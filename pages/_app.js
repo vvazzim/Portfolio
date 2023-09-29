@@ -8,7 +8,7 @@ import Transition from '../components/Transition'
 import { useRouter } from 'next/router';
 
 //framer motion
-import { AnimatePresence, motion} from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
 function MyApp({ Component, pageProps }) {
