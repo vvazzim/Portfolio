@@ -14,6 +14,7 @@ import {
   SiAdobexd,
   SiAdobephotoshop,
 } from "react-icons/si";
+import React from "react";
 
 
 //  data

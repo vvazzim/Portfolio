@@ -34,11 +34,11 @@ const Home = () => {
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          L'erreur que vous obtenez, "SyntaxError: Cannot use import statement outside a
-          module", indique que Node.js n'accepte pas les instructions d'importation dans
-          un fichier qui n'est pas un module ES6. Pour résoudre ce problème, vous devez
+          Lerreur que vous obtenez, "SyntaxError: Cannot use import statement outside a
+          module", indique que Node.js naccepte pas les instructions dimportation dans
+          un fichier qui nest pas un module ES6. Pour résoudre ce problème, vous devez
           indiquer explicitement à Node.js que votre fichier est un module ES6 en
-          utilisant l'extension .mjs pour votre fichier principal, ou en configurant
+          utilisant lextension .mjs pour votre fichier principal, ou en configurant
           votre projet pour utiliser ES6 modules.
         </motion.p>
 
@@ -62,9 +62,9 @@ const Home = () => {
       <div className={'bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0'}> </div>
 
       {/*Particles*/}
-      <div>Particles</div>
+      <ParticlesContainer/>
 
-      {/*Avatar*/}
+      {/*Avatar img*/}
       <motion.div variants={fadeIn('up', 0.5)}
            initial={'hidden'}
            animate={'show'}
