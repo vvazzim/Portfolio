@@ -15,10 +15,10 @@ module.exports = {
       },
     },
     screens: {
-      sm: '640px',
-      md: '768px',
-      lg: '960px',
-      xl: '1200px',
+      sm: '40em',  // ou '640px' si nécessaire
+      md: '48em',  // ou '768px' si nécessaire
+      lg: '60em',  // ou '960px' si nécessaire
+      xl: '75em',  // ou '1200px' si nécessaire
     },
     extend: {
       colors: {
