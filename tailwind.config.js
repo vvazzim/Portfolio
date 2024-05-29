@@ -21,7 +21,7 @@ module.exports = {
       xl: '75em',  // ou '1200px' si nécessaire
     },
     extend: {
-      colors: { 
+      colors: {
         primary: '#131424',
         secondary: '#393A47',
         accent: '#F13024',
