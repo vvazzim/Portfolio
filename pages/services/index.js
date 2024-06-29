@@ -37,7 +37,7 @@ const Services = () => {
                   exit="hidden"
                   className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  I offer a range of professional services to help your business thrive in the digital landscape. Whether you need a compelling brand identity, sleek designs, robust development, engaging content, or improved search engine visibility, I have the expertise to deliver exceptional results.
               </motion.p>
             </div>
             {/* Slider */}

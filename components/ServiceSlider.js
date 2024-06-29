@@ -21,27 +21,27 @@ const serviceData = [
   {
     icon: <RxCrop />,
     title: 'Branding',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Creating a strong brand identity with distinctive visuals and messaging to connect with your target audience.\n'
   },
   {
     icon: <RxPencil2 />,
     title: 'Design',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Crafting visually appealing and user-friendly designs for websites, apps, and digital products.\\n',
   },
   {
     icon: <RxDesktop />,
     title: 'Development',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Building robust web and mobile applications using modern technologies to ensure efficiency and security.\n',
   },
   {
     icon: <RxReader />,
     title: 'Copywriting',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Writing engaging and persuasive content for websites and marketing materials to convey your brand\'s message.\n',
   },
   {
     icon: <RxRocket />,
     title: 'SEO',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+    description: 'Improving your website\'s visibility on search engines through keyword research and on-page optimization.\n',
   },
 ];
 // import required modules

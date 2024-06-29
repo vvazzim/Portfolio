@@ -26,7 +26,7 @@ const Home = () => {
                    exit={'hidden'}
                    className={'h1'}>
           Transforming Ideas <br/> Into{''}
-          <span className={'text-accent'}>Digital Reality</span>
+          <span className={'text-accent'}> Digital Reality</span>
         </motion.h1>
         {/*subtitle*/}
         <motion.p variants={fadeIn('down', 0.3)}
@@ -34,12 +34,7 @@ const Home = () => {
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          Lerreur que vous obtenez, "SyntaxError: Cannot use import statement outside a
-          module", indique que Node.js naccepte pas les instructions dimportation dans
-          un fichier qui nest pas un module ES6. Pour résoudre ce problème, vous devez
-          indiquer explicitement à Node.js que votre fichier est un module ES6 en
-          utilisant lextension .mjs pour votre fichier principal, ou en configurant
-          votre projet pour utiliser ES6 modules.
+          I am Wassim CHIKHI, a dedicated professional specializing in branding, design, development, copywriting, and SEO. With a passion for creating innovative solutions and helping businesses thrive, I combine technical expertise with creative vision to deliver exceptional results. My goal is to turn your ideas into reality and drive your success in the digital landscape.
         </motion.p>
 
         {/*btn*/}

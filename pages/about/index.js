@@ -6,13 +6,14 @@ import {
   FaJs,
   FaReact,
   FaWordpress,
-  FaFigma,
+  FaPython,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiFramer,
-  SiAdobexd,
   SiAdobephotoshop,
+  SiAdobeillustrator,
+  SiMongodb
 } from "react-icons/si";
 
 // data
@@ -30,14 +31,15 @@ const aboutData = [
           { id: 5, component: <SiNextdotjs /> },
           { id: 6, component: <SiFramer /> },
           { id: 7, component: <FaWordpress /> },
+          { id: 8, component: <SiMongodb /> },
+          { id: 9, component: <FaPython /> },
         ],
       },
       {
-        title: "UI/UX Design",
+        title: "Graphic Design",
         icons: [
-          { id: 1, component: <FaFigma /> },
-          { id: 2, component: <SiAdobexd /> },
-          { id: 3, component: <SiAdobephotoshop /> },
+          { id: 1, component: <SiAdobeillustrator /> },
+          { id: 2, component: <SiAdobephotoshop /> },
         ],
       },
     ],
@@ -59,33 +61,48 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Intern Data & Cloud - sonatrach",
+        stage: "2024 - 2024",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Web Developer - Antallis",
+        stage: "2022 - 2023",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Designer - HIS University",
+        stage: "2021 - 2022",
       },
     ],
   },
   {
     title: "credentials",
     info: [
-      {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        {
+      title: "Cybersecurity Master Degree - Paris Cité University, Paris, France",
+      stage: "2025",
+      },{
+      title: "Computer Science Bachelor - Paris Cité University, Paris, France",
+      stage: "2024",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+      title: "Computer Science Bachelor - HIS University",
+      stage: "2023",
       },
       {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
+        title: "Web Development - GoMyCode, Tunis, Tunisia",
+        stage: "2022",
+      },
+      {
+        title: "Certified Graphic Designer - HIS University",
+        stage: "2022",
+      },
+      {
+        title: "Certified Business Management - ECF Montréal, Montréal, Canada",
+        stage: "2020",
+      },
+      {
+        title: "Certied GSM repairman - ECoin Institute, Alger, Algeria",
+        stage: "2019"
       },
     ],
   },
@@ -137,7 +154,7 @@ const About = () => {
                 exit={"hidden"}
                 className={'max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'}
             >
-              10 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
+              4 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
             </motion.p>
             {/* counters */}
             <motion.div
@@ -152,7 +169,7 @@ const About = () => {
                 <div className={'relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute' +
                 ' after:top-0 after:right-0'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
-                    <CountUp start={0} end={10} duration={5}/>+
+                    <CountUp start={0} end={4} duration={5}/>+
                   </div>
                   <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Years of experience</div>
                 </div>
@@ -160,7 +177,7 @@ const About = () => {
                 <div className={'relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute' +
                 ' after:top-0 after:right-0'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
-                    <CountUp start={0} end={250} duration={5}/>+
+                    <CountUp start={0} end={25} duration={5}/>+
                   </div>
                   <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Satisfied clients</div>
                 </div>
@@ -169,14 +186,14 @@ const About = () => {
                 <div className={'relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute' +
                 ' after:top-0 after:right-0'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
-                    <CountUp start={0} end={100} duration={5}/>+
+                    <CountUp start={0} end={35} duration={5}/>+
                   </div>
                   <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Finished projects</div>
                 </div>
                 {/* awards */}
                 <div className={'relative flex-1'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
-                    <CountUp start={0} end={3} duration={5}/>+
+                    <CountUp start={0} end={2} duration={5}/>+
                   </div>
                   <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Winning awards</div>
                 </div>
