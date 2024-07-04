@@ -37,7 +37,7 @@ const Work = () => {
                   exit="hidden"
                   className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                  I take pride in delivering high-quality projects that drive results and exceed client expectations. Below is a selection of my work, demonstrating my expertise in branding, design, development, copywriting, and SEO. Each project reflects my commitment to excellence and my passion for helping businesses succeed.
+                  I take pride in delivering high-quality projects that drive results and exceed client expectations. Below is a selection of my work, demonstrating my skills in branding, design, development, and SEO. Each project reflects my commitment to excellence and my passion for helping businesses succeed.
               </motion.p>
             </div>
             {/* Slider */}

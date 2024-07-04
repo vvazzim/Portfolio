@@ -34,7 +34,8 @@ const Home = () => {
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          I am Wassim CHIKHI, a dedicated professional specializing in branding, design, development, copywriting, and SEO. With a passion for creating innovative solutions and helping businesses thrive, I combine technical expertise with creative vision to deliver exceptional results. My goal is to turn your ideas into reality and drive your success in the digital landscape.
+          I am Wassim CHIKHI, a dedicated in branding, design, development, copywriting, and SEO. With a passion for creating innovative solutions and helping businesses thrive.
+          My goal is to turn your ideas into reality and drive your success in the digital landscape.
         </motion.p>
 
         {/*btn*/}
@@ -66,7 +67,7 @@ const Home = () => {
            exit={'hidden'}
                   transition={{duration: 1, ease: 'easeInOut'}}
            className={'w-full h-full max-w-[737px] max-h-[678px] absolute bottom-32 lg:bottom-0 lg:right-[8%]'}>
-        <Avatar/>
+        {/*//<Avatar/>*/}
       </motion.div>
 
     </div>

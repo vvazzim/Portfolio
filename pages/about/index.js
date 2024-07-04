@@ -13,56 +13,60 @@ import {
   SiFramer,
   SiAdobephotoshop,
   SiAdobeillustrator,
-  SiMongodb
+  SiMongodb,
+  SiScikitlearn,
+  SiPytorch,
+  SiTensorflow,
 } from "react-icons/si";
 
 // data
 const aboutData = [
-  {
-    title: "skills",
+  
+  {title: "skills",
     info: [
-      {
-        title: "Web Development",
-        icons: [
-          { id: 1, component: <FaHtml5 /> },
-          { id: 2, component: <FaCss3 /> },
-          { id: 3, component: <FaJs /> },
-          { id: 4, component: <FaReact /> },
-          { id: 5, component: <SiNextdotjs /> },
-          { id: 6, component: <SiFramer /> },
-          { id: 7, component: <FaWordpress /> },
-          { id: 8, component: <SiMongodb /> },
-          { id: 9, component: <FaPython /> },
-        ],
-      },
-      {
-        title: "Graphic Design",
-        icons: [
-          { id: 1, component: <SiAdobeillustrator /> },
-          { id: 2, component: <SiAdobephotoshop /> },
-        ],
-      },
+  {
+    title: "Web Development",
+    icons: [
+      { id: 1, component: <FaHtml5 /> },
+      { id: 2, component: <FaCss3 /> },
+      { id: 3, component: <FaJs /> },
+      { id: 4, component: <FaReact /> },
+      { id: 5, component: <SiNextdotjs /> },
+      { id: 6, component: <SiFramer /> },
+      { id: 7, component: <FaWordpress /> },
+      { id: 8, component: <SiMongodb /> },
+      { id: 9, component: <FaPython /> },
     ],
   },
   {
+    title: "Data Science",
+    icons: [
+      { id: 1, component: <SiTensorflow /> },   // Exemple avec TensorFlow
+      { id: 2, component: <SiPytorch /> },      // Exemple avec PyTorch
+      { id: 3, component: <SiScikitlearn /> },  // Exemple avec Scikit-learn
+      // Ajoutez d'autres icônes de data science nécessaires
+    ],
+  },
+  {
+    title: "Graphic Design",
+    icons: [
+      { id: 1, component: <SiAdobeillustrator /> },
+      { id: 2, component: <SiAdobephotoshop /> },
+    ],
+  },
+]},
+  {
     title: "awards",
     info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
+
     ],
   },
   {
     title: "experience",
     info: [
       {
-        title: "Intern Data & Cloud - sonatrach",
-        stage: "2024 - 2024",
+        title: "Intern Data & Cloud - Sonatrach",
+        stage: "2024 - Present",
       },
       {
         title: "Web Developer - Antallis",
@@ -133,7 +137,7 @@ const About = () => {
             exit={"hidden"}
             className={"hidden xl:flex absolute bottom-0 -left-[370px]"}
         >
-          <Avatar />
+          {/*<Avatar />*/}
         </motion.div>
         <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"}>
           {/* text */}
@@ -145,7 +149,7 @@ const About = () => {
                 exit={"hidden"}
                 className={'h2'}
             >
-              Captivating <span className={'text-accent'}>stories</span> birth magnificent designs.
+              Ideas spark <span className={'text-accent'}>dreams</span>, dreams shape <span className={'text-accent'}>goals</span>, and goals lead to <span className={'text-accent'}>success</span>.
             </motion.h2>
             <motion.p
                 variants={fadeIn("right", 0.4)}
