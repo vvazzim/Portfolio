@@ -6,44 +6,45 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-// icons
-import {
-  RxCrop,
-  RxPencil2,
-  RxDesktop,
-  RxReader,
-  RxRocket,
 
-} from "react-icons/rx";
 
 // data
+import {
+  FaServer,
+  FaBrain,
+  FaRobot,
+  FaCode,
+  FaCloud,
+} from "react-icons/fa";
+
 const serviceData = [
   {
-    icon: <RxCrop />,
-    title: 'Branding',
-    description: 'Creating a strong brand identity with distinctive visuals and messaging to connect with your target audience.\n'
+    icon: <FaServer />,
+    title: 'Data Engineering',
+    description: 'Design and orchestration of scalable data pipelines using Spark, Airflow, Kafka and more.',
   },
   {
-    icon: <RxPencil2 />,
-    title: 'Design',
-    description: 'Crafting visually appealing and user-friendly designs for websites, apps, and digital products.\\n',
+    icon: <FaBrain />,
+    title: 'Computer Vision',
+    description: 'Image classification, segmentation and visual representation learning using CNNs and Transformers.',
   },
   {
-    icon: <RxDesktop />,
-    title: 'Development',
-    description: 'Building robust web and mobile applications using modern technologies to ensure efficiency and security.\n',
+    icon: <FaRobot />,
+    title: 'Machine Learning & NLP',
+    description: 'Training and deployment of models (BERT, RoBERTa, Chatbots) for real-world AI applications.',
   },
   {
-    icon: <RxReader />,
-    title: 'Copywriting',
-    description: 'Writing engaging and persuasive content for websites and marketing materials to convey your brand\'s message.\n',
+    icon: <FaCode />,
+    title: 'Web Full-Stack Development',
+    description: 'Development of full-stack platforms using FastAPI, React.js and MongoDB.',
   },
   {
-    icon: <RxRocket />,
-    title: 'SEO',
-    description: 'Improving your website\'s visibility on search engines through keyword research and on-page optimization.\n',
+    icon: <FaCloud />,
+    title: 'Cloud & DevOps',
+    description: 'Containerization, CI/CD, cloud-ready architectures and monitoring using Docker and Kubernetes.',
   },
 ];
+
 // import required modules
 import {FreeMode, Pagination} from 'swiper';
 import {RiArrowRightSLine} from "react-icons/ri";

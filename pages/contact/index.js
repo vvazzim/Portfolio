@@ -1,6 +1,6 @@
 //components
 import Circles from '/components/Circles'
-
+import { useForm, ValidationError } from '@formspree/react';
 //variants
 import {fadeIn} from '../../variants'
 
@@ -12,6 +12,24 @@ import { motion } from 'framer-motion';
 
 
 const Contact = () => {
+    const [state, handleSubmit] = useForm("mblynrpl");
+
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-32">
+        <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
+        <a href="/" className="text-accent underline">Return to Home</a>
+      </div>
+    );
+  }
+  if (state.succeeded) {
+    return (
+      <div className="text-center py-32">
+        <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
+        <a href="/" className="text-accent underline">Return to Home</a>
+      </div>
+    );
+  }
   return (
       <div className={'h-full bg-primary/30'}>
         <div className={'container mx-auto py-32 text-center xl:texxt-left flex items-center justify-center h-full'}>
@@ -28,18 +46,20 @@ const Contact = () => {
                 </motion.h2>
                 {/* form */}
                 <motion.form variants={fadeIn('up', 0.4)}
+                        onSubmit={handleSubmit}
                       initial="hidden"
                       animate="show"
                       exit="hidden"
                       className={'flex-1 flex flex-col gap-6 w-full mx-auto'}>
                     {/* input group */}
                     <div className={'flex gap-x-6 w-full'}>
-                        <input type="text" placeholder={'name'} className={'input'}/>
-                        <input type="text" placeholder={'email'} className={'input'}/>
+                        <input type="text" name="name" placeholder="Name" className={'input'} required />
+                        <input type="email" name="email" placeholder="Email" className={'input'} required />
                     </div>
-                    <input type="text" placeholder={'subject'} className={'input'}/>
-                    <textarea placeholder="message" className="textarea"></textarea>
-                    <button className={'btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all' +
+                    <input type="text" name="subject" placeholder="Subject" className={'input'} />
+                    <textarea name="message" placeholder="Message" className="textarea" required></textarea>
+                    <ValidationError prefix="Message" field="message" errors={state.errors} />
+                    <button type="submit" disabled={state.submitting} className={'btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all' +
                     ' duration-300 flex items-center justify-center overflow-hidden hover:border-accent' +
                     ' group-hover:opacity-0 transition-all duration-300 flex items-center justify-center' +
                     ' overflow-hidden hover:border-accent group'}>

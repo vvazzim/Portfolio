@@ -1,25 +1,28 @@
 // testimonial data
 export const testimonialSlider = [
   {
-    image: '/t-avt-1.png',
-    name: 'Ali',
-    position: 'Founder of Rasheeq',
-    message:
-      'Working with Wassim was a game-changer for our brand. His expertise in branding and design helped us create a cohesive and compelling visual identity that truly resonates with our audience. We\'re thrilled with the results!',
-  },
-  {
     image: '/t-avt-2.png',
-    name: 'Jane Doe',
-    position: 'Customer',
-    message: 'Wassim\'s copywriting and SEO services have been invaluable to our business. The content he created is' +
-        ' engaging and perfectly aligns with our brand voice. Plus, our search engine rankings have improved' +
-            ' dramatically thanks to his SEO expertise. Highly recommend!',
-  },
+    name: "Besma Khoualdia",
+    position: "PhD – AI for Oncology",
+    message:"His work on histology image classification was rigorous, well documented and aligned with real research goals.",
+      },
   {
     image: '/t-avt-3.png',
-    name: 'Zine Edine',
+    name: 'Nicolas Lomenie',
+    position: "Professor – Université Paris Cité",
+    message: "Wassim actively contributed to a medical imaging research project and showed great autonomy and technical understanding.",
+  
+  },
+  {
+    image: '/t-avt-1.png',
+    name: 'Zoé Legrand',
     position: 'Antallis CEO',
     message: 'Wassim\'s development skills are top-notch. He built a robust and user-friendly website for us that has significantly improved our online presence. His attention to detail and commitment to excellence are evident in every aspect of his work.',
+  }, {
+    image: '/t-avt-4.png',
+    name: "You?",
+    position: "Future Collaborator",
+    message: "Looking to build a data-driven or AI-based system? Let’s connect and make it happen.",
   },
 ];
 // data

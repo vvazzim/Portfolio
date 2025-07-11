@@ -25,8 +25,8 @@ const Home = () => {
                    animate={'show'}
                    exit={'hidden'}
                    className={'h1'}>
-          Transforming Ideas <br/> Into{''}
-          <span className={'text-accent'}> Digital Reality</span>
+          Building Intelligent Systems <br /> 
+          <span className={'text-accent'}> with Data & AI</span>
         </motion.h1>
         {/*subtitle*/}
         <motion.p variants={fadeIn('down', 0.3)}
@@ -34,8 +34,9 @@ const Home = () => {
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          I am Wassim CHIKHI, a dedicated in branding, design, development, copywriting, and SEO. With a passion for creating innovative solutions and helping businesses thrive.
-          My goal is to turn your ideas into reality and drive your success in the digital landscape.
+          I’m Wassim CHIKHI, a Master's student in Artificial Intelligence and Computer Vision at Université Paris Cité.  
+        I specialize in Data Engineering and AI systems, combining cloud, big data, and machine learning to build innovative solutions. <br/> 
+        I’m currently seeking a 1-year apprenticeship starting in September 2025.
         </motion.p>
 
         {/*btn*/}

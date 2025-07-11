@@ -37,8 +37,10 @@ const Work = () => {
                   exit="hidden"
                   className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                  I take pride in delivering high-quality projects that drive results and exceed client expectations. Below is a selection of my work, demonstrating my skills in branding, design, development, and SEO. Each project reflects my commitment to excellence and my passion for helping businesses succeed.
-              </motion.p>
+                  I take pride in building intelligent and scalable systems using data, AI and cloud technologies.  
+                Below is a selection of technical projects I've worked on — from real-time fake news detection to medical image analysis.  
+                Each project reflects my passion for impactful innovation, and my drive to turn complex challenges into practical solutions.
+                </motion.p>
             </div>
             {/* Slider */}
             <motion.div

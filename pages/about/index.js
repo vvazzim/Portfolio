@@ -17,7 +17,11 @@ import {
   SiScikitlearn,
   SiPytorch,
   SiTensorflow,
+  SiDocker, 
+  SiApacheairflow, SiKubernetes, SiApachekafka, SiPostgresql, SiHuggingface,
+  SiFastapi
 } from "react-icons/si";
+import { FaBrain } from "react-icons/fa";
 
 // data
 const aboutData = [
@@ -39,21 +43,28 @@ const aboutData = [
     ],
   },
   {
-    title: "Data Science",
-    icons: [
-      { id: 1, component: <SiTensorflow /> },   // Exemple avec TensorFlow
-      { id: 2, component: <SiPytorch /> },      // Exemple avec PyTorch
-      { id: 3, component: <SiScikitlearn /> },  // Exemple avec Scikit-learn
-      // Ajoutez d'autres icônes de data science nécessaires
-    ],
-  },
-  {
-    title: "Graphic Design",
-    icons: [
-      { id: 1, component: <SiAdobeillustrator /> },
-      { id: 2, component: <SiAdobephotoshop /> },
-    ],
-  },
+        title: "Cloud & Engineering",
+        icons: [
+          { id: 6, component: <SiApacheairflow /> },
+          { id: 7, component: <SiApachekafka /> },
+          { id: 8, component: <SiDocker /> },
+          { id: 9, component: <SiKubernetes /> },
+          { id: 10, component: <SiPostgresql /> },
+        ],
+      },
+      {
+        title: "Data & AI",
+        icons: [
+          { id: 11, component: <FaHtml5 /> },
+          { id: 12, component: <FaCss3 /> },
+          { id: 13, component: <FaJs /> },
+          { id: 14, component: <FaReact /> },
+          { id: 15, component: <SiNextdotjs /> },
+          { id: 16, component: <SiFastapi /> },
+          { id: 17, component: <SiMongodb /> },
+          { id: 10, component: <FaBrain title="NLP" /> },
+        ],
+      },
 ]},
   {
     title: "awards",
@@ -66,7 +77,7 @@ const aboutData = [
     info: [
       {
         title: "Intern Data & Cloud - Sonatrach",
-        stage: "2024 - Present",
+        stage: "2024 - 2025",
       },
       {
         title: "Web Developer - Antallis",
@@ -82,32 +93,25 @@ const aboutData = [
     title: "credentials",
     info: [
         {
-      title: "Cybersecurity Master Degree - Paris Cité University, Paris, France",
-      stage: "2025",
+        title: "Master – Vision & Machines Intelligentes, Université Paris Cité",
+        stage: "2024 – 2026",
       },{
-      title: "Computer Science Bachelor - Paris Cité University, Paris, France",
-      stage: "2024",
+        title: "Bachelor – Informatique & Applications, Université Paris Cité",
+        stage: "2023 – 2024",
       },
       {
-      title: "Computer Science Bachelor - HIS University",
-      stage: "2023",
+        title: "Bachelor – Information Systems, HIS University, Algiers",
+        stage: "2020 – 2023",
       },
       {
         title: "Web Development - GoMyCode, Tunis, Tunisia",
         stage: "2022",
       },
       {
-        title: "Certified Graphic Designer - HIS University",
-        stage: "2022",
-      },
-      {
-        title: "Certified Business Management - ECF Montréal, Montréal, Canada",
+        title: "Certified Business Management – ECF Montréal, Canada",
         stage: "2020",
       },
-      {
-        title: "Certied GSM repairman - ECoin Institute, Alger, Algeria",
-        stage: "2019"
-      },
+      
     ],
   },
 ];
@@ -142,23 +146,13 @@ const About = () => {
         <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"}>
           {/* text */}
           <div className={'flex-1 flex flex-col justify-center'}>
-            <motion.h2
-                variants={fadeIn("right", 0.2)}
-                initial={"hidden"}
-                animate={"show"}
-                exit={"hidden"}
-                className={'h2'}
-            >
-              Ideas spark <span className={'text-accent'}>dreams</span>, dreams shape <span className={'text-accent'}>goals</span>, and goals lead to <span className={'text-accent'}>success</span>.
-            </motion.h2>
-            <motion.p
-                variants={fadeIn("right", 0.4)}
-                initial={"hidden"}
-                animate={"show"}
-                exit={"hidden"}
-                className={'max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0'}
-            >
-              4 years ago, I began freelancing as a developer. Since then, I&apos;ve done remote work for agencies, consulted for startups, and collaborated on digital products for business and consumer use.
+          <motion.h2 className="h2"> 
+            Turning <span className="text-accent">Data & AI</span> into real-world solutions.
+          </motion.h2>
+            <motion.p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
+              I'm Wassim CHIKHI, a Master's student in Vision & AI at Université Paris Cité.  
+              I specialize in Data Engineering, Machine Learning and Computer Vision, and I love turning ideas into intelligent systems.  
+              Currently seeking a 1-year apprenticeship (Sept. 2025) in Data/AI, cloud, or vision-related projects.
             </motion.p>
             {/* counters */}
             <motion.div
