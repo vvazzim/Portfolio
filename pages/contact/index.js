@@ -21,7 +21,7 @@ const Contact = () => {
       <div className="text-center py-32">
         <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
         <Link href="/" className="text-accent underline">Return to Home</Link>
-      </div>
+      </div> 
     );
   }
   return (
