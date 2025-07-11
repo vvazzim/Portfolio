@@ -1,6 +1,8 @@
 //components
 import Circles from '/components/Circles'
 import { useForm, ValidationError } from '@formspree/react';
+import Link from 'next/link';
+
 //variants
 import {fadeIn} from '../../variants'
 
@@ -18,15 +20,7 @@ const Contact = () => {
     return (
       <div className="text-center py-32">
         <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
-        <a href="/" className="text-accent underline">Return to Home</a>
-      </div>
-    );
-  }
-  if (state.succeeded) {
-    return (
-      <div className="text-center py-32">
-        <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
-        <a href="/" className="text-accent underline">Return to Home</a>
+        <Link href="/" className="text-accent underline">Return to Home</Link>
       </div>
     );
   }
