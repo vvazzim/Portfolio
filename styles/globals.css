@@ -51,4 +51,9 @@
   .text-accent {
     color: red !important;
   }
+  /* styles/globals.css or tailwind layer */
+body, * {
+  cursor: url('/cursor-red.svg'), auto; /* fallback to auto if image fails */
+}
+
 }

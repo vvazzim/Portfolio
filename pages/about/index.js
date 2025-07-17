@@ -69,23 +69,30 @@ const aboutData = [
   {
     title: "awards",
     info: [
-
+      {
+        title: "Top of the Class – 3 years in a row, HIS University",
+        stage: "2020 – 2023",
+      },
+      {
+        title: "Recognition for Outstanding Contribution – Marketing Department",
+        stage: "2022",
+      },
+      {
+        title: "Honorary Member – HIS Technology Club",
+        stage: "2021",
+      }
     ],
   },
   {
     title: "experience",
     info: [
       {
-        title: "Intern Data & Cloud - Sonatrach",
-        stage: "2024 - 2025",
+        title: "Data & Cloud Engineering Intern – Sonatrach",
+        stage: "2024 – 2025",
       },
       {
-        title: "Web Developer - Antallis",
-        stage: "2022 - 2023",
-      },
-      {
-        title: "Designer - HIS University",
-        stage: "2021 - 2022",
+        title: "Full-Stack Web Developer – Antallis Agency",
+        stage: "2022 – 2023",
       },
     ],
   },
@@ -104,11 +111,11 @@ const aboutData = [
         stage: "2020 – 2023",
       },
       {
-        title: "Web Development - GoMyCode, Tunis, Tunisia",
+        title: "Full-Stack JS Web Development - GoMyCode, Tunis, Tunisia",
         stage: "2022",
       },
       {
-        title: "Certified Business Management – ECF Montréal, Canada",
+        title: "Business Management – ECF Montréal, Canada",
         stage: "2020",
       },
       
