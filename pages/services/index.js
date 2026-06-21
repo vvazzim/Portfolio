@@ -37,8 +37,8 @@ const Services = () => {
                   exit="hidden"
                   className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
-                I provide technical solutions in Data Engineering, AI, Cybersecurity Automation and Software Development.  
-                From building scalable data pipelines and automating security workflows to deploying intelligent models and full-stack platforms,  
+                I provide technical solutions in Data Engineering, AI and Software Development.  
+                From building scalable data pipelines to deploying intelligent models and full-stack platforms,  
                 my goal is to turn data into value and ideas into robust systems.
               </motion.p>
             </div>

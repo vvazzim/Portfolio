@@ -15,6 +15,7 @@ import {
   FaRobot,
   FaCode,
   FaCloud,
+  FaShieldAlt,
 } from "react-icons/fa";
 
 const serviceData = [
@@ -42,6 +43,11 @@ const serviceData = [
     icon: <FaCloud />,
     title: 'Cloud & DevOps',
     description: 'Containerization, CI/CD, cloud-ready architectures and monitoring using Docker and Kubernetes.',
+  },
+  {
+    icon: <FaShieldAlt />,
+    title: 'Cybersecurity Automation',
+    description: 'Automating vulnerability scans, security log analysis, and response orchestration (SOAR).',
   },
 ];
 
