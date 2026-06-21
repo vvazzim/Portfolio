@@ -81,15 +81,15 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Top of the Class – 3 years in a row, HIS University",
-        stage: "2020 – 2023",
+        title: "Top of the Class - 3 years in a row, HIS University",
+        stage: "2020 - 2023",
       },
       {
-        title: "Recognition for Outstanding Contribution – Marketing Department",
+        title: "Recognition for Outstanding Contribution - Marketing Department",
         stage: "2022",
       },
       {
-        title: "Honorary Member – HIS Technology Club",
+        title: "Honorary Member - HIS Technology Club",
         stage: "2021",
       },
     ],
@@ -98,11 +98,11 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Cybersecurity Automation Intern – VINCI SA",
-        stage: "2026 – Present",
+        title: "Cybersecurity Automation Intern - VINCI SA",
+        stage: "2026 - Present",
       },
       {
-        title: "Full-Stack Web Developer – Antallis",
+        title: "Full-Stack Web Developer - Antallis",
         stage: "2023",
       },
     ],
@@ -111,22 +111,22 @@ const aboutData = [
     title: "credentials",
     info: [
         {
-        title: "Master – Vision & Machines Intelligentes, Université Paris Cité",
-        stage: "2024 – 2026",
+        title: "Master - Vision & Machines Intelligentes, Université Paris Cité",
+        stage: "2024 - 2026",
       },{
-        title: "Bachelor – Informatique & Applications, Université Paris Cité",
-        stage: "2023 – 2024",
+        title: "Bachelor - Informatique & Applications, Université Paris Cité",
+        stage: "2023 - 2024",
       },
       {
-        title: "Bachelor – Information Systems, HIS University, Algiers",
-        stage: "2020 – 2023",
+        title: "Bachelor - Information Systems, HIS University, Algiers",
+        stage: "2020 - 2023",
       },
       {
         title: "Full-Stack JS Web Development - GoMyCode, Tunis, Tunisia",
         stage: "2022",
       },
       {
-        title: "Business Management – ECF Montréal, Canada",
+        title: "Business Management - ECF Montréal, Canada",
         stage: "2020",
       },
       
@@ -144,11 +144,11 @@ const aboutData = [
         stage: "2025",
       },
       {
-        title: "SecNumacadémie (ANSSI) – Cybersécurité",
+        title: "SecNumacadémie (ANSSI) - Cybersécurité",
         stage: "2025",
       },
       {
-        title: "CNIL – Protection des données (RGPD)",
+        title: "CNIL - Protection des données (RGPD)",
         stage: "2025",
       },
     ],
