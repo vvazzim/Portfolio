@@ -20,9 +20,9 @@ export const testimonialSlider = [
     message: 'Wassim\'s development skills are top-notch. He built a robust and user-friendly website for us that has significantly improved our online presence. His attention to detail and commitment to excellence are evident in every aspect of his work.',
   }, {
     image: '/t-avt-4.png',
-    name: "You?",
-    position: "Future Collaborator",
-    message: "Looking to build a data-driven or AI-based system? Let’s connect and make it happen.",
+    name: "Akram CHAABNIA",
+    position: "Data Scientist – BNP Paribas",
+    message: "I worked with Wassim on various data science and engineering projects. He has an outstanding balance of theoretical knowledge and practical technical skills, making him highly effective at solving complex problems.",
   },
 ];
 // data

@@ -19,7 +19,8 @@ import {
   SiTensorflow,
   SiDocker, 
   SiApacheairflow, SiKubernetes, SiApachekafka, SiPostgresql, SiHuggingface,
-  SiFastapi
+  SiFastapi,
+  SiGit, SiLinux, SiStreamlit, SiGitlab, SiJupyter
 } from "react-icons/si";
 import { FaBrain } from "react-icons/fa";
 
@@ -65,6 +66,16 @@ const aboutData = [
           { id: 10, component: <FaBrain title="NLP" /> },
         ],
       },
+      {
+        title: "Tools & DevOps",
+        icons: [
+          { id: 18, component: <SiGit /> },
+          { id: 19, component: <SiLinux /> },
+          { id: 20, component: <SiStreamlit /> },
+          { id: 21, component: <SiGitlab /> },
+          { id: 22, component: <SiJupyter /> },
+        ],
+      },
 ]},
   {
     title: "awards",
@@ -87,12 +98,12 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Data & Cloud Engineering Intern – Sonatrach",
-        stage: "2024 – 2025",
+        title: "Cybersecurity Automation Intern – VINCI SA",
+        stage: "2026 – Present",
       },
       {
-        title: "Full-Stack Web Developer – Antallis Agency",
-        stage: "2022 – 2023",
+        title: "Full-Stack Web Developer – Antallis",
+        stage: "2023",
       },
     ],
   },
@@ -121,6 +132,27 @@ const aboutData = [
       
     ],
   },
+  {
+    title: "certifications",
+    info: [
+      {
+        title: "AZ-400: Designing and Implementing DevOps Solutions",
+        stage: "2025",
+      },
+      {
+        title: "AZ-900: Microsoft Azure Fundamentals",
+        stage: "2025",
+      },
+      {
+        title: "SecNumacadémie (ANSSI) – Cybersécurité",
+        stage: "2025",
+      },
+      {
+        title: "CNIL – Protection des données (RGPD)",
+        stage: "2025",
+      },
+    ],
+  },
 ];
 
 // components
@@ -146,9 +178,9 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className={"hidden xl:flex absolute bottom-0 -left-[370px]"}
+            className={"hidden xl:flex absolute bottom-0 -left-[370px] max-w-[550px] max-h-[500px] pointer-events-none select-none opacity-60"}
         >
-          {/*<Avatar />*/}
+          <Avatar />
         </motion.div>
         <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"}>
           {/* text */}
@@ -157,9 +189,9 @@ const About = () => {
               Turning <span className="text-accent">Data & AI</span> into real-world solutions.
             </motion.h2>
             <motion.p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
-              I'm Wassim CHIKHI, a Master's student in Vision & AI at Université Paris Cité.  
-              I specialize in Data Engineering, Machine Learning and Computer Vision, and I love turning ideas into intelligent systems.  
-              Currently seeking a 1-year apprenticeship (Sept. 2025) in Data/AI, cloud, or vision-related projects.
+              I'm Wassim CHIKHI, a Master's student in Vision & AI at Université Paris Cité and Cybersecurity Automation Intern at VINCI.  
+              I specialize in Data Engineering, Machine Learning, and Computer Vision, and I love turning ideas into intelligent systems.  
+              Currently seeking a CDI position starting in September 2026.
             </motion.p>
             {/* counters */}
             <motion.div

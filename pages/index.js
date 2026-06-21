@@ -34,9 +34,9 @@ const Home = () => {
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          I’m Wassim CHIKHI, a Master's student in Artificial Intelligence and Computer Vision at Université Paris Cité.  
-        I specialize in Data Engineering and AI systems, combining cloud, big data, and machine learning to build innovative solutions. <br/> 
-        I’m currently seeking a 1-year apprenticeship starting in September 2025.
+          I’m Wassim CHIKHI, a Master's student in Artificial Intelligence and Computer Vision at Université Paris Cité and Cybersecurity Automation Intern at VINCI.  
+          I specialize in Data Engineering, AI systems, and Cybersecurity Automation, combining cloud, big data, and machine learning. <br/> 
+          I’m currently seeking a CDI position starting in September 2026.
         </motion.p>
 
         {/*btn*/}
@@ -67,8 +67,8 @@ const Home = () => {
            animate={'show'}
            exit={'hidden'}
                   transition={{duration: 1, ease: 'easeInOut'}}
-           className={'w-full h-full max-w-[737px] max-h-[678px] absolute bottom-32 lg:bottom-0 lg:right-[8%]'}>
-        {/*//<Avatar/>*/}
+           className={'w-full h-full max-w-[480px] max-h-[440px] xl:max-w-[620px] xl:max-h-[570px] absolute bottom-0 right-0 lg:right-[4%] pointer-events-none select-none'}>
+        <Avatar/>
       </motion.div>
 
     </div>

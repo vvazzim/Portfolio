@@ -66,7 +66,7 @@ const projects = [
   },
   {
     title: "AI Assistant Chatbot",
-    cover: "/images/projects/chatbot/thumb4.jpg", 
+    cover: "/images/projects/Chatbot/cover_chatbot.jpeg", 
     summary: "Chatbot intelligent avec LangChain et LLM pour support client.",
     links: {
       report: "/assets/docs/chatbot_report.pdf",
