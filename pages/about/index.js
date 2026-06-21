@@ -80,7 +80,7 @@ const aboutData = [
       {
         title: "Honorary Member – HIS Technology Club",
         stage: "2021",
-      }
+      },
     ],
   },
   {
@@ -143,9 +143,9 @@ const About = () => {
         {/* Avatar */}
         <motion.div
             variants={fadeIn("right", 0.2)}
-            initial={"hidden"}
-            animate={"show"}
-            exit={"hidden"}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
             className={"hidden xl:flex absolute bottom-0 -left-[370px]"}
         >
           {/*<Avatar />*/}
@@ -153,9 +153,9 @@ const About = () => {
         <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"}>
           {/* text */}
           <div className={'flex-1 flex flex-col justify-center'}>
-          <motion.h2 className="h2"> 
-            Turning <span className="text-accent">Data & AI</span> into real-world solutions.
-          </motion.h2>
+            <motion.h2 className="h2"> 
+              Turning <span className="text-accent">Data & AI</span> into real-world solutions.
+            </motion.h2>
             <motion.p className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0">
               I'm Wassim CHIKHI, a Master's student in Vision & AI at Université Paris Cité.  
               I specialize in Data Engineering, Machine Learning and Computer Vision, and I love turning ideas into intelligent systems.  
@@ -164,9 +164,9 @@ const About = () => {
             {/* counters */}
             <motion.div
                 variants={fadeIn("right", 0.6)}
-                initial={"hidden"}
-                animate={"show"}
-                exit={"hidden"}
+                initial="hidden"
+                animate="show"
+                exit="hidden"
                 className={'hidden md:flex md:max-w-xl xl:max-w-none mx-auto xl:mx-0 mb-8'}
             >
               <div className={'flex flex-1 xl:gap-x-6'}>
@@ -208,9 +208,9 @@ const About = () => {
           {/* info */}
           <motion.div
               variants={fadeIn("left", 0.4)}
-              initial={"hidden"}
-              animate={"show"}
-              exit={"hidden"}
+              initial="hidden"
+              animate="show"
+              exit="hidden"
               className={'flex flex-col w-full xl:max-w-[48%] h-[480px]'}
           >
             <div className={'flex gap-x-4 xl:gap-x-8 mx-auto xl:mx-0 mb-4'}>
@@ -218,7 +218,7 @@ const About = () => {
                   <div
                       key={itemIndex}
                       className={`${
-                          index === itemIndex ? "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300" : ""
+                        index === itemIndex ? "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300" : ""
                       } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:bottom-1 after:left-0`}
                       onClick={() => setIndex(itemIndex)}
                   >

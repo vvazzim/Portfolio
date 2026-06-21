@@ -38,9 +38,9 @@ const Work = () => {
                   className="mb-4 max-w-[400px] mx-auto lg:mx-0"
               >
                   I take pride in building intelligent and scalable systems using data, AI and cloud technologies.  
-                Below is a selection of technical projects I've worked on — from real-time fake news detection to medical image analysis.  
-                Each project reflects my passion for impactful innovation, and my drive to turn complex challenges into practical solutions.
-                </motion.p>
+                  Below is a selection of technical projects I've worked on — from real-time fake news detection to medical image analysis.  
+                  Each project reflects my passion for impactful innovation, and my drive to turn complex challenges into practical solutions.
+              </motion.p>
             </div>
             {/* Slider */}
             <motion.div

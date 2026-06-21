@@ -22,7 +22,7 @@ const Home = () => {
         {/*title*/}
         <motion.h1 variants={fadeIn('down', 0.2)}
                    initial={'hidden'}
-                   animate={'show'}
+                      animate={'show'}
                    exit={'hidden'}
                    className={'h1'}>
           Building Intelligent Systems <br /> 
