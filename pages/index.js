@@ -5,6 +5,7 @@ import Image from 'next/image';
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from '../components/ProjectsBtn';
 import Avatar from '../components/Avatar';
+import HeroRotator from '../components/HeroRotator';
 
 //framer motion
 import {motion} from 'framer-motion'
@@ -24,19 +25,29 @@ const Home = () => {
                    initial={'hidden'}
                       animate={'show'}
                    exit={'hidden'}
-                   className={'h1'}>
-          Building Intelligent Systems <br /> 
-          <span className={'text-accent'}> with Data & AI</span>
+                   className={'h1 !mb-2'}>
+          Ingénieur IA & Automatisation <br /> 
+          <span className={'text-accent'}>Systèmes critiques, GenAI & Cyber</span>
         </motion.h1>
+
+        {/* Hero Rotator ECC */}
+        <motion.div
+          variants={fadeIn('down', 0.25)}
+          initial={'hidden'}
+          animate={'show'}
+          exit={'hidden'}
+        >
+          <HeroRotator />
+        </motion.div>
+
         {/*subtitle*/}
         <motion.p variants={fadeIn('down', 0.3)}
                   initial={'hidden'}
                   animate={'show'}
                   exit={'hidden'}
                   className={'max-w-sm xl:max-w-xl mw-auto xl:mx-0 mb-10 xl:mb-16'}>
-          I’m Wassim CHIKHI, a Master's student in Artificial Intelligence and Computer Vision at Université Paris Cité and Cybersecurity Automation Intern at VINCI.  
-          I specialize in Data Engineering, AI systems, and Cybersecurity Automation, combining cloud, big data, and machine learning. <br/> 
-          I’m currently seeking a full-time position starting in September 2026.
+          Diplômé du Master 2 Recherche Informatique (Université Paris Cité, 2026), certifié Azure DevOps Expert (AZ-400) et ANSSI SecNumacadémie (96%). <br/>
+          Je conçois et j'industrialise des systèmes d'IA en environnements critiques.
         </motion.p>
 
         {/*btn*/}
