@@ -25,56 +25,169 @@ const SHOW_EMPTY_SLOTS = true; // affiche une case vide pour compléter la grill
 // Mets tes PDFs dans public/assets/docs/ (noms ci-dessous)
 // ------------------------------
 const projects = [
+  // ── 1. SOLUTIONS SAAS & DIGITALES ──────────────────────────────────────
   {
-    title: "Fake News Multimodal Platform",
-    cover: "/images/projects/fn/thumb2.jpg", 
+    title: "FRMediCall : Plateforme SaaS de Gestion Médicale",
+    cover: "/images/projects/frmedicall/cover.jpg", 
     summary:
-      "WSI → patchs → embeddings (UNI/ViT) → PCA/UMAP → classification. Accuracy test jusqu’à 87,5% (UNI).",
+      "Application SaaS complète pour cabinets médicaux : prise de rendez-vous en ligne, gestion de patientèle et fluidification des flux de consultations.",
     links: {
       live: "", 
-      report: "/assets/docs/fakenews_report_web.pdf",
-      slides: "/assets/docs/fakenews_slides_bigdata.pdf",
-      code: "https://github.com/vvazzim/fake-news-platform.git", // <- repo Git si tu veux
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/FRMediCall",
       kaggle: "", 
     },
   },
   {
-    title: "TER – Biomarkers (WSI, UNI/ViT)",
-    cover: "/images/projects/ter/thumb1.jpg", 
+    title: "MAPARIS : Cartographie Temps Réel & Sécurité",
+    cover: "/images/projects/maparis/cover.jpg", 
     summary:
-      "Détection multimodale (texte+image) avec FastAPI, Kafka, PostgreSQL. Dashboard React pour métriques (F1, comparison, dernières prédictions).",
+      "Plateforme temps réel streamant les lieux de manifestations en Île-de-France pour calculer des itinéraires piétons sécurisés (Fastify, React, Leaflet, Socket.io).",
     links: {
-      live: "", // pas de live
-      report: "/assets/docs/rapport_TER2025.pdf",
-      slides: "/assets/docs/slides_TER2025.pdf",
-      code: "",
-      kaggle: "https://www.kaggle.com/code/wassmed/model-foundation-uni/", // <- remplace par ton vrai lien Kaggle
-    },
-  },
-  {
-    title: "Real-Estate Website",
-    cover: "/images/projects/RE/cover.png", // TODO cover dédié si tu as
-    summary:
-      "Real-Estate website (démo live).",
-    links: {
-      live: "https://main--tubular-kelpie-d1f63c.netlify.app", // <- COLLE ICI le lien que tu veux “garder”
+      live: "", 
       report: "",
       slides: "",
-      code: "", // optionnel
-      kaggle: "",
+      code: "https://github.com/vvazzim/MAPARIS",
+      kaggle: "", 
     },
   },
   {
-    title: "AI Assistant Chatbot",
-    cover: "/images/projects/Chatbot/cover_chatbot.jpeg", 
-    summary: "Chatbot intelligent avec LangChain et LLM pour support client.",
+    title: "BabelStore & CozySpace : SaaS Retail & Coworking",
+    cover: "/images/projects/babel/cover.jpg", 
+    summary:
+      "Solutions SaaS de gestionnaire de stock, inventaire, point de vente et réservation d'espaces partagés développées sous architecture Astro et Tailwind CSS.",
     links: {
-      report: "/assets/docs/chatbot_report.pdf",
-      code: "https://github.com/vvazzim/chatbot-project",
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/BABELSTORE",
+      kaggle: "", 
+    },
+  },
+  {
+    title: "DZPIECE & MACDI : Moteurs Communautaires",
+    cover: "/images/projects/dzpiece/cover.jpg", 
+    summary:
+      "Plateformes de cartographie et moteurs de recherche communautaires pour pièces détachées automobiles (DZPIECE) et grossistes agroalimentaires (MACDI).",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/DZPIECE",
+      kaggle: "", 
+    },
+  },
+
+  // ── 2. MACHINE LEARNING & DEEP LEARNING (VISION) ────────────────────────
+  {
+    title: "Histopathologie & Biomarqueurs WSI",
+    cover: "/images/projects/ter/thumb1.jpg", 
+    summary:
+      "Recherche en oncologie computationnelle : classification et explicabilité des décisions sur lames microscopiques (WSI) pour la détection de lésions (AUC 0.87 Camelyon).",
+    links: {
+      live: "", 
+      report: "/assets/docs/rapport_TER2025.pdf",
+      slides: "/assets/docs/slides_TER2025.pdf",
+      code: "https://github.com/vvazzim/TER_Histopathology_Classification",
+      kaggle: "https://www.kaggle.com/code/wassmed/model-foundation-uni/",
+    },
+  },
+  {
+    title: "VMI-LAB : Socle Recherche M2 Vision & DL",
+    cover: "/images/projects/vmilab/cover.jpg", 
+    summary:
+      "Socle de recherche Master 2 VMI (Paris Cité) : implémentation d'architectures avancées en Deep Learning, segmentation d'images, reconnaissance de formes et vision 3D.",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/VMI-LAB",
+      kaggle: "", 
+    },
+  },
+  {
+    title: "CoinDetect : Détection par Vision par Ordinateur",
+    cover: "/images/projects/coindetect/cover.jpg", 
+    summary:
+      "Système de traitement d'images pour la détection, la segmentation et la classification automatique d'objets et monnaies (Python, OpenCV).",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/CoinDetect",
+      kaggle: "", 
+    },
+  },
+
+  // ── 3. CYBERSÉCURITÉ & IAM ─────────────────────────────────────────────
+  {
+    title: "Role Mining & Audit de Sécurité des Accès (RBAC)",
+    cover: "/images/projects/iam/cover.jpg", 
+    summary:
+      "Moteur algorithmique de modélisation de droits, détection des conflits de séparation des tâches (SoD), contrôle Active Directory et console interactive Streamlit.",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/iam-role-mining",
+      kaggle: "", 
+    },
+  },
+  {
+    title: "PhishVision : Détection d'Usurpations de Marques",
+    cover: "/images/projects/phishvision/cover.png", 
+    summary:
+      "Module de vision par ordinateur pour la détection d'usurpations visuelles par descripteurs invariants SIFT/OpenCV avec classification du risque à 4 niveaux.",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/phishvision",
+      kaggle: "", 
+    },
+  },
+
+  // ── 4. DEVOPS, CLOUD & STREAMING DISTRIBUÉ ──────────────────────────────
+  {
+    title: "Plateforme Distribuée de Streaming & Monitoring",
+    cover: "/images/projects/fn/thumb2.jpg", 
+    summary:
+      "Architecture microservices temps réel avec Apache Kafka, FastAPI et monitoring de modèles (TF-IDF vs BERT vs RoBERTa) avec réentraînement continu (F1 = 0.89).",
+    links: {
+      live: "", 
+      report: "/assets/docs/fakenews_report_web.pdf",
+      slides: "/assets/docs/fakenews_slides_bigdata.pdf",
+      code: "https://github.com/vvazzim/fake-news-platform",
+      kaggle: "", 
+    },
+  },
+  {
+    title: "OncoMind : RAG Local Souverain & Indexation",
+    cover: "/images/projects/Chatbot/cover_chatbot.jpeg", 
+    summary:
+      "Assistant RAG local pour équipes de recherche en oncologie analysant des publications complexes de 50+ pages sans fuite de données (ChromaDB, Ollama, Retrieval@5 = 89%).",
+    links: {
+      live: "", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/oncomind",
+      kaggle: "", 
+    },
+  },
+  {
+    title: "Real-Estate Showcase : Plateforme Immobilière",
+    cover: "/images/projects/RE/cover.png", 
+    summary:
+      "Plateforme web moderne d'annonces immobilières avec navigation interactive, filtres avancés et intégration responsive (démo live déployée sur Netlify).",
+    links: {
+      live: "https://main--tubular-kelpie-d1f63c.netlify.app", 
+      report: "",
+      slides: "",
+      code: "https://github.com/vvazzim/Real-Estate-Website",
+      kaggle: "", 
     },
   }
-  
-  // -> Ajoute/retire des projets ici. Le slider pagine automatiquement par 4.
 ];
 
 // ------------------------------

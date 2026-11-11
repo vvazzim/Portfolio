@@ -18,7 +18,7 @@ import {
   SiPytorch,
   SiTensorflow,
   SiDocker, 
-  SiApacheairflow, SiKubernetes, SiApachekafka, SiPostgresql, SiHuggingface,
+  SiApacheairflow, SiKubernetes, SiApachekafka, SiPostgresql,
   SiFastapi,
   SiGit, SiLinux, SiStreamlit, SiGitlab, SiJupyter
 } from "react-icons/si";
@@ -56,14 +56,12 @@ const aboutData = [
       {
         title: "Data & AI",
         icons: [
-          { id: 11, component: <FaHtml5 /> },
-          { id: 12, component: <FaCss3 /> },
-          { id: 13, component: <FaJs /> },
-          { id: 14, component: <FaReact /> },
-          { id: 15, component: <SiNextdotjs /> },
-          { id: 16, component: <SiFastapi /> },
-          { id: 17, component: <SiMongodb /> },
-          { id: 10, component: <FaBrain title="NLP" /> },
+          { id: 11, component: <FaPython /> },
+          { id: 12, component: <SiPytorch /> },
+          { id: 13, component: <SiTensorflow /> },
+          { id: 14, component: <SiScikitlearn /> },
+          { id: 15, component: <SiFastapi /> },
+          { id: 16, component: <FaBrain title="NLP & Vision" /> },
         ],
       },
       {
@@ -98,12 +96,16 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Cybersecurity Automation Intern - VINCI SA",
-        stage: "2026 - Present",
+        title: "Consultant Données, Automatisation & Cybersécurité - VINCI SA (CERT)",
+        stage: "Jan 2026 - Present",
       },
       {
-        title: "Full-Stack Web Developer - Antallis",
-        stage: "2023",
+        title: "Research Engineer, Computational Pathology & Computer Vision - Université Paris Cité",
+        stage: "Sept 2025 - Jan 2026",
+      },
+      {
+        title: "Consultant Développeur & Gestion des Droits Applicatifs - Antallis",
+        stage: "June 2024 - Dec 2025",
       },
     ],
   },
