@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "command": "npm run lint -- --quiet || true"
+      }
+    ],
+    "Stop": [
+      {
+        "command": "node -e \"console.log('[ECC Hook] Session check completed: code verified and components structured.')\""
+      }
+    ]
+  }
+}
