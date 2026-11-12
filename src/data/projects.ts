@@ -1,4 +1,10 @@
-export type CategoryId = 'cyber' | 'mldl' | 'devops' | 'saas';
+export type CategoryId =
+  | 'cyber'
+  | 'vision_dl'
+  | 'ml_nlp'
+  | 'data_eng'
+  | 'cloud_devops'
+  | 'web_fullstack';
 
 export interface CategoryInfo {
   id: CategoryId;
@@ -6,44 +12,62 @@ export interface CategoryInfo {
   shortLabel: string;
   subtitle: string;
   description: string;
-  icon: 'shield' | 'brain' | 'cloud' | 'laptop';
+  icon: 'shield' | 'brain' | 'cloud' | 'laptop' | 'eye' | 'kafka';
   stackPreview: string[];
 }
 
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'cyber',
-    title: 'Cyber & IAM',
-    shortLabel: 'Cyber',
+    title: 'Cybersecurity Automation',
+    shortLabel: 'Cybersecurity',
     subtitle: 'Sécurité, IAM Role Mining & Anti-Phishing',
     description: 'Audit Active Directory, cartographie des rôles, détection de conflits SoD et reconnaissance SIFT.',
     icon: 'shield',
     stackPreview: ['Active Directory', 'SIFT', 'Python', 'SoD'],
   },
   {
-    id: 'mldl',
-    title: 'ML, DL & GenAI',
-    shortLabel: 'ML / DL',
-    subtitle: 'Vision WSI Camelyon, Transformers & RAG Souverain',
-    description: 'Classification histopathologique (AUC 0.87), architectures RAG locales et traitement d’images morphologique.',
+    id: 'vision_dl',
+    title: 'Computer Vision & DL',
+    shortLabel: 'Computer Vision & DL',
+    subtitle: 'Vision WSI Camelyon, Transformers & Traitement d’Images',
+    description: 'Classification histopathologique (AUC 0.87), architectures Vision Transformers et morphologie mathématique.',
+    icon: 'eye',
+    stackPreview: ['PyTorch', 'Vision Transformers', 'UNI2-h', 'OpenCV'],
+  },
+  {
+    id: 'ml_nlp',
+    title: 'Machine Learning & NLP',
+    shortLabel: 'ML & NLP',
+    subtitle: 'RAG Souverain, LLMOps & Algorithmique Avancée',
+    description: 'Plateforme RAG locale (Retrieval@5 = 89%), analyse documentaire sans fuite de données et modèles NLP.',
     icon: 'brain',
-    stackPreview: ['PyTorch', 'Transformers', 'ChromaDB', 'Ollama'],
+    stackPreview: ['ChromaDB', 'Ollama', 'FastAPI', 'LangChain'],
   },
   {
-    id: 'devops',
-    title: 'DevOps & Cloud',
-    shortLabel: 'DevOps',
-    subtitle: 'Streaming Kafka, Kubernetes, Ingestion & CI/CD',
-    description: 'Pipelines Big Data distribués, NLP BERT temps réel, orchestration conteneurisée et pratiques Azure.',
+    id: 'data_eng',
+    title: 'Data Engineering',
+    shortLabel: 'Data Engineering',
+    subtitle: 'Pipelines Temps Réel, Streaming Kafka & Ingestion',
+    description: 'Conception et orchestration de pipelines de streaming distribués, ingestion Kafka et NLP en flux continu.',
+    icon: 'kafka',
+    stackPreview: ['Kafka', 'PostgreSQL', 'FastAPI', 'Docker'],
+  },
+  {
+    id: 'cloud_devops',
+    title: 'Cloud & DevOps',
+    shortLabel: 'Cloud & DevOps',
+    subtitle: 'Conteneurisation, CI/CD & Déploiement Kubernetes',
+    description: 'Architectures résilientes, automatisation CI/CD Azure DevOps (AZ-400), conteneurisation Docker et Kubernetes.',
     icon: 'cloud',
-    stackPreview: ['Kafka', 'Kubernetes', 'Docker', 'BERT'],
+    stackPreview: ['Azure DevOps', 'Kubernetes', 'Docker', 'CI/CD'],
   },
   {
-    id: 'saas',
-    title: 'SaaS & Solutions Digitales',
-    shortLabel: 'SaaS',
+    id: 'web_fullstack',
+    title: 'Web Full-Stack Development',
+    shortLabel: 'Web Full-Stack',
     subtitle: 'Plateformes Web, Cartographie temps réel & E-Commerce',
-    description: 'Applications web production, moteurs cartographiques Leaflet, gestion de stock et solutions métiers.',
+    description: 'Applications web complètes, moteurs cartographiques Leaflet, gestion de stock temps réel et solutions métiers.',
     icon: 'laptop',
     stackPreview: ['React', 'TypeScript', 'Node.js', 'Fastify'],
   },
@@ -59,11 +83,11 @@ export interface Project {
   githubUrl: string;
   demoUrl?: string;
   featured: boolean; // carte principale du pôle
-  icon: 'shield' | 'brain' | 'eye' | 'kafka' | 'pytorch' | 'cpu' | 'scan' | 'map' | 'store' | 'bag' | 'building' | 'home' | 'hospital' | 'truck';
+  icon: 'shield' | 'brain' | 'eye' | 'kafka' | 'pytorch' | 'cpu' | 'scan' | 'map' | 'store' | 'bag' | 'building' | 'home' | 'hospital' | 'truck' | 'cloud';
 }
 
 export const projects: Project[] = [
-  // ─── 1. Pôle Cyber & IAM ──────────────────────────────────────────────────
+  // ─── 1. Cybersecurity Automation ──────────────────────────────────────────
   {
     id: 'iam-role-mining',
     name: 'IAM Role Mining & SoD',
@@ -87,11 +111,11 @@ export const projects: Project[] = [
     icon: 'eye',
   },
 
-  // ─── 2. Pôle ML, DL & GenAI ───────────────────────────────────────────────
+  // ─── 2. Computer Vision & DL ──────────────────────────────────────────────
   {
     id: 'ter-histopathology',
     name: 'Histopathologie Camelyon (WSI)',
-    category: 'mldl',
+    category: 'vision_dl',
     pole: 'ML',
     stack: ['PyTorch', 'Vision Transformers', 'UNI2-h', 'DINOv2'],
     description: 'Classification et explicabilité de lames histopathologiques pour la détection de lésions tumorales (WSI).',
@@ -100,20 +124,9 @@ export const projects: Project[] = [
     icon: 'pytorch',
   },
   {
-    id: 'oncomind',
-    name: 'OncoMind (RAG Médical)',
-    category: 'mldl',
-    pole: 'GenAI',
-    stack: ['Python', 'ChromaDB', 'Ollama', 'LangChain'],
-    description: 'Assistant RAG local pour analyser des publications oncologiques complexes de 50+ pages sans fuite de données.',
-    githubUrl: 'https://github.com/vvazzim/oncomind',
-    featured: true,
-    icon: 'brain',
-  },
-  {
     id: 'vmi-lab',
     name: 'VMI-LAB (Recherche M2 DL/Vision)',
-    category: 'mldl',
+    category: 'vision_dl',
     pole: 'ML',
     stack: ['Python', 'PyTorch', 'Jupyter', 'Computer Vision'],
     description: 'Socle de recherche Master 2 : vision 3D, segmentation et modèles Deep Learning pour systèmes critiques.',
@@ -124,7 +137,7 @@ export const projects: Project[] = [
   {
     id: 'coindetect',
     name: 'CoinDetect (Vision Morphologique)',
-    category: 'mldl',
+    category: 'vision_dl',
     pole: 'ML',
     stack: ['Python', 'OpenCV', 'Image Processing'],
     description: "Détection et classification automatique d'objets et monnaies par vision par ordinateur et morphologie.",
@@ -135,7 +148,7 @@ export const projects: Project[] = [
   {
     id: 'staircase-detection',
     name: 'Staircase Step Detection',
-    category: 'mldl',
+    category: 'vision_dl',
     pole: 'ML',
     stack: ['Python', 'OpenCV', 'Edge Detection'],
     description: "Analyse d'images et détection automatique de marches d'escalier pour l'accessibilité et la robotique.",
@@ -144,11 +157,35 @@ export const projects: Project[] = [
     icon: 'scan',
   },
 
-  // ─── 3. Pôle Cloud & DevOps ───────────────────────────────────────────────
+  // ─── 3. Machine Learning & NLP ────────────────────────────────────────────
+  {
+    id: 'oncomind',
+    name: 'OncoMind (RAG Médical)',
+    category: 'ml_nlp',
+    pole: 'GenAI',
+    stack: ['Python', 'ChromaDB', 'Ollama', 'LangChain'],
+    description: 'Assistant RAG local pour analyser des publications oncologiques complexes de 50+ pages sans fuite de données.',
+    githubUrl: 'https://github.com/vvazzim/oncomind',
+    featured: true,
+    icon: 'brain',
+  },
+  {
+    id: 'graphworks',
+    name: 'GraphWorks (Algorithmes de Graphes)',
+    category: 'ml_nlp',
+    pole: 'ML',
+    stack: ['MATLAB', 'Graph Algorithms', 'BFS/DFS', 'Dijkstra'],
+    description: "Extension MATLAB pour la manipulation avancée de graphes et l'intégration d'algorithmes d'exploration.",
+    githubUrl: 'https://github.com/vvazzim/GraphWorks',
+    featured: false,
+    icon: 'cpu',
+  },
+
+  // ─── 4. Data Engineering ──────────────────────────────────────────────────
   {
     id: 'fake-news-platform',
     name: 'Fake News Streaming Platform',
-    category: 'devops',
+    category: 'data_eng',
     pole: 'Cloud',
     stack: ['Kafka', 'FastAPI', 'PostgreSQL', 'Docker', 'BERT'],
     description: 'Plateforme distribuée de détection de fake news avec ingestion Kafka, NLP BERT et réentraînement continu.',
@@ -157,11 +194,24 @@ export const projects: Project[] = [
     icon: 'kafka',
   },
 
-  // ─── 4. Pôle SaaS & Solutions Digitales ────────────────────────────────────
+  // ─── 5. Cloud & DevOps ────────────────────────────────────────────────────
+  {
+    id: 'pipeline-vinci',
+    name: 'Pipeline CI/CD & Cloud Orchestration',
+    category: 'cloud_devops',
+    pole: 'Cloud',
+    stack: ['Azure DevOps', 'Kubernetes', 'Docker', 'CI/CD'],
+    description: 'Architecture CI/CD souveraine et orchestration conteneurisée pour systèmes critiques (certifié AZ-400).',
+    githubUrl: 'https://github.com/vvazzim',
+    featured: true,
+    icon: 'cloud',
+  },
+
+  // ─── 6. Web Full-Stack Development ────────────────────────────────────────
   {
     id: 'maparis',
     name: 'MAPARIS (Itinéraires Sécurisés)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['TypeScript', 'React', 'Fastify', 'Leaflet', 'Socket.io'],
     description: 'Itinéraires piétons sécurisés à Paris avec streaming temps réel des manifestations pour éviter les risques.',
@@ -172,7 +222,7 @@ export const projects: Project[] = [
   {
     id: 'babelstore',
     name: 'BABELSTORE (Gestion de Stock SaaS)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['Astro', 'Tailwind CSS', 'JavaScript'],
     description: 'Solution de gestion de stock, inventaire et point de vente temps réel pour commerce de détail.',
@@ -184,7 +234,7 @@ export const projects: Project[] = [
   {
     id: 'cozyspace-dz',
     name: 'Cozyspace-DZ (Espaces Coworking)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['Astro', 'Tailwind CSS', 'JavaScript'],
     description: "Plateforme de gestion d'inventaire, réservation d'espaces coworking et équipements partagés.",
@@ -196,7 +246,7 @@ export const projects: Project[] = [
   {
     id: 'dzpiece',
     name: 'DZPIECE (Pièces Auto Casses)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['JavaScript', 'Node.js', 'Express', 'Leaflet'],
     description: 'Moteur de recherche et cartographie communautaire de pièces détachées automobiles avec casses.',
@@ -207,7 +257,7 @@ export const projects: Project[] = [
   {
     id: 'macdi',
     name: 'MACDI (Cartographie Grossistes)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['JavaScript', 'React', 'REST API'],
     description: 'Moteur de recherche et cartographie géolocalisée pour grossistes et commerces agroalimentaires.',
@@ -218,7 +268,7 @@ export const projects: Project[] = [
   {
     id: 'real-estate-website',
     name: 'Real-Estate Showcase',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['JavaScript', 'React', 'Tailwind CSS'],
     description: "Plateforme d'annonces immobilières interactive avec navigation fluide et recherche géolocalisée.",
@@ -230,7 +280,7 @@ export const projects: Project[] = [
   {
     id: 'frmedicall',
     name: 'FRMediCall (Cabinets Médicaux)',
-    category: 'saas',
+    category: 'web_fullstack',
     pole: 'SWE',
     stack: ['JavaScript', 'Node.js', 'MongoDB', 'Express'],
     description: 'Système de gestion pour cabinets médicaux : flux de consultations, dossiers patients et prise de RDV.',

@@ -26,8 +26,8 @@ const serviceData = [
   },
   {
     icon: <FaBrain />,
-    title: 'Computer Vision',
-    description: 'Image classification, segmentation and visual representation learning using CNNs and Transformers.',
+    title: 'Computer Vision & DL',
+    description: 'Image classification, segmentation and visual representation learning using CNNs, Vision Transformers and Deep Learning.',
   },
   {
     icon: <FaRobot />,
