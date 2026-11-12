@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Liste de phrases dynamiques vibrantes et actuelles (GenAI, Threat Intel, OSINT, RAG, Classification...)
+// Pépites techniques orientées valeur et crédibilité terrain
 const HERO_VIBES = [
   {
     prefix: 'Je construis des systèmes critiques avec :',
     highlight: 'GenAI & Threat Intel',
-    badge: 'Production 24/7',
+    badge: 'Prod 24/7',
   },
   {
     prefix: "J'industrialise des pipelines souverains de :",
@@ -30,7 +30,7 @@ const HERO_VIBES = [
   },
   {
     prefix: 'Je conçois des plateformes distribuées en :',
-    highlight: 'Streaming Kafka, BERT & Cloud',
+    highlight: 'Streaming Kafka & Kubernetes',
     badge: 'F1 = 0.89',
   },
 ];
@@ -49,26 +49,26 @@ const HeroRotator = () => {
   const current = HERO_VIBES[index];
 
   return (
-    <div className="my-3 min-h-[64px] flex flex-col justify-center">
+    <div className="my-3 min-h-[52px] flex items-center justify-center xl:justify-start">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
-          initial={{ opacity: 0, y: 14 }}
+          initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -14 }}
+          exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2.5 gap-y-1.5 text-base sm:text-lg md:text-xl font-medium"
+          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2.5 gap-y-1.5 text-base sm:text-lg md:text-xl font-normal"
         >
-          {/* Action Prefix (La phrase se transforme dynamiquement) */}
-          <span className="text-white/85 tracking-tight font-light">
+          {/* Action Prefix */}
+          <span className="text-white/90 tracking-normal font-light">
             {current.prefix}
           </span>
 
-          {/* Glowing Highlight Keyword Tag */}
-          <span className="relative inline-flex items-center gap-1.5 px-3 py-1 rounded-xl bg-accent/15 border border-accent/50 text-accent font-bold tracking-wide shadow-md shadow-accent/20 backdrop-blur-md">
+          {/* High-contrast Pill Tag */}
+          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-gradient-to-r from-accent/90 to-accent text-white font-bold tracking-wide shadow-lg shadow-accent/40 border border-white/30 backdrop-blur-md">
             <span>{current.highlight}</span>
             {current.badge && (
-              <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 rounded-md bg-accent/30 text-white/90">
+              <span className="text-[10px] font-mono tracking-wider uppercase px-1.5 py-0.5 rounded-md bg-black/40 text-white/95">
                 {current.badge}
               </span>
             )}

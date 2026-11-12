@@ -1,43 +1,41 @@
-//next image
 import Image from 'next/image';
-
-//components
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from '../components/ProjectsBtn';
-import Avatar from '../components/Avatar';
 import HeroRotator from '../components/HeroRotator';
-
-//framer motion
 import { motion } from 'framer-motion';
-
-//variants
 import { fadeIn } from '../variants';
 import React from "react";
 
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full relative overflow-hidden">
-      {/* 1. Fullscreen Particles Background (Étiré sur TOUT l'écran, gauche à droite) */}
+      {/* ── PLAN 0 (Fond) : Artwork d'explosion étiré + gradient d'ambiance ── */}
       <div className="w-full h-full absolute inset-0 z-0 pointer-events-none overflow-hidden">
+        <div className="w-full h-full xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat mix-blend-color-dodge translate-z-0 opacity-90" />
+        <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/50 to-transparent" />
+      </div>
+
+      {/* ── PLAN 1 (Milieu) : Particules sur 100% de l'écran, AU-DESSUS de l'image de fond et du gradient ── */}
+      <div className="w-full h-full absolute inset-0 z-10 pointer-events-none overflow-hidden">
         <ParticlesContainer />
       </div>
 
-      {/* 2. Text & Content Layer (au-dessus des particules) */}
-      <div className="w-full h-full bg-gradient-to-r from-primary/30 via-black/40 to-transparent relative z-10">
-        <div className="text-center flex flex-col justify-center xl:pt-36 xl:text-left h-full container mx-auto px-4">
-          {/* Main Title */}
+      {/* ── PLAN 2 (Premier plan) : Contenu texte et interactions (AU-DESSUS des particules) ── */}
+      <div className="w-full h-full relative z-20 flex items-center bg-transparent">
+        <div className="container mx-auto px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full xl:pt-20">
+          {/* Titre Principal */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 !mb-2 tracking-tight"
+            className="h1 !mb-1 tracking-tight"
           >
             Ingénieur IA & Automatisation <br />
             <span className="text-accent">Systèmes critiques, GenAI & Cyber</span>
           </motion.h1>
 
-          {/* Dynamic Transformative Hero Rotator (OSINT, Threat Intel, RAG, etc.) */}
+          {/* Accroche Dynamique Transformative */}
           <motion.div
             variants={fadeIn('down', 0.25)}
             initial="hidden"
@@ -47,23 +45,23 @@ const Home = () => {
             <HeroRotator />
           </motion.div>
 
-          {/* Subtitle / Punchy Credibility Receipts */}
+          {/* Synthèse de positionnement & crédibilité terrain */}
           <motion.p
             variants={fadeIn('down', 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-8 xl:mb-12 text-sm sm:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-8 xl:mb-10 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
-            Diplômé du Master 2 Recherche Informatique (Université Paris Cité, 2026), doublement certifié{' '}
+            Diplômé du Master 2 Recherche Informatique (Université Paris Cité, 2026), certifié{' '}
             <span className="text-white font-medium">Azure DevOps Expert (AZ-400)</span> et{' '}
             <span className="text-white font-medium">ANSSI SecNumacadémie (96%)</span>.
             <br />
-            Je conçois et j'industrialise des systèmes d'IA robustes en environnements critiques.
+            Production 24/7 (1 500 dossiers/jour, CERT VINCI). Je conçois et j'industrialise des systèmes d'IA robustes en environnements critiques.
           </motion.p>
 
-          {/* Action Button */}
-          <div className="flex justify-center xl:hidden relative z-20">
+          {/* Bouton Projets */}
+          <div className="flex justify-center xl:hidden relative z-30">
             <ProjectsBtn />
           </div>
           <motion.div
@@ -71,16 +69,11 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex z-20"
+            className="hidden xl:flex z-30"
           >
             <ProjectsBtn />
           </motion.div>
         </div>
-      </div>
-
-      {/* 3. Decorative Accent Explosion Layer (Right side) */}
-      <div className="w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none z-[5]">
-        <div className="bg-none xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat w-full h-full absolute mix-blend-color-dodge translate-z-0 opacity-80" />
       </div>
     </div>
   );

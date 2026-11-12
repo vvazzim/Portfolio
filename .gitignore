@@ -36,4 +36,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# private personal views
+pages/work-mindmap.js
+
 .vercel
