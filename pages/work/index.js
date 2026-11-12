@@ -7,18 +7,18 @@ import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
 
 const Work = () => {
-  // Catégorie active par défaut : 'cyber' (alignée avec les services)
-  const [selectedCategory, setSelectedCategory] = useState('cyber');
+  // Catégorie active par défaut : 'vision_dl' (CV & DL)
+  const [selectedCategory, setSelectedCategory] = useState('vision_dl');
 
-  // Décompte dynamique des projets par service
+  // Décompte dynamique des projets par catégorie
   const counts = useMemo(() => {
     return {
-      cyber: projects.filter((p) => p.category === 'cyber').length,
       vision_dl: projects.filter((p) => p.category === 'vision_dl').length,
       ml_nlp: projects.filter((p) => p.category === 'ml_nlp').length,
+      cyber: projects.filter((p) => p.category === 'cyber').length,
+      saas: projects.filter((p) => p.category === 'saas').length,
       data_eng: projects.filter((p) => p.category === 'data_eng').length,
       cloud_devops: projects.filter((p) => p.category === 'cloud_devops').length,
-      web_fullstack: projects.filter((p) => p.category === 'web_fullstack').length,
     };
   }, []);
 
@@ -31,7 +31,7 @@ const Work = () => {
       <Circles />
       <div className="container mx-auto px-4 xl:px-8">
         <div className="flex flex-col xl:flex-row gap-x-10 items-center justify-between">
-          {/* ── COLONNE GAUCHE (32vw) : Titre, Cadrage & Sélecteur de Services ── */}
+          {/* ── COLONNE GAUCHE (32vw) : Titre, Cadrage & Boutons Abrégés ── */}
           <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-6 xl:mb-0">
             <motion.h2
               variants={fadeIn('up', 0.2)}
@@ -53,7 +53,7 @@ const Work = () => {
               {activeCategoryInfo.description}
             </motion.p>
 
-            {/* Sélecteur des Services (Synchronisé avec la page Services) */}
+            {/* Boutons abrégés dans la colonne gauche (Synchronisés avec les onglets) */}
             <motion.div
               variants={fadeIn('up', 0.4)}
               initial="hidden"
@@ -69,7 +69,7 @@ const Work = () => {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
+                    className={`px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
                       isActive
                         ? 'bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold'
                         : 'bg-white/[0.04] text-white/75 border-white/10 hover:bg-white/[0.08] hover:text-white'
@@ -77,7 +77,7 @@ const Work = () => {
                   >
                     <span className="truncate pr-1">{cat.title}</span>
                     <span
-                      className={`text-[10px] px-1.5 py-0.5 rounded-md font-normal tabular-nums shrink-0 ${
+                      className={`text-[10px] px-2 py-0.5 rounded-md font-normal tabular-nums shrink-0 ${
                         isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-white/70'
                       }`}
                     >
@@ -89,7 +89,7 @@ const Work = () => {
             </motion.div>
           </div>
 
-          {/* ── COLONNE DROITE (65vw) : Le Showcase Slider (PAS DE PHOTO, 100% ICÔNES) ── */}
+          {/* ── COLONNE DROITE (65vw) : Le Showcase Slider (Boutons au-dessus des cards) ── */}
           <div className="w-full xl:max-w-[65%]">
             <motion.div
               key={`slider-${selectedCategory}`}
@@ -98,8 +98,8 @@ const Work = () => {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="w-full"
             >
-              {/* En-tête de catégorie avec Tabs horizontaux */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-y-3 mb-4 pb-3 border-b border-white/10">
+              {/* En-tête avec Icône active + Onglets abrégés au-dessus des cards */}
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-y-3 mb-4 pb-3 border-b border-white/10">
                 <div className="flex items-center gap-3">
                   <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0">
                     {renderProjectIcon(activeCategoryInfo.icon, 'text-lg')}
@@ -114,8 +114,8 @@ const Work = () => {
                   </div>
                 </div>
 
-                {/* Switcher horizontal d'onglets pour navigation directe */}
-                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 sm:pb-0 scrollbar-none">
+                {/* Onglets avec abréviations au-dessus des cards de projet */}
+                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
                   {CATEGORIES.map((c) => {
                     const isActive = c.id === selectedCategory;
 
@@ -123,7 +123,7 @@ const Work = () => {
                       <button
                         key={c.id}
                         onClick={() => setSelectedCategory(c.id)}
-                        className={`px-2.5 py-1.5 rounded-lg text-xs whitespace-nowrap transition-all shrink-0 ${
+                        className={`px-3 py-1.5 rounded-lg text-xs whitespace-nowrap transition-all shrink-0 ${
                           isActive
                             ? 'bg-accent text-white font-semibold shadow-md shadow-accent/30'
                             : 'bg-white/[0.05] text-white/60 hover:text-white hover:bg-white/10'
@@ -136,7 +136,7 @@ const Work = () => {
                 </div>
               </div>
 
-              {/* Slider des projets du service sélectionné */}
+              {/* Slider des projets */}
               <WorkSlider categoryId={selectedCategory} />
             </motion.div>
           </div>
