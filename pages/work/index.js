@@ -3,14 +3,15 @@ import Circles from '../../components/Circles';
 import PoleTabs from '../../components/PoleTabs';
 import PoleCardStack from '../../components/PoleCardStack';
 import WorkSlider from '../../components/WorkSlider';
+import WorkTree from '../../components/WorkTree';
 import { projects } from '../../src/data/projects';
 import { motion } from 'framer-motion';
 import { fadeIn } from '../../variants';
-import { FaThLarge, FaSlidersH } from 'react-icons/fa';
+import { FaThLarge, FaSlidersH, FaProjectDiagram } from 'react-icons/fa';
 
 const Work = () => {
   const [selectedPole, setSelectedPole] = useState('Tous');
-  const [viewMode, setViewMode] = useState('stack'); // 'stack' or 'slider'
+  const [viewMode, setViewMode] = useState('tree'); // 'tree', 'stack', 'slider'
 
   // Pre-calculate count per pole
   const counts = useMemo(() => {
@@ -57,8 +58,18 @@ const Work = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex items-center gap-2 self-start md:self-auto bg-white/5 p-1 rounded-xl border border-white/10"
+            className="flex items-center gap-1.5 self-start md:self-auto bg-white/5 p-1 rounded-xl border border-white/10"
           >
+            <button
+              onClick={() => setViewMode('tree')}
+              className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
+                viewMode === 'tree'
+                  ? 'bg-accent text-white shadow-sm'
+                  : 'text-white/60 hover:text-white'
+              }`}
+            >
+              <FaProjectDiagram className="text-xs" /> Arborescence ML/DL
+            </button>
             <button
               onClick={() => setViewMode('stack')}
               className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
@@ -82,7 +93,7 @@ const Work = () => {
           </motion.div>
         </div>
 
-        {/* Pole Filter Tabs */}
+        {/* Pole Filter Tabs (when stack mode is active) */}
         {viewMode === 'stack' && (
           <motion.div
             variants={fadeIn('down', 0.35)}
@@ -99,7 +110,19 @@ const Work = () => {
         )}
 
         {/* Content View */}
-        {viewMode === 'stack' ? (
+        {viewMode === 'tree' && (
+          <motion.div
+            variants={fadeIn('up', 0.4)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="w-full mt-4"
+          >
+            <WorkTree />
+          </motion.div>
+        )}
+
+        {viewMode === 'stack' && (
           <motion.div
             variants={fadeIn('up', 0.4)}
             initial="hidden"
@@ -112,7 +135,9 @@ const Work = () => {
               onSelectPole={setSelectedPole}
             />
           </motion.div>
-        ) : (
+        )}
+
+        {viewMode === 'slider' && (
           <motion.div
             variants={fadeIn('up', 0.4)}
             initial="hidden"
