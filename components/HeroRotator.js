@@ -60,17 +60,20 @@ const HeroRotator = () => {
           className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2.5 gap-y-1.5 text-base sm:text-lg md:text-xl font-normal"
         >
           {/* Action Prefix */}
-          <span className="text-white/90 tracking-normal font-light">
+          <span className="text-white/80 tracking-tight font-light">
             {current.prefix}
           </span>
 
-          {/* High-contrast Pill Tag */}
-          <span className="inline-flex items-center gap-2 px-3 py-1 rounded-xl bg-gradient-to-r from-accent/90 to-accent text-white font-bold tracking-wide shadow-lg shadow-accent/40 border border-white/30 backdrop-blur-md">
-            <span>{current.highlight}</span>
+          {/* High-end Precision Tag (distinctive, non-templated) */}
+          <span className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-xl bg-white/[0.07] border border-white/20 backdrop-blur-md text-white shadow-lg shadow-black/30">
+            <span className="font-semibold tracking-tight text-white">{current.highlight}</span>
             {current.badge && (
-              <span className="text-[10px] font-mono tracking-wider uppercase px-1.5 py-0.5 rounded-md bg-black/40 text-white/95">
-                {current.badge}
-              </span>
+              <>
+                <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
+                <span className="text-xs font-normal text-white/85">
+                  {current.badge}
+                </span>
+              </>
             )}
           </span>
         </motion.div>

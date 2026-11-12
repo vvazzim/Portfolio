@@ -8,12 +8,12 @@ import { fadeIn } from '../../variants';
 import { FaProjectDiagram } from 'react-icons/fa';
 
 const POLE_FILTERS = [
-  { id: 'Tous', label: 'Tous les projets', icon: '✦' },
-  { id: 'Cyber', label: 'Cyber & Threat Intel', icon: '🛡️' },
-  { id: 'GenAI', label: 'GenAI & RAG Souverain', icon: '🧠' },
-  { id: 'ML', label: 'ML & Computer Vision', icon: '👁️' },
-  { id: 'Cloud', label: 'Cloud & Streaming Kafka', icon: '☁️' },
-  { id: 'SWE', label: 'SWE & Solutions Digitales', icon: '💻' },
+  { id: 'Tous', label: 'Tous les projets' },
+  { id: 'Cyber', label: 'Cyber & IAM' },
+  { id: 'GenAI', label: 'GenAI & RAG' },
+  { id: 'ML', label: 'ML & Vision' },
+  { id: 'Cloud', label: 'Cloud & Kafka' },
+  { id: 'SWE', label: 'Solutions SWE' },
 ];
 
 const Work = () => {
@@ -64,12 +64,9 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="flex flex-col gap-1.5 max-w-[380px] mx-auto lg:mx-0 w-full"
+              className="flex flex-col gap-2 max-w-[380px] mx-auto lg:mx-0 w-full"
             >
-              <span className="text-[10px] uppercase font-mono tracking-widest text-white/40 mb-1 block">
-                Filtrer par domaine :
-              </span>
-              <div className="grid grid-cols-2 gap-1.5">
+              <div className="grid grid-cols-2 gap-2">
                 {POLE_FILTERS.map((f) => {
                   const isActive = selectedPole === f.id;
                   const count = counts[f.id] || 0;
@@ -78,19 +75,16 @@ const Work = () => {
                     <button
                       key={f.id}
                       onClick={() => setSelectedPole(f.id)}
-                      className={`px-3 py-2 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
+                      className={`px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
                         isActive
-                          ? 'bg-accent text-white border-accent shadow-md shadow-accent/30 font-semibold'
-                          : 'bg-white/[0.03] text-white/70 border-white/10 hover:bg-white/[0.08] hover:text-white'
+                          ? 'bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold'
+                          : 'bg-white/[0.04] text-white/75 border-white/10 hover:bg-white/[0.08] hover:text-white'
                       }`}
                     >
-                      <span className="truncate flex items-center gap-1.5">
-                        <span className="text-[11px]">{f.icon}</span>
-                        <span className="truncate">{f.label.split(' ')[0]}</span>
-                      </span>
+                      <span className="truncate">{f.label}</span>
                       <span
-                        className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono shrink-0 ml-1 ${
-                          isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-white/60'
+                        className={`text-[11px] px-2 py-0.5 rounded-md font-normal tabular-nums shrink-0 ml-1.5 ${
+                          isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-white/70'
                         }`}
                       >
                         {count}
@@ -103,11 +97,11 @@ const Work = () => {
               {/* Lien discret vers la Mind-Map de recherche (conservée pour Wassim) */}
               <Link
                 href="/work-mindmap"
-                className="mt-4 inline-flex items-center gap-2 text-xs text-white/45 hover:text-accent transition-colors self-start"
+                className="mt-4 inline-flex items-center gap-2 text-xs text-white/50 hover:text-white transition-colors self-start group"
               >
-                <FaProjectDiagram className="text-[11px]" />
-                <span className="underline underline-offset-4 decoration-white/20 hover:decoration-accent">
-                  Visualiser la Mind-Map de recherche ML/DL →
+                <FaProjectDiagram className="text-accent text-xs group-hover:scale-110 transition-transform" />
+                <span className="underline underline-offset-4 decoration-white/20 hover:decoration-white/60">
+                  Arborescence de recherche ML/DL (vue Mind-Map)
                 </span>
               </Link>
             </motion.div>
