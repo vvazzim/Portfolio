@@ -3,6 +3,7 @@ export type CategoryId = 'cyber' | 'mldl' | 'devops' | 'saas';
 export interface CategoryInfo {
   id: CategoryId;
   title: string;
+  shortLabel: string;
   subtitle: string;
   description: string;
   icon: 'shield' | 'brain' | 'cloud' | 'laptop';
@@ -13,6 +14,7 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'cyber',
     title: 'Cyber & IAM',
+    shortLabel: 'Cyber',
     subtitle: 'Sécurité, IAM Role Mining & Anti-Phishing',
     description: 'Audit Active Directory, cartographie des rôles, détection de conflits SoD et reconnaissance SIFT.',
     icon: 'shield',
@@ -21,6 +23,7 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'mldl',
     title: 'ML, DL & GenAI',
+    shortLabel: 'ML / DL',
     subtitle: 'Vision WSI Camelyon, Transformers & RAG Souverain',
     description: 'Classification histopathologique (AUC 0.87), architectures RAG locales et traitement d’images morphologique.',
     icon: 'brain',
@@ -29,6 +32,7 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'devops',
     title: 'DevOps & Cloud',
+    shortLabel: 'DevOps',
     subtitle: 'Streaming Kafka, Kubernetes, Ingestion & CI/CD',
     description: 'Pipelines Big Data distribués, NLP BERT temps réel, orchestration conteneurisée et pratiques Azure.',
     icon: 'cloud',
@@ -37,6 +41,7 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'saas',
     title: 'SaaS & Solutions Digitales',
+    shortLabel: 'SaaS',
     subtitle: 'Plateformes Web, Cartographie temps réel & E-Commerce',
     description: 'Applications web production, moteurs cartographiques Leaflet, gestion de stock et solutions métiers.',
     icon: 'laptop',
