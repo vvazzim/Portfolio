@@ -4,10 +4,7 @@ import {
   Controls,
   Background,
   BackgroundVariant,
-  useNodesState,
-  useEdgesState,
 } from '@xyflow/react';
-import '@xyflow/react/dist/style.css';
 
 import RootNode from './RootNode';
 import BranchNode from './BranchNode';
@@ -21,15 +18,15 @@ const nodeTypes = {
 };
 
 const WorkTreeCanvas = () => {
-  const [selectedProject, setSelectedProject] = useState(null);
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
 
   const handleSelectProject = useCallback((projectData) => {
-    setSelectedProject((prev) => (prev?.id === projectData?.id ? null : projectData));
+    setSelectedProjectId((prev) => (prev === projectData?.id ? null : projectData?.id));
   }, []);
 
-  // Construct initial nodes
-  const initialNodes = useMemo(() => {
-    const nodes = [
+  // Compute nodes dynamically with exact selection state
+  const nodes = useMemo(() => {
+    const list = [
       // 1. Root Node
       {
         id: 'root-work',
@@ -51,24 +48,24 @@ const WorkTreeCanvas = () => {
     const startY = 30;
 
     mlDlProjects.forEach((proj, idx) => {
-      nodes.push({
+      list.push({
         id: proj.id,
         type: 'projectNode',
         position: { x: 570, y: startY + idx * verticalSpacing },
         data: {
           ...proj,
           onSelect: handleSelectProject,
-          isExpanded: selectedProject?.id === proj.id,
+          isExpanded: selectedProjectId === proj.id,
         },
       });
     });
 
-    return nodes;
-  }, [handleSelectProject, selectedProject]);
+    return list;
+  }, [handleSelectProject, selectedProjectId]);
 
-  // Construct edges connecting Root -> Branch -> Projects
-  const initialEdges = useMemo(() => {
-    const edges = [
+  // Compute edges connecting Root -> Branch -> Projects
+  const edges = useMemo(() => {
+    const list = [
       {
         id: 'edge-root-mldl',
         source: 'root-work',
@@ -80,52 +77,33 @@ const WorkTreeCanvas = () => {
     ];
 
     mlDlProjects.forEach((proj) => {
-      edges.push({
+      const isSelected = selectedProjectId === proj.id;
+      list.push({
         id: `edge-mldl-${proj.id}`,
         source: 'branch-mldl',
         target: proj.id,
         type: 'smoothstep',
-        animated: selectedProject?.id === proj.id,
+        animated: isSelected,
         style: {
-          stroke: selectedProject?.id === proj.id ? '#f13024' : '#a855f7',
-          strokeWidth: selectedProject?.id === proj.id ? 2.5 : 1.5,
+          stroke: isSelected ? '#f13024' : '#a855f7',
+          strokeWidth: isSelected ? 2.5 : 1.5,
           opacity: 0.85,
         },
       });
     });
 
-    return edges;
-  }, [selectedProject]);
-
-  const [nodes, , onNodesChange] = useNodesState(initialNodes);
-  const [edges, , onEdgesChange] = useEdgesState(initialEdges);
-
-  // Keep node expanded state synced
-  React.useEffect(() => {
-    setNodes((nds) =>
-      nds.map((node) => {
-        if (node.type === 'projectNode') {
-          return {
-            ...node,
-            data: {
-              ...node.data,
-              isExpanded: selectedProject?.id === node.id,
-            },
-          };
-        }
-        return node;
-      })
-    );
-  }, [selectedProject]);
+    return list;
+  }, [selectedProjectId]);
 
   return (
     <div className="w-full h-[620px] rounded-2xl overflow-hidden border border-white/10 bg-[#0d0e1b]/80 shadow-2xl relative">
       <ReactFlow
         nodes={nodes}
         edges={edges}
-        onNodesChange={onNodesChange}
-        onEdgesChange={onEdgesChange}
         nodeTypes={nodeTypes}
+        nodesDraggable={false}
+        nodesConnectable={false}
+        elementsSelectable={true}
         fitView
         fitViewOptions={{ padding: 0.2 }}
         minZoom={0.4}
