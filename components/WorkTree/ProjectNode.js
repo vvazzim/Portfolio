@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Handle, Position } from '@xyflow/react';
 import { FaExternalLinkAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 
 const ProjectNode = ({ data, selected }) => {
-  const [isHovered, setIsHovered] = useState(false);
-  const isExpanded = selected || isHovered || data?.isExpanded;
-
-  const { name, badge, description, tech, link, onSelect } = data || {};
+  const { name, badge, description, tech, link, onSelect, onHover, isExpanded } = data || {};
 
   return (
     <div
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
+      onMouseEnter={() => onHover && onHover(data?.id)}
+      onMouseLeave={() => onHover && onHover(null)}
       onClick={() => onSelect && onSelect(data)}
       className={`relative rounded-2xl transition-all duration-300 backdrop-blur-md cursor-pointer ${
         isExpanded
-          ? 'w-[320px] bg-[#1a1b2e]/95 border-2 border-accent shadow-2xl shadow-accent/25 z-30'
-          : 'w-[230px] bg-[#151628]/85 border border-white/15 shadow-lg hover:border-accent/60 hover:shadow-accent/15 z-10'
+          ? 'w-[340px] bg-[#1a1b2e]/98 border-2 border-accent shadow-2xl shadow-accent/40 scale-[1.02] z-50 ring-2 ring-accent/30'
+          : 'w-[250px] bg-[#151628]/90 border border-white/15 shadow-md hover:border-accent/70 hover:shadow-accent/20 z-10'
       }`}
     >
       <Handle
@@ -27,7 +24,7 @@ const ProjectNode = ({ data, selected }) => {
 
       {/* Visual Badge (ex: "VMI LAB" en haut à droite de la bulle) */}
       {badge && (
-        <span className="absolute -top-2.5 -right-2 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/30 text-amber-300 border border-amber-500/70 shadow-lg shadow-amber-950/60 z-20 pointer-events-none">
+        <span className="absolute -top-3 -right-2 px-2.5 py-0.5 rounded-full text-[10px] font-extrabold uppercase tracking-wider bg-amber-500/30 text-amber-300 border border-amber-500/70 shadow-lg shadow-amber-950/70 z-30 pointer-events-none">
           {badge}
         </span>
       )}
@@ -42,14 +39,14 @@ const ProjectNode = ({ data, selected }) => {
         </div>
         <button
           type="button"
-          aria-label="Toggle details"
+          aria-label="Afficher les détails"
           className="text-white/60 hover:text-white text-xs p-1 rounded-md hover:bg-white/10 shrink-0"
         >
           {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
         </button>
       </div>
 
-      {/* Collapsed Preview (when not expanded) */}
+      {/* Collapsed State Preview */}
       {!isExpanded && (
         <div className="px-3.5 py-2.5">
           <div className="flex flex-wrap gap-1">
@@ -68,29 +65,29 @@ const ProjectNode = ({ data, selected }) => {
             )}
           </div>
           <span className="text-[10px] text-accent/80 block mt-1.5 font-medium">
-            Cliquer pour explorer →
+            Survoler / Cliquer pour détails →
           </span>
         </div>
       )}
 
-      {/* Expanded Content (Hover or Click) */}
+      {/* Expanded State (Full description, tech stack, and link button) */}
       {isExpanded && (
-        <div className="p-3.5 space-y-3 animate-fadeIn">
-          {/* Description validée (non modifiée) */}
-          <p className="text-xs text-white/80 leading-relaxed">
+        <div className="p-4 space-y-3">
+          {/* Description validée sans aucune modification */}
+          <p className="text-xs text-white/90 leading-relaxed font-light">
             {description}
           </p>
 
-          {/* Tech Stack Pills */}
+          {/* Tech stack badges */}
           <div>
             <span className="text-[10px] uppercase font-mono text-white/50 block mb-1">
-              Technologies :
+              Stack technique :
             </span>
             <div className="flex flex-wrap gap-1">
               {tech?.map((item) => (
                 <span
                   key={item}
-                  className="text-[10px] px-2 py-0.5 rounded-md bg-white/10 border border-white/15 text-white/90 font-mono"
+                  className="text-[10px] px-2 py-0.5 rounded-md bg-white/10 border border-white/20 text-white/90 font-mono"
                 >
                   {item}
                 </span>
@@ -98,7 +95,7 @@ const ProjectNode = ({ data, selected }) => {
             </div>
           </div>
 
-          {/* Link button: STRICTEMENT si link existe, pas de bouton si link est null */}
+          {/* Link: strict condition (pas de bouton si link est null) */}
           {link ? (
             <div className="pt-2 border-t border-white/10">
               <a
