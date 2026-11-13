@@ -9,6 +9,7 @@ export type CategoryId =
 export interface CategoryInfo {
   id: CategoryId;
   title: string;
+  fullName: string;
   shortLabel: string;
   subtitle: string;
   description: string;
@@ -19,16 +20,18 @@ export interface CategoryInfo {
 export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'vision_dl',
-    title: 'CV & DL',
-    shortLabel: 'CV & DL',
-    subtitle: 'Vision WSI Camelyon, Transformers & Traitement d’Images',
-    description: 'Classification histopathologique (AUC 0.87), architectures Vision Transformers et morphologie mathématique.',
+    title: 'Computer Vision & DL',
+    fullName: 'Computer Vision & Deep Learning',
+    shortLabel: 'Computer Vision',
+    subtitle: 'Vision WSI Camelyon, Transformers & Modèles Fondations',
+    description: 'Classification histopathologique (AUC 0.87), architectures Vision Transformers (UNI2-h, DINOv2) et recherche biomédicale.',
     icon: 'eye',
-    stackPreview: ['PyTorch', 'Vision Transformers', 'UNI2-h', 'OpenCV'],
+    stackPreview: ['PyTorch', 'Vision Transformers', 'UNI2-h', 'DINOv2'],
   },
   {
     id: 'ml_nlp',
-    title: 'ML & NLP',
+    title: 'Machine Learning & NLP',
+    fullName: 'Machine Learning & NLP',
     shortLabel: 'ML & NLP',
     subtitle: 'RAG Souverain, LLMOps & Algorithmique Avancée',
     description: 'Plateforme RAG locale (Retrieval@5 = 89%), analyse documentaire sans fuite de données et modèles NLP.',
@@ -38,8 +41,9 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'cyber',
     title: 'Cybersécurité',
+    fullName: 'Cybersécurité & Audit IAM',
     shortLabel: 'Cybersécurité',
-    subtitle: 'Sécurité, IAM Role Mining & Anti-Phishing',
+    subtitle: 'Sécurité Active Directory, Role Mining & Anti-Phishing',
     description: 'Audit Active Directory, cartographie des rôles, détection de conflits SoD et reconnaissance SIFT.',
     icon: 'shield',
     stackPreview: ['Active Directory', 'SIFT', 'Python', 'SoD'],
@@ -47,16 +51,18 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'saas',
     title: 'SaaS',
+    fullName: 'SaaS & Applications Web',
     shortLabel: 'SaaS',
-    subtitle: 'Plateformes Web Métier, Cartographie & E-Commerce',
+    subtitle: 'Plateformes Métier, Cartographie Temps Réel & E-Commerce',
     description: 'Applications web complètes, moteurs cartographiques Leaflet, gestion de stock temps réel et solutions métiers.',
     icon: 'laptop',
     stackPreview: ['React', 'TypeScript', 'Node.js', 'Fastify'],
   },
   {
     id: 'data_eng',
-    title: 'Data Engineer',
-    shortLabel: 'Data Engineer',
+    title: 'Data Engineering',
+    fullName: 'Data Engineering & Streaming Distribué',
+    shortLabel: 'Data Engineering',
     subtitle: 'Pipelines Temps Réel, Streaming Kafka & Ingestion',
     description: 'Conception et orchestration de pipelines de streaming distribués, ingestion Kafka et NLP en flux continu.',
     icon: 'kafka',
@@ -65,6 +71,7 @@ export const CATEGORIES: CategoryInfo[] = [
   {
     id: 'cloud_devops',
     title: 'Cloud & DevOps',
+    fullName: 'Cloud, DevOps & Conteneurisation',
     shortLabel: 'Cloud & DevOps',
     subtitle: 'Conteneurisation, CI/CD & Déploiement Kubernetes',
     description: 'Architectures résilientes, automatisation CI/CD Azure DevOps (AZ-400), conteneurisation Docker et Kubernetes.',
@@ -109,28 +116,6 @@ export const projects: Project[] = [
     githubUrl: 'https://github.com/vvazzim/VMI-LAB',
     featured: false,
     icon: 'cpu',
-  },
-  {
-    id: 'coindetect',
-    name: 'CoinDetect (Vision Morphologique)',
-    category: 'vision_dl',
-    pole: 'ML',
-    stack: ['Python', 'OpenCV', 'Image Processing'],
-    description: "Détection et classification automatique d'objets et monnaies par vision par ordinateur et morphologie.",
-    githubUrl: 'https://github.com/vvazzim/CoinDetect',
-    featured: false,
-    icon: 'eye',
-  },
-  {
-    id: 'staircase-detection',
-    name: 'Staircase Step Detection',
-    category: 'vision_dl',
-    pole: 'ML',
-    stack: ['Python', 'OpenCV', 'Edge Detection'],
-    description: "Analyse d'images et détection automatique de marches d'escalier pour l'accessibilité et la robotique.",
-    githubUrl: 'https://github.com/vvazzim/Staircase-Step-Detection',
-    featured: false,
-    icon: 'scan',
   },
 
   // ─── 2. ML & NLP ──────────────────────────────────────────────────────────

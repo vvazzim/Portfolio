@@ -53,7 +53,7 @@ const Work = () => {
               {activeCategoryInfo.description}
             </motion.p>
 
-            {/* Boutons abrégés dans la colonne gauche (Synchronisés avec les onglets) */}
+            {/* Boutons de sélection dans la colonne gauche */}
             <motion.div
               variants={fadeIn('up', 0.4)}
               initial="hidden"
@@ -75,7 +75,7 @@ const Work = () => {
                         : 'bg-white/[0.04] text-white/75 border-white/10 hover:bg-white/[0.08] hover:text-white'
                     }`}
                   >
-                    <span className="truncate pr-1">{cat.title}</span>
+                    <span className="pr-1 text-xs leading-tight">{cat.title}</span>
                     <span
                       className={`text-[10px] px-2 py-0.5 rounded-md font-normal tabular-nums shrink-0 ${
                         isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-white/70'
@@ -89,7 +89,7 @@ const Work = () => {
             </motion.div>
           </div>
 
-          {/* ── COLONNE DROITE (65vw) : Le Showcase Slider (Boutons au-dessus des cards) ── */}
+          {/* ── COLONNE DROITE (65vw) : Le Showcase Slider (Titre complet en full sans liste horizontale) ── */}
           <div className="w-full xl:max-w-[65%]">
             <motion.div
               key={`slider-${selectedCategory}`}
@@ -98,41 +98,26 @@ const Work = () => {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="w-full"
             >
-              {/* En-tête avec Icône active + Onglets abrégés au-dessus des cards */}
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-y-3 mb-4 pb-3 border-b border-white/10">
+              {/* En-tête : Titre en full (Computer Vision & Deep Learning) + Sous-titre & Badge */}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-y-2 mb-4 pb-3 border-b border-white/10">
                 <div className="flex items-center gap-3">
-                  <div className="w-9 h-9 rounded-lg flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0">
-                    {renderProjectIcon(activeCategoryInfo.icon, 'text-lg')}
+                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0 shadow-lg shadow-accent/15">
+                    {renderProjectIcon(activeCategoryInfo.icon, 'text-xl')}
                   </div>
                   <div>
-                    <h3 className="text-base font-bold text-white tracking-tight">
-                      {activeCategoryInfo.title}
+                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                      {activeCategoryInfo.fullName || activeCategoryInfo.title}
                     </h3>
-                    <p className="text-[11px] text-white/60">
-                      {counts[selectedCategory]} {counts[selectedCategory] > 1 ? 'projets disponibles' : 'projet disponible'}
+                    <p className="text-xs text-white/60">
+                      {activeCategoryInfo.subtitle}
                     </p>
                   </div>
                 </div>
 
-                {/* Onglets avec abréviations au-dessus des cards de projet */}
-                <div className="flex items-center gap-1.5 overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
-                  {CATEGORIES.map((c) => {
-                    const isActive = c.id === selectedCategory;
-
-                    return (
-                      <button
-                        key={c.id}
-                        onClick={() => setSelectedCategory(c.id)}
-                        className={`px-3 py-1.5 rounded-lg text-xs whitespace-nowrap transition-all shrink-0 ${
-                          isActive
-                            ? 'bg-accent text-white font-semibold shadow-md shadow-accent/30'
-                            : 'bg-white/[0.05] text-white/60 hover:text-white hover:bg-white/10'
-                        }`}
-                      >
-                        {c.shortLabel}
-                      </button>
-                    );
-                  })}
+                <div className="flex items-center gap-2 self-start sm:self-center shrink-0">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/[0.06] border border-white/10 text-white/80 tabular-nums">
+                    {counts[selectedCategory]} {counts[selectedCategory] > 1 ? 'projets disponibles' : 'projet disponible'}
+                  </span>
                 </div>
               </div>
 
