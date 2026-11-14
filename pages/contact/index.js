@@ -41,21 +41,16 @@ const Contact = () => {
             Let's <span className="text-accent">Connect.</span>
           </motion.h2>
 
-          {/* Strategic Availability & Fast-Track Badge */}
-          <motion.div
+          {/* Subtitle */}
+          <motion.p
             variants={fadeIn('up', 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-center mb-8"
+            className="text-center mb-8 text-sm text-white/70 max-w-md mx-auto leading-relaxed font-light"
           >
-            <p className="text-sm text-white/85 max-w-lg mx-auto leading-relaxed">
-              Available <span className="text-accent font-medium">immediately for permanent engineering positions (CDI)</span>.
-            </p>
-            <p className="text-xs text-white/60 mt-1 font-light">
-              French M.Sc. Research Graduate — Eligible for direct Cadre & Passeport Talent sponsorship (fast-track procedure without labor market test).
-            </p>
-          </motion.div>
+            Have a project, a technical challenge, or an engineering role in mind? Reach out directly below.
+          </motion.p>
 
           {/* form */}
           <motion.form

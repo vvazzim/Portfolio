@@ -62,10 +62,7 @@ const Home = () => {
             <br className="hidden sm:inline" />
             Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span>,{' '}
             <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, and trained in{' '}
-            <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming systems and sovereign AI platforms.
-            <br />
-            Available <span className="text-accent font-medium">immediately for permanent engineering roles (CDI)</span>.
-            <span className="text-xs text-white/60 block mt-1 font-light">French M.Sc. Graduate — Directly eligible for fast-track Cadre & Passeport Talent status.</span>
+            <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming architectures and sovereign AI platforms.
           </motion.p>
 
           {/* Projects Button */}

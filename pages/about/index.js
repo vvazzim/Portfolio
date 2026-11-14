@@ -68,15 +68,15 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "AI & Cybersecurity Automation Engineer — VINCI SA (CERT VINCI)",
+        title: "AI & Cybersecurity Automation Engineer (CERT VINCI SA)",
         stage: "2026 - Present",
       },
       {
-        title: "Deep Learning & Computational Vision Researcher — Université Paris Cité",
+        title: "Deep Learning & Computer Vision Researcher (Université Paris Cité)",
         stage: "2024 - 2026",
       },
       {
-        title: "Full-Stack Developer & IAM Access Rights Consultant — Antallis",
+        title: "Full-Stack Developer & IAM Access Rights Consultant (Antallis)",
         stage: "2024 - 2025",
       },
     ],
@@ -89,15 +89,15 @@ const aboutData = [
         stage: "2025",
       },
       {
-        title: "ANSSI SecNumacadémie — Cybersecurity (Certified 96%)",
+        title: "ANSSI SecNumacadémie: Cybersecurity (Certified 96%)",
         stage: "2025",
       },
       {
-        title: "Enterprise Management & Strategy (ECF) — Montréal",
+        title: "Enterprise Management & Strategy (ECF Montréal)",
         stage: "2024",
       },
       {
-        title: "CNIL — Data Protection & GDPR Compliance (RGPD)",
+        title: "CNIL: Data Protection & GDPR Compliance (RGPD)",
         stage: "2025",
       },
       {
@@ -110,19 +110,19 @@ const aboutData = [
     title: "education",
     info: [
       {
-        title: "M.Sc. Research — Vision & Intelligent Machines, Université Paris Cité",
+        title: "M.Sc. Research in Vision & Machine Intelligence (Université Paris Cité)",
         stage: "2024 - 2026",
       },
       {
-        title: "B.Sc. — Computer Science & Applications, Université Paris Cité",
+        title: "B.Sc. in Computer Science & Applications (Université Paris Cité)",
         stage: "2023 - 2024",
       },
       {
-        title: "B.Sc. — Information Systems, HIS University",
+        title: "B.Sc. in Information Systems (HIS University)",
         stage: "2020 - 2023",
       },
       {
-        title: "Full-Stack JS Web Development — GoMyCode",
+        title: "Full-Stack JS Web Development (GoMyCode)",
         stage: "2022",
       },
     ],
@@ -131,7 +131,7 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Valedictorian / Top of Class (3 consecutive years) — HIS University",
+        title: "Valedictorian / Top of Class (3 consecutive years, HIS University)",
         stage: "2020 - 2023",
       },
       {
@@ -139,7 +139,7 @@ const aboutData = [
         stage: "2022",
       },
       {
-        title: "Honorary Member — University Technology Club",
+        title: "Honorary Member (University Technology Club)",
         stage: "2021",
       },
     ],
@@ -170,10 +170,10 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 !mb-3 tracking-tight"
+            className="text-[26px] sm:text-[34px] md:text-[38px] xl:text-[42px] leading-[1.2] font-bold tracking-tight !mb-4"
           >
-            Transforming Data & AI <br />
-            <span className="text-accent">into Critical Systems.</span>
+            <span className="block whitespace-nowrap">Transforming Data & AI</span>
+            <span className="block whitespace-nowrap text-accent">into Critical Systems.</span>
           </motion.h2>
 
           <motion.p

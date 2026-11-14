@@ -3,7 +3,7 @@ export const testimonialSlider = [
   {
     image: '/t-avt-1.png',
     name: "Benoît Herment",
-    position: "Group Cybersecurity Director — VINCI",
+    position: "Group Cybersecurity Director, VINCI",
     message: "Wassim made decisive contributions to modernizing and automating phishing response at CERT VINCI, delivering 10 analysis modules, 213 automated tests (88% code coverage), and successful production deployment. His rigor, curiosity, and software architecture maturity are outstanding.",
   },
   {
