@@ -19,7 +19,7 @@ const Services = () => {
               exit="hidden"
               className="h2 xl:mt-8 tracking-tight"
             >
-              Expertises <span className="text-accent">.</span>
+              Expertise <span className="text-accent">.</span>
             </motion.h2>
             <motion.p
               variants={fadeIn('up', 0.4)}
@@ -28,8 +28,8 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[420px] mx-auto lg:mx-0 text-white/80 font-light text-sm sm:text-base leading-relaxed"
             >
-              De la recherche appliquée en Deep Learning à l'industrialisation en environnement critique (CERT VINCI, production 24/7).  
-              Je conçois des pipelines de données résilients, des modèles de fondation souverains et des plateformes logicielles haute performance.
+              From applied Deep Learning research to 24/7 production engineering (CERT VINCI).  
+              I architect resilient event-driven data streaming pipelines, sovereign foundational models, and high-concurrency cloud architectures.
             </motion.p>
           </div>
           {/* Slider */}

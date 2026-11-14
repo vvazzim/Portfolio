@@ -18,9 +18,9 @@ const Contact = () => {
   if (state.succeeded) {
     return (
       <div className="text-center py-32">
-        <h2 className="text-2xl mb-4 font-semibold text-white">Merci ! Votre message a bien été transmis.</h2>
-        <p className="text-white/70 mb-6">Je vous répondrai dans les plus brefs délais.</p>
-        <Link href="/" className="text-accent underline hover:text-white transition-colors">Retour à l'accueil</Link>
+        <h2 className="text-2xl mb-4 font-semibold text-white">Thank you! Your message has been sent successfully.</h2>
+        <p className="text-white/70 mb-6">I will get back to you shortly.</p>
+        <Link href="/" className="text-accent underline hover:text-white transition-colors">Return to Home</Link>
       </div> 
     );
   }
@@ -38,7 +38,7 @@ const Contact = () => {
             exit="hidden"
             className="h2 text-center mb-10 tracking-tight"
           >
-            Me <span className="text-accent">Contacter.</span>
+            Let's <span className="text-accent">Connect.</span>
           </motion.h2>
 
           {/* form */}
@@ -52,19 +52,19 @@ const Contact = () => {
           >
             {/* input group */}
             <div className="flex gap-x-6 w-full">
-              <input type="text" name="name" placeholder="Nom complet" className="input" required />
-              <input type="email" name="email" placeholder="Adresse email" className="input" required />
+              <input type="text" name="name" placeholder="Full Name" className="input" required />
+              <input type="email" name="email" placeholder="Email Address" className="input" required />
             </div>
-            <input type="text" name="subject" placeholder="Objet de votre message" className="input" />
-            <textarea name="message" placeholder="Votre message..." className="textarea" required></textarea>
+            <input type="text" name="subject" placeholder="Subject" className="input" />
+            <textarea name="message" placeholder="Your Message..." className="textarea" required></textarea>
             <ValidationError prefix="Message" field="message" errors={state.errors} />
             <button
               type="submit"
               disabled={state.submitting}
-              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
             >
               <span className="group-hover:-translate-y-[120px] group-hover:opacity-0 transition-all duration-500 font-medium">
-                Envoyer
+                Send Message
               </span>
               <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-accent" />
             </button>

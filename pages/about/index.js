@@ -21,7 +21,7 @@ import { BsDownload } from "react-icons/bs";
 // data
 const aboutData = [
   {
-    title: "compétences",
+    title: "skills",
     info: [
       {
         title: "Computer Vision & Deep Learning",
@@ -34,7 +34,7 @@ const aboutData = [
         ],
       },
       {
-        title: "Cybersécurité & SecOps (CERT)",
+        title: "Cybersecurity & SecOps (CERT)",
         icons: [
           { id: 15, component: <SiFastapi /> },
           { id: 19, component: <SiLinux /> },
@@ -65,18 +65,18 @@ const aboutData = [
     ],
   },
   {
-    title: "expérience",
+    title: "experience",
     info: [
       {
-        title: "Ingénieur IA & Automatisation Cybersécurité - VINCI SA (CERT VINCI)",
-        stage: "2026 - Présent",
+        title: "AI & Cybersecurity Automation Engineer — VINCI SA (CERT VINCI)",
+        stage: "2026 - Present",
       },
       {
-        title: "Chercheur en Deep Learning & Vision Biomédicale - Université Paris Cité",
+        title: "Deep Learning & Computational Vision Researcher — Université Paris Cité",
         stage: "2024 - 2026",
       },
       {
-        title: "Consultant Développeur & Gestion des Droits Applicatifs - Antallis",
+        title: "Full-Stack Developer & IAM Access Rights Consultant — Antallis",
         stage: "2024 - 2025",
       },
     ],
@@ -85,57 +85,57 @@ const aboutData = [
     title: "certifications",
     info: [
       {
-        title: "Microsoft Certified : DevOps Engineer Expert (AZ-400)",
+        title: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
         stage: "2025",
       },
       {
-        title: "ANSSI SecNumacadémie - Cybersécurité (Certifié 96%)",
+        title: "ANSSI SecNumacadémie — Cybersecurity (Certified 96%)",
         stage: "2025",
       },
       {
-        title: "Microsoft Certified : Azure Fundamentals (AZ-900)",
+        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         stage: "2025",
       },
       {
-        title: "CNIL - Protection des Données & RGPD",
+        title: "CNIL — Data Protection & GDPR Compliance",
         stage: "2025",
       },
     ],
   },
   {
-    title: "formation",
+    title: "education",
     info: [
       {
-        title: "Master 2 Recherche - Vision & Machines Intelligentes, Université Paris Cité",
+        title: "M.Sc. Research — Vision & Intelligent Machines, Université Paris Cité",
         stage: "2024 - 2026",
       },
       {
-        title: "Licence - Informatique & Applications, Université Paris Cité",
+        title: "B.Sc. — Computer Science & Applications, Université Paris Cité",
         stage: "2023 - 2024",
       },
       {
-        title: "Licence - Systèmes d'Information, HIS University",
+        title: "B.Sc. — Information Systems, HIS University",
         stage: "2020 - 2023",
       },
       {
-        title: "Full-Stack JS Web Development - GoMyCode",
+        title: "Full-Stack JS Web Development — GoMyCode",
         stage: "2022",
       },
     ],
   },
   {
-    title: "distinctions",
+    title: "awards",
     info: [
       {
-        title: "Major de Promotion - 3 années consécutives, HIS University",
+        title: "Valedictorian / Top of Class (3 consecutive years) — HIS University",
         stage: "2020 - 2023",
       },
       {
-        title: "Prix d'Excellence & Contribution Exceptionnelle",
+        title: "Outstanding Engineering Contribution Award",
         stage: "2022",
       },
       {
-        title: "Membre d'Honneur - Club Technologique Universitaire",
+        title: "Honorary Member — University Technology Club",
         stage: "2021",
       },
     ],
@@ -155,32 +155,32 @@ import CountUp from "react-countup";
 const About = () => {
   const [index, setIndex] = useState(0);
   return (
-      <div className={"h-full bg-primary/30 py-32 text-center xl:text-left"}>
+      <div className={"min-h-screen xl:h-full bg-primary/30 pt-36 xl:pt-44 pb-16 text-center xl:text-left overflow-y-auto xl:overflow-hidden relative"}>
         <Circles />
-        <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-6"}>
+        <div className={"container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-8 px-4 xl:px-8"}>
           {/* text */}
-          <div className={'flex-1 flex flex-col justify-center'}>
+          <div className={'flex-1 flex flex-col justify-center xl:pt-4'}>
             <motion.h2
               variants={fadeIn('right', 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2"
+              className="text-3xl xl:text-4xl 2xl:text-5xl font-bold leading-tight !mb-4 tracking-tight"
             > 
-              Concevoir des <span className="text-accent">Systèmes d'IA Robustes</span> pour environnements critiques.
+              Engineering <span className="text-accent">Robust AI Systems</span> for Critical Environments.
             </motion.h2>
             <motion.p
               variants={fadeIn('right', 0.4)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="max-w-[500px] mx-auto xl:mx-0 mb-4 xl:mb-6 px-2 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
+              className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-4 xl:mb-6 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
             >
-              Diplômé du Master 2 Recherche Vision & Machines Intelligentes (Université Paris Cité), j'opère au sein de la holding VINCI SA (CERT VINCI, production 24/7).
-              Doublement certifié Azure DevOps Expert (AZ-400) et ANSSI SecNumacadémie (96%), je conçois des systèmes d'IA de pointe, souverains et vérifiables pour les organisations à haute exigence de sécurité.
+              Graduate of the M.Sc. Research in Vision & Machine Intelligence (Université Paris Cité), operating in production at VINCI SA (CERT VINCI, 24/7 operations).
+              Holding dual certifications as Azure DevOps Expert (AZ-400) and ANSSI SecNumacadémie (96%), I bridge academic Deep Learning R&D with defense-grade software engineering to deploy sovereign, verifiable, and scalable systems.
             </motion.p>
 
-            {/* Bouton Téléchargement CV */}
+            {/* Resume Download Button */}
             <motion.div
               variants={fadeIn('right', 0.5)}
               initial="hidden"
@@ -192,10 +192,10 @@ const About = () => {
                 href="/CV_Wassim_CHIKHI.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn rounded-full border border-white/50 px-6 py-2 transition-all duration-300 flex items-center gap-x-2 text-sm font-medium hover:border-accent hover:text-accent"
+                className="btn rounded-full border border-white/50 px-6 py-2 transition-all duration-300 flex items-center gap-x-2 text-sm font-medium hover:border-accent hover:text-accent group"
               >
-                <BsDownload className="text-base" />
-                <span>Télécharger mon CV (PDF)</span>
+                <BsDownload className="text-base group-hover:translate-y-0.5 transition-transform" />
+                <span>Download Resume (PDF)</span>
               </a>
             </motion.div>
 
@@ -213,34 +213,34 @@ const About = () => {
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
                     <CountUp start={0} end={4} duration={3}/>+
                   </div>
-                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Années d'expérience</div>
+                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Years of Experience</div>
                 </div>
                 {/* audits */}
                 <div className={'relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
                     <CountUp start={0} end={25} duration={3}/>+
                   </div>
-                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Projets & Audits</div>
+                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Audits & Projects</div>
                 </div>
 
-                {/* projects */}
+                {/* deployments */}
                 <div className={'relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
                     <CountUp start={0} end={35} duration={3}/>+
                   </div>
-                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Systèmes Déployés</div>
+                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Deployments Done</div>
                 </div>
-                {/* distinctions */}
+                {/* awards */}
                 <div className={'relative flex-1'}>
                   <div className={'text-2xl xl:text-4xl font-extrabold text-accent mb-2'}>
                     <CountUp start={0} end={2} duration={3}/>
                   </div>
-                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Prix d'Excellence</div>
+                  <div className={'text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]'}>Excellence Awards</div>
                 </div>
               </div>
             </motion.div>
           </div>
-          {/* info */}
+          {/* info tabs */}
           <motion.div
               variants={fadeIn("left", 0.4)}
               initial="hidden"

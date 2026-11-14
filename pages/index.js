@@ -9,21 +9,21 @@ import React from "react";
 const Home = () => {
   return (
     <div className="bg-primary/60 h-full relative overflow-hidden">
-      {/* ── PLAN 0 (Fond) : Artwork d'explosion étiré + gradient d'ambiance ── */}
+      {/* ── PLAN 0 (Background) : Explosion artwork + atmosphere gradient ── */}
       <div className="w-full h-full absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <div className="w-full h-full xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat mix-blend-color-dodge translate-z-0 opacity-90" />
         <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/50 to-transparent" />
       </div>
 
-      {/* ── PLAN 1 (Milieu) : Particules sur 100% de l'écran, AU-DESSUS de l'image de fond et du gradient ── */}
+      {/* ── PLAN 1 (Middle) : Full screen interactive particles ── */}
       <div className="w-full h-full absolute inset-0 z-10 pointer-events-none overflow-hidden">
         <ParticlesContainer />
       </div>
 
-      {/* ── PLAN 2 (Premier plan) : Contenu texte et interactions (AU-DESSUS des particules) ── */}
+      {/* ── PLAN 2 (Foreground) : Content and user interactions ── */}
       <div className="w-full h-full relative z-20 flex items-center bg-transparent">
         <div className="container mx-auto px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full xl:pt-20">
-          {/* Titre Principal */}
+          {/* Main Title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
@@ -31,11 +31,11 @@ const Home = () => {
             exit="hidden"
             className="h1 !mb-1 tracking-tight"
           >
-            Ingénieur IA & Automatisation <br />
-            <span className="text-accent">Systèmes critiques, GenAI & Cyber</span>
+            Critical Systems & AI Engineer <br />
+            <span className="text-accent">Applied Deep Learning & Sovereign SecOps</span>
           </motion.h1>
 
-          {/* Accroche Dynamique Transformative */}
+          {/* Dynamic Value Hook */}
           <motion.div
             variants={fadeIn('down', 0.25)}
             initial="hidden"
@@ -45,22 +45,22 @@ const Home = () => {
             <HeroRotator />
           </motion.div>
 
-          {/* Synthèse de positionnement & crédibilité terrain */}
+          {/* Broadened Narrative Paragraph */}
           <motion.p
             variants={fadeIn('down', 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-sm xl:max-w-xl mx-auto xl:mx-0 mb-8 xl:mb-10 text-sm sm:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-8 xl:mb-10 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
-            Diplômé du Master 2 Recherche Informatique (Université Paris Cité, 2026), certifié{' '}
-            <span className="text-white font-medium">Azure DevOps Expert (AZ-400)</span> et{' '}
+            M.Sc. Research in Computer Vision & Machine Intelligence (Université Paris Cité, 2026), certified{' '}
+            <span className="text-white font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
             <span className="text-white font-medium">ANSSI SecNumacadémie (96%)</span>.
             <br />
-            Production 24/7 (1 500 dossiers/jour, CERT VINCI). Je conçois et j'industrialise des systèmes d'IA robustes en environnements critiques.
+            Production Engineer at VINCI SA (CERT VINCI, 24/7 ops, 1,500 daily security tickets). I design, secure, and productionize sovereign AI models and resilient distributed pipelines.
           </motion.p>
 
-          {/* Bouton Projets */}
+          {/* Projects Button */}
           <div className="flex justify-center xl:hidden relative z-30">
             <ProjectsBtn />
           </div>

@@ -17,32 +17,32 @@ const serviceData = [
   {
     icon: <FaBrain />,
     title: 'Computer Vision & Deep Learning',
-    description: "Classification histopathologique (WSI 100k patches), segmentation d'instances denses (Cellpose) et Vision Transformers.",
+    description: "Histopathological classification (WSI 100k patches), dense instance segmentation (Cellpose), cancer cell tracking, and Vision Transformers.",
   },
   {
     icon: <FaShieldAlt />,
-    title: 'Cybersécurité & SecOps (CERT)',
-    description: "Automatisation de la détection (Cortex XSOAR), architecture 3E anti-phishing sans dépendance réseau et audit IAM / SoD.",
+    title: 'Cybersecurity & SecOps (SOAR)',
+    description: "Automated triage (Cortex XSOAR, CERT VINCI), on-premise 3E anti-phishing pipeline (QLoRA, zero cloud leakage), and IAM SoD governance.",
   },
   {
     icon: <FaServer />,
     title: 'Data Engineering & Streaming',
-    description: "Ingestion événementielle distribuée Apache Kafka, microservices découplés et bases relationnelles PostgreSQL 15.",
+    description: "Distributed event-driven ingestion with Apache Kafka, decoupled microservices, and PostgreSQL 15 / Redis persistence.",
   },
   {
     icon: <FaCloud />,
     title: 'Cloud & Kubernetes (AZ-400)',
-    description: "Orchestration conteneurisée Kubernetes avec sécurisation RBAC stricte (moindre privilège) et pipelines CI/CD Azure DevOps.",
+    description: "Container orchestration under strict Kubernetes RBAC (least-privilege principle) and automated Azure DevOps CI/CD.",
   },
   {
     icon: <FaCode />,
-    title: 'Architectures SaaS Temps Réel',
-    description: "Conception full-stack haute performance (Fastify, React 18, Astro 5), WebSockets Socket.io et cartographie Leaflet.",
+    title: 'Real-Time SaaS Architectures',
+    description: "High-throughput full-stack engineering (Fastify, React 18, Astro 5), real-time WebSockets (Socket.io), and Leaflet geospatial routing.",
   },
   {
     icon: <FaRobot />,
-    title: 'Machine Learning & NLP Souverain',
-    description: "Pipelines RAG locaux (ChromaDB, Ollama), inférence NLP (DeBERTa-v3) et explicabilité post-hoc sans fuite de données.",
+    title: 'Sovereign ML & Local NLP',
+    description: "Private RAG architectures (ChromaDB, Ollama), NLP inference (DeBERTa-v3), and post-hoc explainability without third-party API exposure.",
   },
 ];
 

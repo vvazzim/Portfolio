@@ -1,36 +1,36 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// Pépites techniques orientées valeur et crédibilité terrain
+// High-impact engineering highlights for international recruiters
 const HERO_VIBES = [
   {
-    prefix: 'Je construis des systèmes critiques avec :',
+    prefix: 'Engineering critical systems with:',
     highlight: 'GenAI & Threat Intel',
-    badge: 'Prod 24/7',
+    badge: '24/7 Production',
   },
   {
-    prefix: "J'industrialise des pipelines souverains de :",
-    highlight: 'RAG Local & LLMOps',
+    prefix: 'Productionizing sovereign pipelines:',
+    highlight: 'Local RAG & LLMOps',
     badge: 'Retrieval@5 = 89%',
   },
   {
-    prefix: "J'automatise des architectures sécurisées :",
+    prefix: 'Automating enterprise security:',
     highlight: 'Cyber, IAM & Role Mining',
-    badge: 'Conformité SoD',
+    badge: 'SoD Compliance',
   },
   {
-    prefix: 'Je déploie des moteurs temps réel pour :',
-    highlight: 'OSINT & Cartographie Sécurisée',
-    badge: 'Streaming Live',
+    prefix: 'Deploying real-time engines for:',
+    highlight: 'OSINT & Safe Geospatial Routing',
+    badge: 'Live Streaming',
   },
   {
-    prefix: "J'entraîne des modèles de classification :",
+    prefix: 'Training clinical diagnostic models:',
     highlight: 'Computer Vision WSI & Deep Learning',
     badge: 'AUC 0.87 Camelyon',
   },
   {
-    prefix: 'Je conçois des plateformes distribuées en :',
-    highlight: 'Streaming Kafka & Kubernetes',
+    prefix: 'Architecting distributed platforms:',
+    highlight: 'Kafka Streaming & Kubernetes RBAC',
     badge: 'F1 = 0.89',
   },
 ];
@@ -49,7 +49,7 @@ const HeroRotator = () => {
   const current = HERO_VIBES[index];
 
   return (
-    <div className="my-3 min-h-[52px] flex items-center justify-center xl:justify-start">
+    <div className="h-14 flex items-center justify-center xl:justify-start my-1 overflow-hidden">
       <AnimatePresence mode="wait">
         <motion.div
           key={index}
@@ -57,24 +57,14 @@ const HeroRotator = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
           transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2.5 gap-y-1.5 text-base sm:text-lg md:text-xl font-normal"
+          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2 text-xs sm:text-sm font-light text-white/90"
         >
-          {/* Action Prefix */}
-          <span className="text-white/80 tracking-tight font-light">
-            {current.prefix}
+          <span className="text-white/60 hidden sm:inline">{current.prefix}</span>
+          <span className="font-semibold text-white tracking-wide border-b border-accent/40 pb-0.5">
+            {current.highlight}
           </span>
-
-          {/* High-end Precision Tag (distinctive, non-templated) */}
-          <span className="inline-flex items-center gap-2.5 px-3.5 py-1 rounded-xl bg-white/[0.07] border border-white/20 backdrop-blur-md text-white shadow-lg shadow-black/30">
-            <span className="font-semibold tracking-tight text-white">{current.highlight}</span>
-            {current.badge && (
-              <>
-                <span className="w-1 h-1 rounded-full bg-accent animate-pulse" />
-                <span className="text-xs font-normal text-white/85">
-                  {current.badge}
-                </span>
-              </>
-            )}
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-mono font-medium bg-accent/20 text-accent border border-accent/40 shadow-sm ml-1">
+            {current.badge}
           </span>
         </motion.div>
       </AnimatePresence>
