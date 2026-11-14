@@ -1,14 +1,9 @@
-//import swiper react components
-import {Swiper, SwiperSlide} from 'swiper/react';
-
-//import swiper styles
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
 
-
-
-// data
 import {
   FaServer,
   FaBrain,
@@ -20,85 +15,80 @@ import {
 
 const serviceData = [
   {
-    icon: <FaServer />,
-    title: 'Data Engineering',
-    description: 'Design and orchestration of scalable data pipelines using Spark, Airflow, Kafka and more.',
-  },
-  {
     icon: <FaBrain />,
-    title: 'Computer Vision & DL',
-    description: 'Image classification, segmentation and visual representation learning using CNNs, Vision Transformers and Deep Learning.',
-  },
-  {
-    icon: <FaRobot />,
-    title: 'Machine Learning & NLP',
-    description: 'Training and deployment of models (BERT, RoBERTa, Chatbots) for real-world AI applications.',
-  },
-  {
-    icon: <FaCode />,
-    title: 'Web Full-Stack Development',
-    description: 'Development of full-stack platforms using FastAPI, React.js and MongoDB.',
-  },
-  {
-    icon: <FaCloud />,
-    title: 'Cloud & DevOps',
-    description: 'Containerization, CI/CD, cloud-ready architectures and monitoring using Docker and Kubernetes.',
+    title: 'Computer Vision & Deep Learning',
+    description: "Classification histopathologique (WSI 100k patches), segmentation d'instances denses (Cellpose) et Vision Transformers.",
   },
   {
     icon: <FaShieldAlt />,
-    title: 'Cybersecurity Automation',
-    description: 'Automating vulnerability scans, security log analysis, and response orchestration (SOAR).',
+    title: 'Cybersécurité & SecOps (CERT)',
+    description: "Automatisation de la détection (Cortex XSOAR), architecture 3E anti-phishing sans dépendance réseau et audit IAM / SoD.",
+  },
+  {
+    icon: <FaServer />,
+    title: 'Data Engineering & Streaming',
+    description: "Ingestion événementielle distribuée Apache Kafka, microservices découplés et bases relationnelles PostgreSQL 15.",
+  },
+  {
+    icon: <FaCloud />,
+    title: 'Cloud & Kubernetes (AZ-400)',
+    description: "Orchestration conteneurisée Kubernetes avec sécurisation RBAC stricte (moindre privilège) et pipelines CI/CD Azure DevOps.",
+  },
+  {
+    icon: <FaCode />,
+    title: 'Architectures SaaS Temps Réel',
+    description: "Conception full-stack haute performance (Fastify, React 18, Astro 5), WebSockets Socket.io et cartographie Leaflet.",
+  },
+  {
+    icon: <FaRobot />,
+    title: 'Machine Learning & NLP Souverain',
+    description: "Pipelines RAG locaux (ChromaDB, Ollama), inférence NLP (DeBERTa-v3) et explicabilité post-hoc sans fuite de données.",
   },
 ];
 
-// import required modules
-import {FreeMode, Pagination} from 'swiper';
-import {RiArrowRightSLine} from "react-icons/ri";
-
-
-
+import { FreeMode, Pagination } from 'swiper';
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const ServiceSlider = () => {
-  return <Swiper breakpoints={{
-  320:{
-  slidesPerView:1,
-  spaceBetween: 15
-  },
-  640:{
-    slidesPerView:3,
-    spaceBetween: 15
-  },
-
-  }}
-  freeMode={true}
-  pagination={{
-  clickable:true,
-  }}
-  modules={[FreeMode,Pagination]}
-  className={'h-[240px] sm:h-[340px]'}
-  >
-    {serviceData.map((item,index)=>{
-      return (
+  return (
+    <Swiper
+      breakpoints={{
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 15,
+        },
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 15,
+        },
+      }}
+      freeMode={true}
+      pagination={{
+        clickable: true,
+      }}
+      modules={[FreeMode, Pagination]}
+      className="h-[280px] sm:h-[350px]"
+    >
+      {serviceData.map((item, index) => {
+        return (
           <SwiperSlide key={index}>
-            <div className={'bg-[rgba(65,47,123,0.15)] h-max rounded-lg px-6 py-8 flex sm:flex-col gap-x-6' +
-            ' sm:gap-x-0 group cursor-pointer hover:bg-[rgba(89,65,169,0.15)] transition-all duration-300'}>
-            {/*icon*/}
-            <div className={'text-4xl text-accent mb-4'}>{item.icon}</div>
-              {/*title & desc*/}
+            <div className="bg-[rgba(65,47,123,0.15)] h-full rounded-lg px-6 py-8 flex flex-col justify-between group cursor-pointer hover:bg-[rgba(89,65,169,0.22)] transition-all duration-300 border border-white/5 hover:border-accent/40">
+              {/* Top: Icon & Title */}
               <div>
-              <div>{item.title}</div>
-              <p>{item.description}</p>
-            </div>
-              {/*arrow*/}
-              <div className={'text-3xl'}>
-                <RiArrowRightSLine className={'group-over:rotate-45 group-hover:text-accent trasition-all' +
-                ' duration-300'}/>
+                <div className="text-4xl text-accent mb-4">{item.icon}</div>
+                <div className="text-base font-semibold text-white mb-2">{item.title}</div>
+                <p className="text-xs text-white/70 font-light leading-relaxed">{item.description}</p>
+              </div>
+              {/* Bottom: Arrow */}
+              <div className="text-2xl text-white/60 group-hover:text-accent group-hover:translate-x-1 transition-all duration-300 mt-4 flex justify-end">
+                <RiArrowRightSLine />
               </div>
             </div>
-      </SwiperSlide>
-      );
-    })}
-  </Swiper>;
+          </SwiperSlide>
+        );
+      })}
+    </Swiper>
+  );
 };
 
 export default ServiceSlider;

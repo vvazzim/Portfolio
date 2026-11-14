@@ -1,74 +1,77 @@
-//components
-import Circles from '/components/Circles'
+// components
+import Circles from '/components/Circles';
 import { useForm, ValidationError } from '@formspree/react';
 import Link from 'next/link';
 
-//variants
-import {fadeIn} from '../../variants'
+// variants
+import { fadeIn } from '../../variants';
 
-//icons
-import {BsArrowRight} from "react-icons/bs";
+// icons
+import { BsArrowRight } from "react-icons/bs";
 
-//framer
+// framer
 import { motion } from 'framer-motion';
 
-
 const Contact = () => {
-    const [state, handleSubmit] = useForm("mblynrpl");
+  const [state, handleSubmit] = useForm("mblynrpl");
 
   if (state.succeeded) {
     return (
       <div className="text-center py-32">
-        <h2 className="text-2xl mb-4">Thank you! Your message has been sent.</h2>
-        <Link href="/" className="text-accent underline">Return to Home</Link>
+        <h2 className="text-2xl mb-4 font-semibold text-white">Merci ! Votre message a bien été transmis.</h2>
+        <p className="text-white/70 mb-6">Je vous répondrai dans les plus brefs délais.</p>
+        <Link href="/" className="text-accent underline hover:text-white transition-colors">Retour à l'accueil</Link>
       </div> 
     );
   }
+
   return (
-      <div className={'h-full bg-primary/30'}>
-        <div className={'container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full'}>
-            {/* text & form */}
-            <div className={'flex flex-col w-full max-w-[700px]'}>
-                {/* text */}
-                <motion.h2
-                    variants={fadeIn('up', 0.2)}
-                    initial="hidden"
-                    animate="show"
-                    exit="hidden"
-                    className={'h2 text-center mb-12'}
-                >
-                    Let's <span className={'text-accent'}>connect.</span>
-                </motion.h2>
-                {/* form */}
-                <motion.form variants={fadeIn('up', 0.4)}
-                    onSubmit={handleSubmit}
-                    initial="hidden"
-                    animate="show"
-                    exit="hidden"
-                    className={'flex-1 flex flex-col gap-6 w-full mx-auto'}
-                >
-                    {/* input group */}
-                    <div className={'flex gap-x-6 w-full'}>
-                        <input type="text" name="name" placeholder="Name" className={'input'} required />
-                        <input type="email" name="email" placeholder="Email" className={'input'} required />
-                    </div>
-                    <input type="text" name="subject" placeholder="Subject" className={'input'} />
-                    <textarea name="message" placeholder="Message" className={'textarea'} required></textarea>
-                    <ValidationError prefix="Message" field="message" errors={state.errors} />
-                    <button type="submit" disabled={state.submitting} className={'btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all' +
-                      ' duration-300 flex items-center justify-center overflow-hidden hover:border-accent' +
-                    ' group-hover:opacity-0 transition-all duration-300 flex items-center justify-center' +
-                    ' overflow-hidden hover:border-accent group'}>
-                        <span className={'group-hover:-translate-y-[120px] group-hover:opacity-0 transition-all' +
-                          ' duration-500'}>Let's Talk</span>
-                        <BsArrowRight className={'-translate-y-[120%] opacity-0 group-hover:flex' +
-                        ' group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute' +
-                          ' text-[22px]'}/>
-                    </button>
-                </motion.form>
+    <div className="h-full bg-primary/30">
+      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+        {/* text & form */}
+        <div className="flex flex-col w-full max-w-[700px]">
+          {/* text */}
+          <motion.h2
+            variants={fadeIn('up', 0.2)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="h2 text-center mb-10 tracking-tight"
+          >
+            Me <span className="text-accent">Contacter.</span>
+          </motion.h2>
+
+          {/* form */}
+          <motion.form
+            variants={fadeIn('up', 0.4)}
+            onSubmit={handleSubmit}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+          >
+            {/* input group */}
+            <div className="flex gap-x-6 w-full">
+              <input type="text" name="name" placeholder="Nom complet" className="input" required />
+              <input type="email" name="email" placeholder="Adresse email" className="input" required />
             </div>
+            <input type="text" name="subject" placeholder="Objet de votre message" className="input" />
+            <textarea name="message" placeholder="Votre message..." className="textarea" required></textarea>
+            <ValidationError prefix="Message" field="message" errors={state.errors} />
+            <button
+              type="submit"
+              disabled={state.submitting}
+              className="btn rounded-full border border-white/50 max-w-[170px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+            >
+              <span className="group-hover:-translate-y-[120px] group-hover:opacity-0 transition-all duration-500 font-medium">
+                Envoyer
+              </span>
+              <BsArrowRight className="-translate-y-[120%] opacity-0 group-hover:flex group-hover:-translate-y-0 group-hover:opacity-100 transition-all duration-300 absolute text-[22px] text-accent" />
+            </button>
+          </motion.form>
         </div>
       </div>
+    </div>
   );
 };
 
