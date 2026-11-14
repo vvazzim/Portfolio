@@ -16,7 +16,7 @@ const HERO_VIBES = [
   {
     prefix: 'Automating enterprise security:',
     highlight: 'Cyber, IAM & Role Mining',
-    badge: 'SoD Compliance',
+    badge: 'RGPD & SoD Compliance',
   },
   {
     prefix: 'Deploying real-time engines for:',

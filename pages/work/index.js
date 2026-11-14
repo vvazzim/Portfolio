@@ -38,9 +38,9 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 !mb-3 tracking-tight"
+              className="h2 !mb-3 tracking-tight whitespace-nowrap"
             >
-              Selected Work <span className="text-accent">.</span>
+              My Work <span className="text-accent">.</span>
             </motion.h2>
 
             <motion.p

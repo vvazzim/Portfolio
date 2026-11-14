@@ -34,7 +34,7 @@ const Home = () => {
             className="text-[32px] sm:text-[44px] md:text-[52px] xl:text-[54px] font-extrabold tracking-tight leading-[1.16] mb-3 xl:mb-4"
           >
             Building Critical Systems <br />
-            <span className="text-accent">with Applied AI & SecOps</span>
+            <span className="text-accent">with Applied AI & Intelligent Automation</span>
           </motion.h1>
 
           {/* Dynamic Value Hook */}
@@ -56,15 +56,15 @@ const Home = () => {
             exit="hidden"
             className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
-            I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer holding an M.Sc. Research from{' '}
-            <span className="text-white font-medium">Université Paris Cité</span> and operating in{' '}
+            I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
             <span className="text-emerald-400 font-medium">24/7 Production</span> at{' '}
             <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>.
             <br className="hidden sm:inline" />
-            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
-            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, I engineer sovereign foundational models, distributed streaming pipelines, and hardened cloud platforms.
+            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span>,{' '}
+            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, and trained in{' '}
+            <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming systems and sovereign AI platforms.
             <br />
-            Currently seeking a <span className="text-accent font-medium">permanent position (CDI)</span> starting September 2026.
+            Available <span className="text-accent font-medium">immediately for permanent positions (CDI)</span>.
           </motion.p>
 
           {/* Projects Button */}

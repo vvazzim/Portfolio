@@ -93,11 +93,15 @@ const aboutData = [
         stage: "2025",
       },
       {
-        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
+        title: "Enterprise Management & Strategy (ECF) — Montréal",
+        stage: "2024",
+      },
+      {
+        title: "CNIL — Data Protection & GDPR Compliance (RGPD)",
         stage: "2025",
       },
       {
-        title: "CNIL — Data Protection & GDPR Compliance",
+        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         stage: "2025",
       },
     ],
@@ -168,7 +172,8 @@ const About = () => {
             exit="hidden"
             className="h2 !mb-3 tracking-tight"
           >
-            Transforming <span className="text-accent">Data & AI</span> into Critical Systems.
+            Transforming Data & AI <br />
+            <span className="text-accent">into Critical Systems.</span>
           </motion.h2>
 
           <motion.p
@@ -178,12 +183,10 @@ const About = () => {
             exit="hidden"
             className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
           >
-            Graduate of the M.Sc. Research in Vision & Machine Intelligence (
-            <span className="text-white font-medium">Université Paris Cité</span>), operating in production at{' '}
-            <span className="text-white font-medium">VINCI SA (CERT VINCI, 24/7 ops)</span>.
+            Holding an M.Sc. Research in Computer Vision from{' '}
+            <span className="text-white font-medium">Université Paris Cité</span>, I bridge foundational AI research with resilient production engineering.
             <br className="hidden sm:inline" />
-            Double-certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
-            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, I engineer sovereign foundational models, distributed Kafka streaming architectures, and hardened cloud platforms tested under real-world production constraints.
+            From WSI cancer cell segmentation to distributed Kafka streaming and IAM governance, I build verifiable, fault-tolerant architectures engineered for high-security environments.
           </motion.p>
 
           {/* Resume Download Button with Hand Cursor */}

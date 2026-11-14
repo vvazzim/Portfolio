@@ -1,25 +1,31 @@
 // testimonial data
 export const testimonialSlider = [
   {
+    image: '/t-avt-1.png',
+    name: "Benoît Herment",
+    position: "Group Cybersecurity Director — VINCI",
+    message: "Wassim made decisive contributions to modernizing and automating phishing response at CERT VINCI, delivering 10 analysis modules, 213 automated tests (88% code coverage), and successful production deployment. His rigor, curiosity, and software architecture maturity are outstanding.",
+  },
+  {
     image: '/t-avt-2.png',
     name: "Besma Khoualdia",
     position: "PhD - AI for Oncology",
-    message:"His work on histology image classification was rigorous, well documented and aligned with real research goals.",
-      },
+    message: "His work on histology image classification was rigorous, well documented and aligned with real research goals.",
+  },
   {
     image: '/t-avt-3.png',
     name: 'Nicolas Lomenie',
     position: "Professor, Université Paris Cité",
     message: "Wassim actively contributed to a medical imaging research project and showed great autonomy and technical understanding.",
-  
   },
   {
-    image: '/t-avt-1.png',
+    image: '/t-avt-4.png',
     name: 'Zoé Legrand',
     position: 'Antallis CEO',
     message: 'Wassim\'s development skills are top-notch. He built a robust and user-friendly website for us that has significantly improved our online presence. His attention to detail and commitment to excellence are evident in every aspect of his work.',
-  }, {
-    image: '/t-avt-4.png',
+  },
+  {
+    image: '/t-avt-2.png',
     name: "Akram C.",
     position: "ML / AI Engineer at Arval BNP Paribas - LinkedIn",
     message: "I worked with Wassim on various data science and engineering projects. He has an outstanding balance of theoretical knowledge and practical technical skills, making him highly effective at solving complex problems.",
