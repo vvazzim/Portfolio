@@ -57,12 +57,10 @@ const Home = () => {
             className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
             I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
-            <span className="text-emerald-400 font-medium">24/7 Production</span> at{' '}
-            <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>.
-            <br />
-            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
-            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>.
-            <br />
+            <span className="text-emerald-400 font-medium">24/7 Production</span><br />
+            at <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>, certified{' '}
+            <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
+            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>.<br />
             Trained in <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming architectures and sovereign AI platforms.
           </motion.p>
 
