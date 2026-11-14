@@ -36,10 +36,26 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-10 tracking-tight"
+            className="h2 text-center mb-4 tracking-tight"
           >
             Let's <span className="text-accent">Connect.</span>
           </motion.h2>
+
+          {/* Strategic Availability & Fast-Track Badge */}
+          <motion.div
+            variants={fadeIn('up', 0.3)}
+            initial="hidden"
+            animate="show"
+            exit="hidden"
+            className="text-center mb-8"
+          >
+            <p className="text-sm text-white/85 max-w-lg mx-auto leading-relaxed">
+              Available <span className="text-accent font-medium">immediately for permanent engineering positions (CDI)</span>.
+            </p>
+            <p className="text-xs text-white/60 mt-1 font-light">
+              French M.Sc. Research Graduate — Eligible for direct Cadre & Passeport Talent sponsorship (fast-track procedure without labor market test).
+            </p>
+          </motion.div>
 
           {/* form */}
           <motion.form

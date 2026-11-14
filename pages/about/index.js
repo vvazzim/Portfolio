@@ -184,7 +184,8 @@ const About = () => {
             className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
           >
             Holding an M.Sc. Research in Computer Vision from{' '}
-            <span className="text-white font-medium">Université Paris Cité</span>, I bridge foundational AI research with resilient production engineering.
+            <span className="text-white font-medium">Université Paris Cité</span> and certified in Business Management (
+            <span className="text-emerald-400 font-medium">ECF Montréal</span>), I bridge foundational AI research with resilient production engineering.
             <br className="hidden sm:inline" />
             From WSI cancer cell segmentation to distributed Kafka streaming and IAM governance, I build verifiable, fault-tolerant architectures engineered for high-security environments.
           </motion.p>

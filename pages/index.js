@@ -64,7 +64,8 @@ const Home = () => {
             <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, and trained in{' '}
             <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming systems and sovereign AI platforms.
             <br />
-            Available <span className="text-accent font-medium">immediately for permanent positions (CDI)</span>.
+            Available <span className="text-accent font-medium">immediately for permanent engineering roles (CDI)</span>.
+            <span className="text-xs text-white/60 block mt-1 font-light">French M.Sc. Graduate — Directly eligible for fast-track Cadre & Passeport Talent status.</span>
           </motion.p>
 
           {/* Projects Button */}
