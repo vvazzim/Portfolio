@@ -30,7 +30,7 @@ const WorkSlider = ({ categoryId }) => {
   if (filteredProjects.length === 0) {
     return (
       <div className="h-[340px] flex items-center justify-center text-white/50 text-sm">
-        Aucun projet disponible dans cette catégorie.
+        No projects available in this category.
       </div>
     );
   }
@@ -67,7 +67,7 @@ const WorkSlider = ({ categoryId }) => {
                       <div className="flex items-center gap-2">
                         {project.featured && (
                           <span className="text-[11px] font-medium px-2.5 py-0.5 rounded-md bg-accent/20 text-white border border-accent/40 backdrop-blur-md">
-                            Projet phare
+                            Featured
                           </span>
                         )}
                         <span className="text-[10px] font-mono uppercase px-2 py-0.5 rounded-md bg-white/[0.06] text-white/60 border border-white/10">
@@ -107,9 +107,9 @@ const WorkSlider = ({ categoryId }) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors"
+                          className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors"
                         >
-                          <FaGithub className="text-xs" /> Code source
+                          <FaGithub className="text-xs" /> Source Code
                         </a>
                       )}
                       {project.demoUrl && (
@@ -118,9 +118,9 @@ const WorkSlider = ({ categoryId }) => {
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
-                          className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-accent hover:bg-accent/85 text-white shadow-md shadow-accent/30 transition-colors"
+                          className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-accent hover:bg-accent/85 text-white shadow-md shadow-accent/30 transition-colors"
                         >
-                          <FaExternalLinkAlt className="text-[10px]" /> Démo live
+                          <FaExternalLinkAlt className="text-[10px]" /> Live Demo
                         </a>
                       )}
                     </div>

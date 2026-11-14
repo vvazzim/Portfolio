@@ -19,7 +19,9 @@ function MyApp({ Component, pageProps }) {
       <Layout>
         <Head>
             <link rel="icon" type="image/png" href="/favicon.png" />
-            <title>WASSIM CHIKHI</title>
+            <title>Wassim CHIKHI | AI & Critical Systems Engineer</title>
+            <meta name="description" content="Portfolio of Wassim CHIKHI — AI & Critical Systems Engineer (M.Sc. Research Paris Cité, CERT VINCI 24/7 Ops, AZ-400 Expert, ANSSI Certified)." />
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
           <AnimatePresence mode={'wait'}>
               <motion.div key={router.route} className={'h-full'}>

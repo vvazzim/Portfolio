@@ -22,17 +22,17 @@ const Home = () => {
 
       {/* ── PLAN 2 (Foreground) : Content and user interactions ── */}
       <div className="w-full h-full relative z-20 flex items-center bg-transparent">
-        <div className="container mx-auto px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full xl:pt-20">
+        <div className="container mx-auto px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full xl:pt-40">
           {/* Main Title */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h1 !mb-1 tracking-tight"
+            className="h1 !mb-2 tracking-tight"
           >
-            Critical Systems & AI Engineer <br />
-            <span className="text-accent">Applied Deep Learning & Sovereign SecOps</span>
+            Building Critical Systems <br />
+            <span className="text-accent">with Applied AI & SecOps</span>
           </motion.h1>
 
           {/* Dynamic Value Hook */}
@@ -45,19 +45,23 @@ const Home = () => {
             <HeroRotator />
           </motion.div>
 
-          {/* Broadened Narrative Paragraph */}
+          {/* Broadened Narrative Paragraph with Strategic Color Accents */}
           <motion.p
             variants={fadeIn('down', 0.3)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-8 xl:mb-10 text-sm sm:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-8 xl:mb-12 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
-            M.Sc. Research in Computer Vision & Machine Intelligence (Université Paris Cité, 2026), certified{' '}
-            <span className="text-white font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
-            <span className="text-white font-medium">ANSSI SecNumacadémie (96%)</span>.
+            I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer holding an M.Sc. Research from{' '}
+            <span className="text-white font-medium">Université Paris Cité</span> and operating in{' '}
+            <span className="text-emerald-400 font-medium">24/7 Production</span> at{' '}
+            <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>.
+            <br className="hidden sm:inline" />
+            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
+            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, I engineer sovereign foundational models, distributed streaming pipelines, and hardened cloud platforms.
             <br />
-            Production Engineer at VINCI SA (CERT VINCI, 24/7 ops, 1,500 daily security tickets). I design, secure, and productionize sovereign AI models and resilient distributed pipelines.
+            Currently seeking a <span className="text-accent font-medium">permanent position (CDI)</span> starting September 2026.
           </motion.p>
 
           {/* Projects Button */}

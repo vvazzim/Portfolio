@@ -1,4 +1,4 @@
-//next link
+// next link
 import { HiArrowRight } from "react-icons/hi2";
 import Link from "next/link";
 import React from "react";
@@ -8,7 +8,7 @@ const ProjectsBtn = () => {
     <div className="mx-auto xl:mx-0">
       <Link
         href="/work"
-        className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group transition-transform duration-300 hover:scale-105"
+        className="relative w-[185px] h-[185px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group transition-transform duration-300 hover:scale-105 cursor-pointer"
       >
         {/* Dynamic vector circular rotating text path */}
         <svg
@@ -33,4 +33,3 @@ const ProjectsBtn = () => {
 };
 
 export default ProjectsBtn;
-

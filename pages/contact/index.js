@@ -20,7 +20,7 @@ const Contact = () => {
       <div className="text-center py-32">
         <h2 className="text-2xl mb-4 font-semibold text-white">Thank you! Your message has been sent successfully.</h2>
         <p className="text-white/70 mb-6">I will get back to you shortly.</p>
-        <Link href="/" className="text-accent underline hover:text-white transition-colors">Return to Home</Link>
+        <Link href="/" className="cursor-pointer text-accent underline hover:text-white transition-colors">Return to Home</Link>
       </div> 
     );
   }
@@ -61,7 +61,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group"
+              className="btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group cursor-pointer"
             >
               <span className="group-hover:-translate-y-[120px] group-hover:opacity-0 transition-all duration-500 font-medium">
                 Send Message

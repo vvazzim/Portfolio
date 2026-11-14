@@ -16,7 +16,7 @@ const BranchNode = ({ data }) => {
         </div>
         <div>
           <span className="text-[10px] uppercase tracking-wider text-purple-200 font-mono block">
-            Pôle Spécialisé
+            Specialized Track
           </span>
           <span className="text-sm font-bold tracking-wide">
             {data?.label || 'ML / DL'}

@@ -92,7 +92,7 @@ const PoleCardStack = ({ selectedPole = 'Tous', onSelectPole }) => {
                     </span>
                     {project.featured && (
                       <span className="flex items-center gap-1 text-[11px] font-medium px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/40 backdrop-blur-md">
-                        <FaStar className="text-[10px]" /> Pôle Lead
+                        <FaStar className="text-[10px]" /> Track Lead
                       </span>
                     )}
                   </div>
@@ -129,9 +129,9 @@ const PoleCardStack = ({ selectedPole = 'Tous', onSelectPole }) => {
                           href={project.githubUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs text-white/80 hover:text-accent transition-colors py-1 px-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10"
+                          className="cursor-pointer flex items-center gap-1.5 text-xs text-white/80 hover:text-accent transition-colors py-1 px-2.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10"
                         >
-                          <FaGithub className="text-sm" /> Code
+                          <FaGithub className="text-sm" /> Source Code
                         </a>
                       )}
                       {project.demoUrl && (
@@ -139,9 +139,9 @@ const PoleCardStack = ({ selectedPole = 'Tous', onSelectPole }) => {
                           href={project.demoUrl}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-1.5 text-xs text-accent hover:text-white transition-colors py-1 px-2.5 rounded-lg bg-accent/15 hover:bg-accent/30 border border-accent/40"
+                          className="cursor-pointer flex items-center gap-1.5 text-xs text-accent hover:text-white transition-colors py-1 px-2.5 rounded-lg bg-accent/15 hover:bg-accent/30 border border-accent/40"
                         >
-                          <FaExternalLinkAlt className="text-xs" /> Démo Live
+                          <FaExternalLinkAlt className="text-xs" /> Live Demo
                         </a>
                       )}
                     </div>

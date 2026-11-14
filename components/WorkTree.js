@@ -22,7 +22,7 @@ class WorkTreeErrorBoundary extends Component {
       return (
         <div className="w-full">
           <div className="mb-3 p-3 rounded-xl bg-amber-500/15 border border-amber-500/30 text-amber-300 text-xs text-center">
-            Mode liste arborescente activé pour compatibilité maximale.
+            Vertical tree view enabled for optimal compatibility.
           </div>
           <WorkTreeMobile />
         </div>
@@ -40,7 +40,7 @@ const WorkTreeCanvas = dynamic(() => import('./WorkTree/WorkTreeCanvas'), {
       <div className="flex flex-col items-center gap-3">
         <span className="w-8 h-8 rounded-full border-2 border-accent border-t-transparent animate-spin" />
         <span className="text-xs text-white/60 font-mono">
-          Chargement de l'arborescence interactive...
+          Loading interactive graph...
         </span>
       </div>
     </div>
@@ -56,34 +56,34 @@ const WorkTree = () => {
         {/* Sub-header / view switch for testing */}
         <div className="w-full flex items-center justify-between mb-4 px-2">
           <div className="text-xs text-white/70">
-            <span className="text-accent font-semibold">Mind-Map :</span> Branche{' '}
-            <strong className="text-white">ML / DL</strong> reliée au nœud{' '}
+            <span className="text-accent font-semibold">Mind-Map :</span> Sub-branch{' '}
+            <strong className="text-white">ML / DL</strong> linked to{' '}
             <strong className="text-white">MY WORK</strong>
           </div>
 
-          {/* View toggle (Permet de basculer facilement entre arborescence et vue liste) */}
+          {/* View toggle */}
           <div className="flex items-center gap-1 bg-white/5 p-1 rounded-xl border border-white/10 text-xs">
             <button
               type="button"
               onClick={() => setViewMode('canvas')}
-              className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all ${
+              className={`cursor-pointer flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all ${
                 viewMode === 'canvas'
                   ? 'bg-accent text-white'
                   : 'text-white/60 hover:text-white'
               }`}
             >
-              <FaProjectDiagram className="text-[10px]" /> Arborescence
+              <FaProjectDiagram className="text-[10px]" /> Graph View
             </button>
             <button
               type="button"
               onClick={() => setViewMode('list')}
-              className={`flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all ${
+              className={`cursor-pointer flex items-center gap-1 px-2.5 py-1 rounded-lg transition-all ${
                 viewMode === 'list'
                   ? 'bg-accent text-white'
                   : 'text-white/60 hover:text-white'
               }`}
             >
-              <FaListUl className="text-[10px]" /> Liste Verticale
+              <FaListUl className="text-[10px]" /> Vertical List
             </button>
           </div>
         </div>

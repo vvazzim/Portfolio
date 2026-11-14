@@ -68,7 +68,7 @@ const WorkTreeMobile = () => {
               <button
                 type="button"
                 onClick={() => toggleExpand(project.id)}
-                className="w-full text-left p-3.5 flex items-center justify-between gap-2 focus:outline-none"
+                className="cursor-pointer w-full text-left p-3.5 flex items-center justify-between gap-2 focus:outline-none"
               >
                 <div className="flex items-center gap-2 overflow-hidden">
                   <span
@@ -112,15 +112,15 @@ const WorkTreeMobile = () => {
                         href={project.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent hover:bg-accent/80 text-white shadow-md shadow-accent/30 transition-colors"
+                        className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent hover:bg-accent/80 text-white shadow-md shadow-accent/30 transition-colors"
                       >
-                        Voir le projet <FaExternalLinkAlt className="text-[10px]" />
+                        View Project <FaExternalLinkAlt className="text-[10px]" />
                       </a>
                     </div>
                   ) : (
                     <div className="pt-1">
                       <span className="text-[10px] italic text-white/40">
-                        Projet de recherche (aucun dépôt public)
+                        Research project (internal / private repository)
                       </span>
                     </div>
                   )}

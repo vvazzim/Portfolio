@@ -129,10 +129,10 @@ const WorkTreeCanvas = () => {
         <Controls className="!bg-[#151628] !border-white/10 !fill-white !shadow-lg rounded-xl overflow-hidden" />
       </ReactFlow>
 
-      {/* Guide utilisateur visuel */}
+      {/* Visual User Guide */}
       <div className="absolute top-4 left-4 z-10 pointer-events-none bg-black/70 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-white/10 text-xs text-white/80 flex items-center gap-2">
         <span className="w-2 h-2 rounded-full bg-accent animate-ping" />
-        <span>Survolez une bulle projet : elle passe au premier plan avec sa fiche détaillée</span>
+        <span>Hover over any project node to inspect details and technical stack</span>
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 
 const POLES = [
-  { id: 'Tous', label: 'Tous les projets', icon: '✦' },
+  { id: 'Tous', label: 'All Projects', icon: '✦' },
   { id: 'Cyber', label: 'Cyber & Threat Intel', icon: '🛡️' },
   { id: 'GenAI', label: 'GenAI & RAG', icon: '🧠' },
   { id: 'ML', label: 'ML & Vision', icon: '👁️' },
@@ -22,7 +22,7 @@ const PoleTabs = ({ selectedPole, onSelectPole, counts = {} }) => {
             <button
               key={pole.id}
               onClick={() => onSelectPole(pole.id)}
-              className={`relative px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 focus:outline-none ${
+              className={`cursor-pointer relative px-3.5 sm:px-4 py-2 rounded-xl text-xs sm:text-sm font-medium transition-all duration-300 flex items-center gap-1.5 focus:outline-none ${
                 isActive
                   ? 'text-white shadow-sm'
                   : 'text-white/60 hover:text-white hover:bg-white/5'

@@ -51,9 +51,17 @@
   .text-accent {
     color: red !important;
   }
-  /* styles/globals.css or tailwind layer */
-body, * {
-  cursor: url('/cursor-red.svg'), auto; /* fallback to auto if image fails */
-}
 
+  /* Global interactive cursor rules - ensures finger pointer on all interactive elements */
+  a,
+  button,
+  [role="button"],
+  .cursor-pointer,
+  input[type="submit"],
+  input[type="button"],
+  .swiper-pagination-bullet,
+  .swiper-button-next,
+  .swiper-button-prev {
+    cursor: pointer !important;
+  }
 }

@@ -69,7 +69,7 @@ const Work = () => {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
+                    className={`cursor-pointer px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
                       isActive
                         ? 'bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold'
                         : 'bg-white/[0.04] text-white/75 border-white/10 hover:bg-white/[0.08] hover:text-white'
@@ -116,7 +116,7 @@ const Work = () => {
 
                 <div className="flex items-center gap-2 self-start sm:self-center shrink-0">
                   <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/[0.06] border border-white/10 text-white/80 tabular-nums">
-                    {counts[selectedCategory]} {counts[selectedCategory] > 1 ? 'projets disponibles' : 'projet disponible'}
+                    {counts[selectedCategory]} {counts[selectedCategory] > 1 ? 'projects available' : 'project available'}
                   </span>
                 </div>
               </div>

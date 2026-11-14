@@ -39,8 +39,8 @@ const ProjectNode = ({ data, selected }) => {
         </div>
         <button
           type="button"
-          aria-label="Afficher les détails"
-          className="text-white/60 hover:text-white text-xs p-1 rounded-md hover:bg-white/10 shrink-0"
+          aria-label="View details"
+          className="cursor-pointer text-white/60 hover:text-white text-xs p-1 rounded-md hover:bg-white/10 shrink-0"
         >
           {isExpanded ? <FaChevronUp /> : <FaChevronDown />}
         </button>
@@ -65,7 +65,7 @@ const ProjectNode = ({ data, selected }) => {
             )}
           </div>
           <span className="text-[10px] text-accent/80 block mt-1.5 font-medium">
-            Survoler / Cliquer pour détails →
+            Hover / Click for details →
           </span>
         </div>
       )}
@@ -73,7 +73,7 @@ const ProjectNode = ({ data, selected }) => {
       {/* Expanded State (Full description, tech stack, and link button) */}
       {isExpanded && (
         <div className="p-4 space-y-3">
-          {/* Description validée sans aucune modification */}
+          {/* Description */}
           <p className="text-xs text-white/90 leading-relaxed font-light">
             {description}
           </p>
@@ -81,7 +81,7 @@ const ProjectNode = ({ data, selected }) => {
           {/* Tech stack badges */}
           <div>
             <span className="text-[10px] uppercase font-mono text-white/50 block mb-1">
-              Stack technique :
+              Tech Stack:
             </span>
             <div className="flex flex-wrap gap-1">
               {tech?.map((item) => (
@@ -95,7 +95,7 @@ const ProjectNode = ({ data, selected }) => {
             </div>
           </div>
 
-          {/* Link: strict condition (pas de bouton si link est null) */}
+          {/* Link: strict condition */}
           {link ? (
             <div className="pt-2 border-t border-white/10">
               <a
@@ -103,15 +103,15 @@ const ProjectNode = ({ data, selected }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={(e) => e.stopPropagation()}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent hover:bg-accent/80 text-white shadow-md shadow-accent/30 transition-all duration-200"
+                className="cursor-pointer inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-accent hover:bg-accent/80 text-white shadow-md shadow-accent/30 transition-all duration-200"
               >
-                Voir le projet <FaExternalLinkAlt className="text-[10px]" />
+                View Project <FaExternalLinkAlt className="text-[10px]" />
               </a>
             </div>
           ) : (
             <div className="pt-1.5 border-t border-white/5">
               <span className="text-[10px] italic text-white/40">
-                Projet de recherche (aucun dépôt public)
+                Research project (internal / private repository)
               </span>
             </div>
           )}
