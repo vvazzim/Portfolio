@@ -59,10 +59,11 @@ const Home = () => {
             I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
             <span className="text-emerald-400 font-medium">24/7 Production</span> at{' '}
             <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>.
-            <br className="hidden sm:inline" />
-            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span>,{' '}
-            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, and trained in{' '}
-            <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming architectures and sovereign AI platforms.
+            <br />
+            Certified <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
+            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>.
+            <br />
+            Trained in <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming architectures and sovereign AI platforms.
           </motion.p>
 
           {/* Projects Button */}
