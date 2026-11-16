@@ -24,7 +24,7 @@ const Home = () => {
 
       {/* ── PLAN 2 (Foreground) : Content and user interactions ── */}
       <div className="w-full h-full relative z-20 flex items-center bg-transparent">
-        <div className="container mx-auto px-4 sm:px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full pt-20 sm:pt-28 xl:pt-40 pb-28 sm:pb-32 xl:pb-8">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full pt-[65px] pb-[72px] xl:pt-40 xl:pb-8">
           {/* Main Title with balanced line-height to prevent Header collisions */}
           <motion.h1
             variants={fadeIn('down', 0.2)}

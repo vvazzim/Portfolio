@@ -27,18 +27,18 @@ const Work = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="h-full bg-primary/30 pt-20 sm:pt-28 xl:py-32 pb-28 sm:pb-32 flex items-center overflow-y-auto xl:overflow-hidden relative">
+    <div className="h-full bg-primary/30 pt-[75px] sm:pt-[90px] xl:pt-0 pb-20 sm:pb-28 xl:pb-0 flex flex-col justify-start xl:justify-center xl:flex-row xl:items-center overflow-y-auto xl:overflow-hidden relative">
       <Circles />
       <div className="container mx-auto px-4 xl:px-8">
         <div className="flex flex-col xl:flex-row gap-x-10 items-center justify-between">
           {/* ── COLONNE GAUCHE (32vw) : Titre, Cadrage & Boutons Abrégés ── */}
-          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-6 xl:mb-0">
+          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-3 xl:mb-0">
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="h2 !mb-3 tracking-tight whitespace-nowrap"
+              className="text-2xl sm:text-3xl xl:text-[54px] font-semibold xl:leading-[1.3] !mb-1 xl:!mb-3 tracking-tight whitespace-nowrap"
             >
               My Work <span className="text-accent">.</span>
             </motion.h2>
@@ -48,7 +48,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-6 max-w-[420px] mx-auto lg:mx-0 text-xs sm:text-sm text-white/75 leading-relaxed font-light min-h-[56px]"
+              className="mb-3 xl:mb-6 max-w-[420px] mx-auto lg:mx-0 text-xs sm:text-sm text-white/75 leading-relaxed font-light min-h-0 xl:min-h-[56px] line-clamp-2 xl:line-clamp-none"
             >
               {activeCategoryInfo.description}
             </motion.p>
@@ -59,7 +59,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="grid grid-cols-2 gap-2 max-w-[420px] mx-auto lg:mx-0 w-full"
+              className="grid grid-cols-3 sm:grid-cols-2 gap-1.5 sm:gap-2 max-w-[420px] mx-auto lg:mx-0 w-full mb-3 xl:mb-0"
             >
               {CATEGORIES.map((cat) => {
                 const isActive = cat.id === selectedCategory;
@@ -69,15 +69,15 @@ const Work = () => {
                   <button
                     key={cat.id}
                     onClick={() => setSelectedCategory(cat.id)}
-                    className={`cursor-pointer px-3.5 py-2.5 rounded-xl text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
+                    className={`cursor-pointer px-2 sm:px-3.5 py-1.5 sm:py-2.5 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-medium transition-all duration-200 text-left flex items-center justify-between border ${
                       isActive
                         ? 'bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold'
                         : 'bg-white/[0.04] text-white/75 border-white/10 hover:bg-white/[0.08] hover:text-white'
                     }`}
                   >
-                    <span className="pr-1 text-xs leading-tight">{cat.title}</span>
+                    <span className="pr-1 leading-tight truncate">{cat.title}</span>
                     <span
-                      className={`text-[10px] px-2 py-0.5 rounded-md font-normal tabular-nums shrink-0 ${
+                      className={`text-[9px] sm:text-[10px] px-1.5 sm:px-2 py-0.5 rounded font-normal tabular-nums shrink-0 ${
                         isActive ? 'bg-black/30 text-white' : 'bg-white/10 text-white/70'
                       }`}
                     >
@@ -99,23 +99,23 @@ const Work = () => {
               className="w-full"
             >
               {/* En-tête : Titre en full (Computer Vision & Deep Learning) + Sous-titre & Badge */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-y-2 mb-4 pb-3 border-b border-white/10">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-xl flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0 shadow-lg shadow-accent/15">
-                    {renderProjectIcon(activeCategoryInfo.icon, 'text-xl')}
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-y-1 mb-2 pb-2 xl:mb-4 xl:pb-3 border-b border-white/10">
+                <div className="flex items-center gap-2 sm:gap-3">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0 shadow-lg shadow-accent/15">
+                    {renderProjectIcon(activeCategoryInfo.icon, 'text-lg sm:text-xl')}
                   </div>
                   <div>
-                    <h3 className="text-base sm:text-lg font-bold text-white tracking-tight">
+                    <h3 className="text-sm sm:text-lg font-bold text-white tracking-tight">
                       {activeCategoryInfo.fullName || activeCategoryInfo.title}
                     </h3>
-                    <p className="text-xs text-white/60">
+                    <p className="text-[11px] sm:text-xs text-white/60">
                       {activeCategoryInfo.subtitle}
                     </p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-2 self-start sm:self-center shrink-0">
-                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-white/[0.06] border border-white/10 text-white/80 tabular-nums">
+                  <span className="px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-full text-[11px] sm:text-xs font-medium bg-white/[0.06] border border-white/10 text-white/80 tabular-nums">
                     {counts[selectedCategory]} {counts[selectedCategory] > 1 ? 'projects available' : 'project available'}
                   </span>
                 </div>
