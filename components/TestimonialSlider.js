@@ -188,34 +188,34 @@ const TestimonialSlider = () => {
                    clickable:true,
                  }}
                  modules={[Navigation, Pagination]}
-                 className={'h-[480px]'}
+                 className={'h-[430px] sm:h-[460px] xl:h-[480px] pb-8 sm:pb-0'}
   >
     {testimonialSlider.map((person,index)=>{
       return (
           <SwiperSlide key={ index}>
-            <div className={'flex flex-col items-center md:flex-row gap-x-8 h-full px-16'}>
+            <div className={'flex flex-col items-center md:flex-row gap-x-8 h-full px-6 sm:px-12 md:px-16'}>
               {/*figure, name, position*/}
-              <div className={'w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0'}>
+              <div className={'w-full max-w-[300px] flex flex-col xl:justify-center items-center relative mx-auto xl:mx-0 shrink-0'}>
                 <div className={'flex flex-col justify-center text-center'}>
                   {/* custom vector figure for anonymity */}
-                  <div className={'mb-3 mx-auto flex items-center justify-center'}>
+                  <div className={'mb-2 sm:mb-3 mx-auto flex items-center justify-center'}>
                     <TestimonialFigure id={person.id} />
                   </div>
                   {/* name*/}
-                  <div className={'text-lg font-medium text-white'}>{person.name}</div>
+                  <div className={'text-base sm:text-lg font-medium text-white'}>{person.name}</div>
                   {/*position*/}
-                  <div className={'text-[12px] uppercase font-light tracking-widest text-white/60 mt-1'}>{person.position}</div>
+                  <div className={'text-[11px] sm:text-[12px] uppercase font-light tracking-widest text-white/60 mt-0.5 sm:mt-1'}>{person.position}</div>
                 </div>
               </div>
               {/*quote & message*/}
               <div className={'flex-1 flex flex-col justify-center before:w-[1px]' +
-              ' xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20'}>
+              ' xl:before:bg-white/20 xl:before:absolute xl:before:left-0 xl:before:h-[200px] relative xl:pl-20 mt-2 md:mt-0'}>
                 {/*quote icon*/}
-                <div className={'mb-4'}>
-                  <FaQuoteLeft className={'text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0'} />
+                <div className={'mb-2 sm:mb-4'}>
+                  <FaQuoteLeft className={'text-2xl sm:text-4xl xl:text-6xl text-white/20 mx-auto md:mx-0'} />
                 </div>
                 {/*message*/}
-                <div className={'xl:text-lg text-center md:text-left text-white/90 leading-relaxed font-light'}>{person.message}</div>
+                <div className={'text-xs sm:text-base xl:text-lg text-center md:text-left text-white/90 leading-relaxed font-light'}>{person.message}</div>
               </div>
             </div>
           </SwiperSlide>

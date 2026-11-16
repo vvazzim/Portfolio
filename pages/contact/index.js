@@ -26,8 +26,8 @@ const Contact = () => {
   }
 
   return (
-    <div className="h-full bg-primary/30">
-      <div className="container mx-auto py-32 text-center xl:text-left flex items-center justify-center h-full">
+    <div className="min-h-screen xl:h-full bg-primary/30 pt-20 sm:pt-28 xl:pt-32 pb-28 sm:pb-32 xl:pb-16 flex items-center justify-center overflow-y-auto xl:overflow-hidden relative">
+      <div className="container mx-auto px-4 sm:px-6 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
@@ -36,7 +36,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-4 tracking-tight"
+            className="h2 text-center mb-4 tracking-tight text-3xl sm:text-4xl xl:text-5xl"
           >
             Let's <span className="text-accent">Connect.</span>
           </motion.h2>
@@ -47,7 +47,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-center mb-8 text-sm text-white/70 max-w-md mx-auto leading-relaxed font-light"
+            className="text-center mb-6 sm:mb-8 text-xs sm:text-sm text-white/70 max-w-md mx-auto leading-relaxed font-light"
           >
             Have a project, a technical challenge, or an engineering role in mind? Reach out directly below.
           </motion.p>
@@ -59,10 +59,10 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="flex-1 flex flex-col gap-6 w-full mx-auto"
+            className="flex-1 flex flex-col gap-4 sm:gap-6 w-full mx-auto"
           >
             {/* input group */}
-            <div className="flex gap-x-6 w-full">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-x-6 w-full">
               <input type="text" name="name" placeholder="Full Name" className="input" required />
               <input type="email" name="email" placeholder="Email Address" className="input" required />
             </div>
@@ -72,7 +72,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={state.submitting}
-              className="btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group cursor-pointer"
+              className="btn rounded-full border border-white/50 max-w-[190px] px-8 transition-all duration-300 flex items-center justify-center overflow-hidden hover:border-accent group cursor-pointer mx-auto xl:mx-0"
             >
               <span className="group-hover:-translate-y-[120px] group-hover:opacity-0 transition-all duration-500 font-medium">
                 Send Message

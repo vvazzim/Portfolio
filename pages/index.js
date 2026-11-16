@@ -8,7 +8,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 h-full relative overflow-hidden">
+    <div className="bg-primary/60 min-h-screen xl:h-full relative overflow-y-auto xl:overflow-hidden">
       {/* ── PLAN 0 (Background) : Explosion artwork positioned on the right ── */}
       <div className="w-full xl:w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none z-0 overflow-hidden">
         <div className="w-full h-full xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat mix-blend-color-dodge translate-z-0 opacity-80" />
@@ -24,14 +24,14 @@ const Home = () => {
 
       {/* ── PLAN 2 (Foreground) : Content and user interactions ── */}
       <div className="w-full h-full relative z-20 flex items-center bg-transparent">
-        <div className="container mx-auto px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full pt-32 sm:pt-36 xl:pt-40 pb-8">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left h-full pt-20 sm:pt-28 xl:pt-40 pb-28 sm:pb-32 xl:pb-8">
           {/* Main Title with balanced line-height to prevent Header collisions */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[32px] sm:text-[44px] md:text-[52px] xl:text-[54px] font-extrabold tracking-tight leading-[1.16] mb-3 xl:mb-4"
+            className="text-[24px] sm:text-[36px] md:text-[46px] xl:text-[54px] font-extrabold tracking-tight leading-[1.18] mb-3 xl:mb-4"
           >
             Building Critical Systems <br />
             <span className="text-accent">with Applied AI & Intelligent Automation</span>
@@ -43,7 +43,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-4 xl:mb-5"
+            className="mb-3 xl:mb-5"
           >
             <HeroRotator />
           </motion.div>
@@ -54,7 +54,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-light"
           >
             I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
             <span className="text-emerald-400 font-medium">24/7 Production</span><br />

@@ -160,7 +160,7 @@ const About = () => {
   const [index, setIndex] = useState(0);
 
   return (
-    <div className="min-h-screen xl:h-full bg-primary/30 pt-32 xl:pt-40 pb-16 text-center xl:text-left overflow-y-auto xl:overflow-hidden relative">
+    <div className="min-h-screen xl:h-full bg-primary/30 pt-20 sm:pt-28 xl:pt-40 pb-28 sm:pb-32 xl:pb-16 text-center xl:text-left overflow-y-auto xl:overflow-hidden relative">
       <Circles />
       <div className="container mx-auto h-full flex flex-col items-center xl:flex-row gap-x-8 px-4 xl:px-8">
         {/* Left Column : Title, Bio, Resume button, Counters */}
@@ -170,7 +170,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[26px] sm:text-[34px] md:text-[38px] xl:text-[42px] leading-[1.2] font-bold tracking-tight !mb-4"
+            className="text-[20px] sm:text-[30px] md:text-[36px] xl:text-[42px] leading-[1.2] font-bold tracking-tight !mb-4"
           >
             <span className="block whitespace-nowrap">Transforming Data & AI</span>
             <span className="block whitespace-nowrap text-accent">into Critical Systems.</span>
@@ -181,7 +181,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-xs sm:text-sm md:text-base"
           >
             Holding an M.Sc. Research in Computer Vision from{' '}
             <span className="text-white font-medium">Université Paris Cité</span> and certified in Business Management (
@@ -267,7 +267,7 @@ const About = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="flex flex-col w-full xl:max-w-[48%] h-[480px]"
+          className="flex flex-col w-full xl:max-w-[48%] h-auto xl:h-[480px] mb-8 xl:mb-0"
         >
           {/* Tab Navigation */}
           <div className="flex flex-wrap gap-x-4 xl:gap-x-6 mx-auto xl:mx-0 mb-4">
