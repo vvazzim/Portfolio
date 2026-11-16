@@ -170,7 +170,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[20px] sm:text-[30px] md:text-[36px] xl:text-[42px] leading-[1.2] font-bold tracking-tight !mb-4"
+            className="text-[22px] sm:text-[34px] md:text-[38px] xl:text-[42px] leading-[1.2] font-bold tracking-tight !mb-4"
           >
             <span className="block whitespace-nowrap">Transforming Data & AI</span>
             <span className="block whitespace-nowrap text-accent">into Critical Systems.</span>
@@ -181,7 +181,7 @@ const About = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-xs sm:text-sm md:text-base"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 px-1 xl:px-0 text-white/80 leading-relaxed font-light text-sm sm:text-base"
           >
             Holding an M.Sc. Research in Computer Vision from{' '}
             <span className="text-white font-medium">Université Paris Cité</span> and certified in Business Management (

@@ -31,7 +31,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[24px] sm:text-[36px] md:text-[46px] xl:text-[54px] font-extrabold tracking-tight leading-[1.18] mb-3 xl:mb-4"
+            className="text-[26px] sm:text-[38px] md:text-[52px] xl:text-[54px] font-extrabold tracking-tight leading-[1.16] mb-3 xl:mb-4"
           >
             Building Critical Systems <br />
             <span className="text-accent">with Applied AI & Intelligent Automation</span>
@@ -43,7 +43,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-3 xl:mb-5"
+            className="mb-4 xl:mb-5"
           >
             <HeroRotator />
           </motion.div>
@@ -54,7 +54,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-xs sm:text-sm md:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
             I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
             <span className="text-emerald-400 font-medium">24/7 Production</span><br />

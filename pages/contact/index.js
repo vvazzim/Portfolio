@@ -26,8 +26,8 @@ const Contact = () => {
   }
 
   return (
-    <div className="min-h-screen xl:h-full bg-primary/30 pt-20 sm:pt-28 xl:pt-32 pb-28 sm:pb-32 xl:pb-16 flex items-center justify-center overflow-y-auto xl:overflow-hidden relative">
-      <div className="container mx-auto px-4 sm:px-6 text-center xl:text-left flex items-center justify-center h-full">
+    <div className="h-full bg-primary/30 pt-20 sm:pt-28 xl:pt-0 pb-28 sm:pb-32 xl:pb-0 flex items-center justify-center overflow-y-auto xl:overflow-hidden relative">
+      <div className="container mx-auto px-4 sm:px-6 xl:py-32 text-center xl:text-left flex items-center justify-center h-full">
         {/* text & form */}
         <div className="flex flex-col w-full max-w-[700px]">
           {/* text */}
@@ -36,7 +36,7 @@ const Contact = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="h2 text-center mb-4 tracking-tight text-3xl sm:text-4xl xl:text-5xl"
+            className="h2 text-center mb-4 tracking-tight"
           >
             Let's <span className="text-accent">Connect.</span>
           </motion.h2>
