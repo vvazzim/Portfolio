@@ -27,12 +27,12 @@ const Work = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="h-full bg-primary/30 pt-20 sm:pt-24 xl:pt-0 pb-16 sm:pb-28 xl:pb-0 flex flex-col justify-start xl:justify-center xl:flex-row xl:items-center overflow-x-hidden relative">
+    <div className="h-full bg-primary/30 pt-16 pb-20 sm:pt-24 sm:pb-28 xl:pt-0 xl:pb-0 flex flex-col justify-center xl:flex-row xl:items-center overflow-x-hidden relative">
       <Circles />
-      <div className="container mx-auto px-4 xl:px-8">
+      <div className="container mx-auto px-4 xl:px-8 my-auto xl:my-0">
         <div className="flex flex-col xl:flex-row gap-x-10 items-center justify-between">
           {/* ── COLONNE GAUCHE (32vw) : Titre, Cadrage & Boutons Abrégés ── */}
-          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-2.5 xl:mb-0">
+          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-3 xl:mb-0">
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial="hidden"
@@ -59,7 +59,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="grid grid-cols-3 sm:grid-cols-2 gap-1.5 sm:gap-2 max-w-[420px] mx-auto lg:mx-0 w-full mb-2 xl:mb-0"
+              className="grid grid-cols-3 sm:grid-cols-2 gap-1.5 sm:gap-2 max-w-[420px] mx-auto lg:mx-0 w-full mb-2.5 xl:mb-0"
             >
               {CATEGORIES.map((cat) => {
                 const isActive = cat.id === selectedCategory;
