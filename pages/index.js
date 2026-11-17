@@ -8,7 +8,7 @@ import React from "react";
 
 const Home = () => {
   return (
-    <div className="bg-primary/60 min-h-screen xl:h-full relative overflow-y-auto xl:overflow-hidden">
+    <div className="bg-primary/60 h-full w-full relative overflow-y-auto xl:overflow-hidden flex flex-col justify-center">
       {/* ── PLAN 0 (Background) : Explosion artwork positioned on the right ── */}
       <div className="w-full xl:w-[1200px] h-full absolute right-0 bottom-0 pointer-events-none z-0 overflow-hidden">
         <div className="w-full h-full xl:bg-explosion xl:bg-cover xl:bg-right xl:bg-no-repeat mix-blend-color-dodge translate-z-0 opacity-80" />
@@ -23,15 +23,15 @@ const Home = () => {
       <div className="w-full h-full absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-transparent z-[15] pointer-events-none" />
 
       {/* ── PLAN 2 (Foreground) : Content and user interactions ── */}
-      <div className="w-full h-full relative z-20 flex items-center bg-transparent">
-        <div className="container mx-auto px-4 sm:px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left my-auto xl:my-0 min-h-[calc(100vh-140px)] xl:min-h-0 pt-[70px] pb-[76px] xl:pt-40 xl:pb-8">
+      <div className="w-full h-full relative z-20 flex flex-col justify-center items-center xl:items-start bg-transparent">
+        <div className="container mx-auto px-4 sm:px-6 xl:px-12 flex flex-col justify-center text-center xl:text-left my-auto xl:my-0 pt-16 pb-20 xl:pt-40 xl:pb-8">
           {/* Main Title with balanced line-height to prevent Header collisions */}
           <motion.h1
             variants={fadeIn('down', 0.2)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="text-[26px] sm:text-[38px] md:text-[52px] xl:text-[54px] font-extrabold tracking-tight leading-[1.16] mb-2 sm:mb-3 xl:mb-4"
+            className="text-[26px] sm:text-[38px] md:text-[52px] xl:text-[54px] font-extrabold tracking-tight leading-[1.16] mb-3 sm:mb-4 xl:mb-4"
           >
             Building Critical Systems <br />
             <span className="text-accent">with Applied AI & Intelligent Automation</span>
@@ -43,7 +43,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-3 sm:mb-4 xl:mb-5"
+            className="mb-4 sm:mb-5 xl:mb-5"
           >
             <HeroRotator />
           </motion.div>
@@ -54,7 +54,7 @@ const Home = () => {
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-4 sm:mb-6 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
+            className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 sm:mb-7 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
             I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
             <span className="text-emerald-400 font-medium">24/7 Production</span><br />
@@ -65,7 +65,7 @@ const Home = () => {
           </motion.p>
 
           {/* Projects Button */}
-          <div className="flex justify-center xl:hidden relative z-30">
+          <div className="flex justify-center xl:hidden relative z-30 mt-1">
             <ProjectsBtn />
           </div>
           <motion.div

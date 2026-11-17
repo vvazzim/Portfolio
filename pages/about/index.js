@@ -4,18 +4,29 @@ import {
   FaJs,
   FaReact,
   FaPython,
+  FaBrain,
 } from "react-icons/fa";
 import {
   SiNextdotjs,
   SiScikitlearn,
   SiPytorch,
   SiTensorflow,
+  SiOpencv,
   SiDocker, 
-  SiApacheairflow, SiKubernetes, SiApachekafka, SiPostgresql,
+  SiApacheairflow, 
+  SiKubernetes, 
+  SiApachekafka, 
+  SiPostgresql,
+  SiRedis,
   SiFastapi,
-  SiLinux, SiStreamlit, SiGitlab
+  SiLinux, 
+  SiGnubash, 
+  SiWireshark, 
+  SiElasticsearch, 
+  SiGitlab,
+  SiTypescript,
+  SiTailwindcss,
 } from "react-icons/si";
-import { FaBrain } from "react-icons/fa";
 import { BsDownload } from "react-icons/bs";
 
 // data
@@ -26,40 +37,44 @@ const aboutData = [
       {
         title: "Computer Vision & Deep Learning",
         icons: [
-          { id: 11, component: <FaPython /> },
-          { id: 12, component: <SiPytorch /> },
-          { id: 13, component: <SiTensorflow /> },
-          { id: 14, component: <SiScikitlearn /> },
-          { id: 16, component: <FaBrain title="Vision Transformers & CNN" /> },
+          { id: "cv-py", name: "Python", component: <FaPython /> },
+          { id: "cv-torch", name: "PyTorch", component: <SiPytorch /> },
+          { id: "cv-tf", name: "TensorFlow", component: <SiTensorflow /> },
+          { id: "cv-cv", name: "OpenCV", component: <SiOpencv /> },
+          { id: "cv-skl", name: "Scikit-Learn", component: <SiScikitlearn /> },
+          { id: "cv-brain", name: "Foundation Models & ViT", component: <FaBrain /> },
         ],
       },
       {
         title: "Cybersecurity & SecOps (CERT)",
         icons: [
-          { id: 15, component: <SiFastapi /> },
-          { id: 19, component: <SiLinux /> },
-          { id: 20, component: <SiStreamlit /> },
-          { id: 21, component: <SiGitlab /> },
+          { id: "sec-linux", name: "Linux Hardening", component: <SiLinux /> },
+          { id: "sec-bash", name: "Bash Scripting", component: <SiGnubash /> },
+          { id: "sec-ws", name: "Wireshark Analysis", component: <SiWireshark /> },
+          { id: "sec-elastic", name: "Elasticsearch / SIEM", component: <SiElasticsearch /> },
+          { id: "sec-gitlab", name: "GitLab SecOps", component: <SiGitlab /> },
         ],
       },
       {
         title: "Cloud, MLOps & Streaming",
         icons: [
-          { id: 6, component: <SiApacheairflow /> },
-          { id: 7, component: <SiApachekafka /> },
-          { id: 8, component: <SiDocker /> },
-          { id: 9, component: <SiKubernetes /> },
-          { id: 10, component: <SiPostgresql /> },
+          { id: "cld-kafka", name: "Apache Kafka", component: <SiApachekafka /> },
+          { id: "cld-airflow", name: "Apache Airflow", component: <SiApacheairflow /> },
+          { id: "cld-k8s", name: "Kubernetes", component: <SiKubernetes /> },
+          { id: "cld-docker", name: "Docker", component: <SiDocker /> },
+          { id: "cld-pg", name: "PostgreSQL", component: <SiPostgresql /> },
+          { id: "cld-redis", name: "Redis", component: <SiRedis /> },
         ],
       },
       {
         title: "Full-Stack SaaS & Web",
         icons: [
-          { id: 3, component: <FaJs /> },
-          { id: 4, component: <FaReact /> },
-          { id: 5, component: <SiNextdotjs /> },
-          { id: 15, component: <SiFastapi /> },
-          { id: 10, component: <SiPostgresql /> },
+          { id: "web-ts", name: "TypeScript", component: <SiTypescript /> },
+          { id: "web-react", name: "React", component: <FaReact /> },
+          { id: "web-next", name: "Next.js", component: <SiNextdotjs /> },
+          { id: "web-tw", name: "Tailwind CSS", component: <SiTailwindcss /> },
+          { id: "web-fastapi", name: "FastAPI", component: <SiFastapi /> },
+          { id: "web-pg", name: "PostgreSQL", component: <SiPostgresql /> },
         ],
       },
     ],
@@ -287,29 +302,21 @@ const About = () => {
             ))}
           </div>
 
-          {/* Mobile Intuitive Segmented Chips (1-tap direct selection) */}
+          {/* Mobile Intuitive Segmented Chips (1-tap direct selection, pas d'emoji) */}
           <div className="xl:hidden w-full overflow-x-auto no-scrollbar py-1 mb-4 flex items-center gap-2 justify-start sm:justify-center">
             {aboutData.map((item, itemIndex) => {
               const isActive = index === itemIndex;
-              const sectionIcons = {
-                skills: "⚡",
-                experience: "💼",
-                certifications: "📜",
-                education: "🎓",
-                awards: "🏆",
-              };
               return (
                 <button
                   key={itemIndex}
                   type="button"
                   onClick={() => setIndex(itemIndex)}
-                  className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+                  className={`whitespace-nowrap px-4 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer border shrink-0 ${
                     isActive
                       ? "bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold"
                       : "bg-white/[0.05] text-white/75 border-white/10 hover:bg-white/[0.1] hover:text-white"
                   }`}
                 >
-                  <span className="text-[12px]">{sectionIcons[item.title] || "•"}</span>
                   <span className="capitalize">{item.title}</span>
                 </button>
               );
@@ -317,14 +324,14 @@ const About = () => {
           </div>
 
           {/* Tab Content List */}
-          <div className="py-2 xl:py-6 flex flex-col gap-y-3 xl:gap-y-4 items-center xl:items-start overflow-y-auto max-h-[380px] pr-2">
+          <div className="py-2 xl:py-6 flex flex-col gap-y-3 xl:gap-y-4 items-center xl:items-start overflow-y-auto max-h-[380px] pr-2 w-full">
             {aboutData[index].info.map((item, itemIndex) => (
               <div
                 key={itemIndex}
                 className="flex-1 flex flex-col md:flex-row max-w-max gap-x-3 items-center text-white/75"
               >
                 {/* Title */}
-                <div className="font-light text-white text-sm sm:text-base mb-1 md:mb-0">
+                <div className="font-light text-white text-sm sm:text-base mb-1 md:mb-0 text-center md:text-left">
                   {item.title}
                 </div>
                 <div className="hidden md:flex text-accent">•</div>
@@ -336,11 +343,12 @@ const About = () => {
                 )}
                 {/* Icons */}
                 {item.icons && (
-                  <div className="flex gap-x-3 mt-1 md:mt-0">
+                  <div className="flex flex-wrap items-center justify-center md:justify-start gap-2.5 sm:gap-x-3.5 mt-1.5 md:mt-0 text-white/80">
                     {item.icons.map((iconObj) => (
                       <div
                         key={iconObj.id}
-                        className="text-2xl text-white/80 hover:text-accent hover:scale-110 transition-all cursor-pointer"
+                        title={iconObj.name || ""}
+                        className="text-xl sm:text-2xl text-white/80 hover:text-accent hover:scale-110 transition-all cursor-pointer flex items-center justify-center"
                       >
                         {iconObj.component}
                       </div>
