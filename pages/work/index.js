@@ -27,12 +27,12 @@ const Work = () => {
   }, [selectedCategory]);
 
   return (
-    <div className="h-full bg-primary/30 pt-[75px] sm:pt-[90px] xl:pt-0 pb-20 sm:pb-28 xl:pb-0 flex flex-col justify-start xl:justify-center xl:flex-row xl:items-center overflow-y-auto xl:overflow-hidden relative">
+    <div className="h-full bg-primary/30 pt-20 sm:pt-24 xl:pt-0 pb-16 sm:pb-28 xl:pb-0 flex flex-col justify-start xl:justify-center xl:flex-row xl:items-center overflow-x-hidden relative">
       <Circles />
       <div className="container mx-auto px-4 xl:px-8">
         <div className="flex flex-col xl:flex-row gap-x-10 items-center justify-between">
           {/* ── COLONNE GAUCHE (32vw) : Titre, Cadrage & Boutons Abrégés ── */}
-          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-3 xl:mb-0">
+          <div className="text-center flex xl:w-[32vw] flex-col lg:text-left mb-2.5 xl:mb-0">
             <motion.h2
               variants={fadeIn('up', 0.2)}
               initial="hidden"
@@ -48,7 +48,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="mb-3 xl:mb-6 max-w-[420px] mx-auto lg:mx-0 text-xs sm:text-sm text-white/75 leading-relaxed font-light min-h-0 xl:min-h-[56px] line-clamp-2 xl:line-clamp-none"
+              className="mb-2.5 xl:mb-6 max-w-[420px] mx-auto lg:mx-0 text-xs sm:text-sm text-white/75 leading-relaxed font-light min-h-0 xl:min-h-[56px] line-clamp-2 xl:line-clamp-none"
             >
               {activeCategoryInfo.description}
             </motion.p>
@@ -59,7 +59,7 @@ const Work = () => {
               initial="hidden"
               animate="show"
               exit="hidden"
-              className="grid grid-cols-3 sm:grid-cols-2 gap-1.5 sm:gap-2 max-w-[420px] mx-auto lg:mx-0 w-full mb-3 xl:mb-0"
+              className="grid grid-cols-3 sm:grid-cols-2 gap-1.5 sm:gap-2 max-w-[420px] mx-auto lg:mx-0 w-full mb-2 xl:mb-0"
             >
               {CATEGORIES.map((cat) => {
                 const isActive = cat.id === selectedCategory;
@@ -98,8 +98,8 @@ const Work = () => {
               transition={{ duration: 0.25, ease: 'easeOut' }}
               className="w-full"
             >
-              {/* En-tête : Titre en full (Computer Vision & Deep Learning) + Sous-titre & Badge */}
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-y-1 mb-2 pb-2 xl:mb-4 xl:pb-3 border-b border-white/10">
+              {/* En-tête : Titre en full (Visible sur sm & desktop, masqué sur petit écran mobile pour éliminer le scroll) */}
+              <div className="hidden sm:flex sm:flex-row sm:items-center justify-between gap-y-1 mb-2 pb-2 xl:mb-4 xl:pb-3 border-b border-white/10">
                 <div className="flex items-center gap-2 sm:gap-3">
                   <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl flex items-center justify-center bg-accent/20 border border-accent/40 text-accent shrink-0 shadow-lg shadow-accent/15">
                     {renderProjectIcon(activeCategoryInfo.icon, 'text-lg sm:text-xl')}

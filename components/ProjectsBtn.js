@@ -8,12 +8,12 @@ const ProjectsBtn = () => {
     <div className="mx-auto xl:mx-0">
       <Link
         href="/work"
-        className="relative w-[150px] h-[150px] xl:w-[170px] xl:h-[170px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group transition-transform duration-300 hover:scale-105 cursor-pointer"
+        className="relative w-[115px] h-[115px] sm:w-[135px] sm:h-[135px] xl:w-[170px] xl:h-[170px] flex justify-center items-center bg-circleStar bg-cover bg-center bg-no-repeat group transition-transform duration-300 hover:scale-105 cursor-pointer"
       >
         {/* Dynamic vector circular rotating text path */}
         <svg
           viewBox="0 0 148 148"
-          className="animate-spin-slow w-full h-full max-w-[128px] max-h-[128px] xl:max-w-[141px] xl:max-h-[148px]"
+          className="animate-spin-slow w-full h-full max-w-[98px] max-h-[98px] sm:max-w-[118px] sm:max-h-[118px] xl:max-w-[141px] xl:max-h-[148px]"
         >
           <path
             id="textPath"
@@ -26,7 +26,7 @@ const ProjectsBtn = () => {
             </textPath>
           </text>
         </svg>
-        <HiArrowRight className="absolute text-3xl xl:text-4xl group-hover:translate-x-2 transition-all duration-300 group-hover:text-accent" />
+        <HiArrowRight className="absolute text-2xl sm:text-3xl xl:text-4xl group-hover:translate-x-2 transition-all duration-300 group-hover:text-accent" />
       </Link>
     </div>
   );

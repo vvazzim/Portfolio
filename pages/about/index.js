@@ -158,7 +158,6 @@ import CountUp from "react-countup";
 
 const About = () => {
   const [index, setIndex] = useState(0);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
     <div className="min-h-screen xl:h-full bg-primary/30 pt-20 sm:pt-28 xl:pt-40 pb-28 sm:pb-32 xl:pb-16 text-center xl:text-left overflow-y-auto xl:overflow-hidden relative">
@@ -191,13 +190,13 @@ const About = () => {
             From WSI cancer cell segmentation to distributed Kafka streaming and IAM governance, I build verifiable, fault-tolerant architectures engineered for high-security environments.
           </motion.p>
 
-          {/* Resume Download Button with Hand Cursor */}
+          {/* Desktop Resume Download Button with Hand Cursor (shown on desktop only) */}
           <motion.div
             variants={fadeIn('right', 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="mb-6 xl:mb-10 flex justify-center xl:justify-start"
+            className="hidden xl:flex mb-6 xl:mb-10 justify-start"
           >
             <a
               href="/CV_Wassim_CHIKHI.pdf"
@@ -288,85 +287,34 @@ const About = () => {
             ))}
           </div>
 
-          {/* Mobile Selector Pill (rabattu par défaut sur mobile) */}
-          <div className="xl:hidden w-full flex justify-center mb-4">
-            <button
-              type="button"
-              onClick={() => setIsMenuOpen(true)}
-              className="flex items-center justify-between gap-x-3 px-5 py-2 rounded-full bg-white/[0.08] hover:bg-white/[0.14] border border-white/20 hover:border-accent text-white text-xs sm:text-sm font-medium backdrop-blur-md transition-all shadow-lg cursor-pointer"
-            >
-              <div className="flex items-center gap-x-2">
-                <span className="text-white/60 uppercase tracking-wider text-[10px] sm:text-xs">Section :</span>
-                <span className="text-accent font-semibold capitalize">{aboutData[index].title}</span>
-              </div>
-              <span className="text-[11px] bg-accent/20 text-white border border-accent/40 px-2.5 py-0.5 rounded-full font-normal">
-                Changer ▾
-              </span>
-            </button>
-          </div>
-
-          {/* Mobile Section Menu (Popup floutant l'arrière-plan) */}
-          <AnimatePresence>
-            {isMenuOpen && (
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                onClick={() => setIsMenuOpen(false)}
-                className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-md xl:hidden cursor-pointer"
-              >
-                <motion.div
-                  initial={{ scale: 0.9, opacity: 0, y: 15 }}
-                  animate={{ scale: 1, opacity: 1, y: 0 }}
-                  exit={{ scale: 0.9, opacity: 0, y: 15 }}
-                  transition={{ duration: 0.2 }}
-                  onClick={(e) => e.stopPropagation()}
-                  className="w-full max-w-[320px] bg-[#16122b]/95 border border-white/20 rounded-2xl p-5 shadow-2xl backdrop-blur-xl flex flex-col gap-y-3 cursor-default"
+          {/* Mobile Intuitive Segmented Chips (1-tap direct selection) */}
+          <div className="xl:hidden w-full overflow-x-auto no-scrollbar py-1 mb-4 flex items-center gap-2 justify-start sm:justify-center">
+            {aboutData.map((item, itemIndex) => {
+              const isActive = index === itemIndex;
+              const sectionIcons = {
+                skills: "⚡",
+                experience: "💼",
+                certifications: "📜",
+                education: "🎓",
+                awards: "🏆",
+              };
+              return (
+                <button
+                  key={itemIndex}
+                  type="button"
+                  onClick={() => setIndex(itemIndex)}
+                  className={`whitespace-nowrap px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-200 cursor-pointer flex items-center gap-1.5 border shrink-0 ${
+                    isActive
+                      ? "bg-accent text-white border-accent shadow-md shadow-accent/25 font-semibold"
+                      : "bg-white/[0.05] text-white/75 border-white/10 hover:bg-white/[0.1] hover:text-white"
+                  }`}
                 >
-                  <div className="flex items-center justify-between pb-3 border-b border-white/10">
-                    <span className="text-xs font-semibold text-white uppercase tracking-wider">
-                      Choisir une section
-                    </span>
-                    <button
-                      type="button"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="text-white/60 hover:text-white text-base px-2 py-1 cursor-pointer"
-                    >
-                      ✕
-                    </button>
-                  </div>
-
-                  <div className="flex flex-col gap-y-2 pt-1">
-                    {aboutData.map((item, itemIndex) => {
-                      const isCurrent = index === itemIndex;
-                      return (
-                        <button
-                          key={itemIndex}
-                          type="button"
-                          onClick={() => {
-                            setIndex(itemIndex);
-                            setIsMenuOpen(false);
-                          }}
-                          className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-left text-sm font-medium transition-all cursor-pointer ${
-                            isCurrent
-                              ? 'bg-accent text-white font-semibold shadow-md shadow-accent/30'
-                              : 'bg-white/[0.05] hover:bg-white/[0.1] text-white/80 hover:text-white border border-white/10'
-                          }`}
-                        >
-                          <span className="capitalize">{item.title}</span>
-                          {isCurrent && (
-                            <span className="text-[10px] bg-black/30 px-2 py-0.5 rounded-full uppercase tracking-wider">
-                              Actif
-                            </span>
-                          )}
-                        </button>
-                      );
-                    })}
-                  </div>
-                </motion.div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+                  <span className="text-[12px]">{sectionIcons[item.title] || "•"}</span>
+                  <span className="capitalize">{item.title}</span>
+                </button>
+              );
+            })}
+          </div>
 
           {/* Tab Content List */}
           <div className="py-2 xl:py-6 flex flex-col gap-y-3 xl:gap-y-4 items-center xl:items-start overflow-y-auto max-h-[380px] pr-2">
@@ -402,6 +350,25 @@ const About = () => {
               </div>
             ))}
           </div>
+        </motion.div>
+
+        {/* Mobile Resume Download Button (placed below interactive sections on mobile) */}
+        <motion.div
+          variants={fadeIn('up', 0.5)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="flex xl:hidden my-4 justify-center w-full"
+        >
+          <a
+            href="/CV_Wassim_CHIKHI.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn rounded-full border border-white/50 px-6 py-2.5 transition-all duration-300 flex items-center gap-x-2 text-sm font-medium hover:border-accent hover:text-accent group cursor-pointer w-fit"
+          >
+            <BsDownload className="text-base group-hover:translate-y-0.5 transition-transform" />
+            <span>Download Resume (PDF)</span>
+          </a>
         </motion.div>
       </div>
     </div>

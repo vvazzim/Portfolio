@@ -57,22 +57,22 @@ const WorkSlider = ({ categoryId }) => {
         }}
         spaceBetween={20}
         slidesPerView={1}
-        className="h-[345px] sm:h-[390px] pb-8 sm:pb-12"
+        className="h-[315px] sm:h-[390px] pb-6 sm:pb-12"
       >
         {slides.map((pair, slideIdx) => (
           <SwiperSlide key={slideIdx} className="h-full">
-            <div className={`grid ${isMobile ? 'grid-cols-1 h-[295px]' : 'grid-cols-1 sm:grid-cols-2 h-[330px]'} gap-4`}>
+            <div className={`grid ${isMobile ? 'grid-cols-1 h-[275px]' : 'grid-cols-1 sm:grid-cols-2 h-[330px]'} gap-4`}>
               {pair.map((project) => (
                 <div
                   key={project.id}
-                  className="group relative rounded-2xl bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 hover:border-accent/60 p-4 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-accent/15 backdrop-blur-md"
+                  className="group relative rounded-2xl bg-gradient-to-b from-white/[0.06] to-white/[0.02] border border-white/10 hover:border-accent/60 p-3.5 sm:p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-2xl hover:shadow-accent/15 backdrop-blur-md"
                 >
                   {/* Haut : Icône représentative & Badges */}
                   <div>
-                    <div className="flex items-center justify-between mb-2 sm:mb-4">
+                    <div className="flex items-center justify-between mb-1.5 sm:mb-4">
                       {/* Icône technique représentative (PAS DE PHOTO) */}
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/15 text-accent group-hover:scale-105 group-hover:border-accent/60 group-hover:bg-accent/10 transition-all duration-300 shadow-md">
-                        {renderProjectIcon(project.icon, 'text-xl sm:text-2xl')}
+                      <div className="w-8 h-8 sm:w-12 sm:h-12 rounded-xl flex items-center justify-center bg-white/[0.06] border border-white/15 text-accent group-hover:scale-105 group-hover:border-accent/60 group-hover:bg-accent/10 transition-all duration-300 shadow-md">
+                        {renderProjectIcon(project.icon, 'text-lg sm:text-2xl')}
                       </div>
 
                       <div className="flex items-center gap-2">
@@ -91,7 +91,7 @@ const WorkSlider = ({ categoryId }) => {
                     <h4 className="text-sm sm:text-lg font-bold text-white mb-1 sm:mb-2 tracking-tight group-hover:text-accent transition-colors">
                       {project.name}
                     </h4>
-                    <p className="text-xs text-white/75 leading-relaxed font-light mb-2 sm:mb-4 line-clamp-2 sm:line-clamp-3">
+                    <p className="text-[11px] sm:text-xs text-white/75 leading-relaxed font-light mb-1.5 sm:mb-4 line-clamp-2 sm:line-clamp-3">
                       {project.description}
                     </p>
                   </div>
@@ -99,11 +99,11 @@ const WorkSlider = ({ categoryId }) => {
                   {/* Bas : Stack technique & Actions */}
                   <div>
                     {/* Stack Pills */}
-                    <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-2 sm:mb-4">
+                    <div className="flex flex-wrap gap-1 sm:gap-1.5 mb-1.5 sm:mb-4">
                       {project.stack.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
-                          className="text-[10px] sm:text-[11px] px-2 sm:px-2.5 py-0.5 rounded-full bg-white/[0.06] text-white/85 border border-white/10"
+                          className="text-[9px] sm:text-[11px] px-2 sm:px-2.5 py-0.5 rounded-full bg-white/[0.06] text-white/85 border border-white/10"
                         >
                           {tech}
                         </span>
@@ -111,7 +111,7 @@ const WorkSlider = ({ categoryId }) => {
                     </div>
 
                     {/* Liens d'action */}
-                    <div className="flex items-center gap-2 sm:gap-2.5 pt-2 sm:pt-3 border-t border-white/10">
+                    <div className="flex items-center gap-2 sm:gap-2.5 pt-1.5 sm:pt-3 border-t border-white/10">
                       {project.githubUrl && (
                         <a
                           href={project.githubUrl}
