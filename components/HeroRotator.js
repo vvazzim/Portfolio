@@ -56,14 +56,14 @@ const HeroRotator = () => {
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -12 }}
-          transition={{ duration: 0.35, ease: 'easeOut' }}
-          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2 text-xs sm:text-sm font-light text-white/90"
+          transition={{ duration: 0.25, ease: 'easeOut' }}
+          className="flex flex-wrap items-center justify-center xl:justify-start gap-x-2 text-xs sm:text-sm font-light text-white"
         >
-          <span className="text-white/60 hidden sm:inline">{current.prefix}</span>
-          <span className="font-semibold text-white tracking-wide border-b border-accent/40 pb-0.5">
+          <span className="text-white/80 hidden sm:inline">{current.prefix}</span>
+          <span className="font-semibold text-white tracking-wide border-b border-accent/60 pb-0.5">
             {current.highlight}
           </span>
-          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-mono font-medium bg-accent/20 text-accent border border-accent/40 shadow-sm ml-1">
+          <span className="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-mono font-medium bg-accent/25 text-white border border-accent/50 shadow-sm ml-1">
             {current.badge}
           </span>
         </motion.div>
