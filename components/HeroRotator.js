@@ -6,10 +6,10 @@ const HERO_VIBES = [
   {
     prefix: 'Engineering critical systems with:',
     highlight: 'GenAI & Threat Intel',
-    badge: '24/7 Production',
+    badge: 'Enterprise Production',
   },
   {
-    prefix: 'Productionizing sovereign pipelines:',
+    prefix: 'Productionizing high-reliability pipelines:',
     highlight: 'Local RAG & LLMOps',
     badge: 'Retrieval@5 = 89%',
   },

@@ -26,6 +26,7 @@ import {
   SiGitlab,
   SiTypescript,
   SiTailwindcss,
+  SiOrcid,
 } from "react-icons/si";
 import { BsDownload } from "react-icons/bs";
 
@@ -83,15 +84,15 @@ const aboutData = [
     title: "experience",
     info: [
       {
-        title: "AI & Cybersecurity Automation Engineer (CERT VINCI SA)",
-        stage: "2026 - Present",
+        title: "AI & Software Automation Engineer - CyberForge (VINCI SA)",
+        stage: "2026",
       },
       {
         title: "Deep Learning & Computer Vision Researcher (Université Paris Cité)",
         stage: "2024 - 2026",
       },
       {
-        title: "Full-Stack Developer & IAM Access Rights Consultant (Antallis)",
+        title: "Full-Stack Developer & Solutions Architect (Antallis)",
         stage: "2024 - 2025",
       },
     ],
@@ -100,11 +101,11 @@ const aboutData = [
     title: "certifications",
     info: [
       {
-        title: "Microsoft Certified: DevOps Engineer Expert (AZ-400)",
+        title: "ANSSI SecNumacadémie: Cybersecurity (Certified 96%)",
         stage: "2025",
       },
       {
-        title: "ANSSI SecNumacadémie: Cybersecurity (Certified 96%)",
+        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         stage: "2025",
       },
       {
@@ -113,10 +114,6 @@ const aboutData = [
       },
       {
         title: "CNIL: Data Protection & GDPR Compliance (RGPD)",
-        stage: "2025",
-      },
-      {
-        title: "Microsoft Certified: Azure Fundamentals (AZ-900)",
         stage: "2025",
       },
     ],
@@ -146,12 +143,12 @@ const aboutData = [
     title: "awards",
     info: [
       {
-        title: "Valedictorian / Top of Class (3 consecutive years, HIS University)",
-        stage: "2020 - 2023",
+        title: "Outstanding Academic & Community Contribution Award (Higher Institute of Sciences)",
+        stage: "2023",
       },
       {
-        title: "Outstanding Engineering Contribution Award",
-        stage: "2022",
+        title: "Valedictorian / Top of Class (3 consecutive years, HIS University)",
+        stage: "2020 - 2023",
       },
       {
         title: "Honorary Member (University Technology Club)",
@@ -205,13 +202,13 @@ const About = () => {
             From WSI cancer cell segmentation to distributed Kafka streaming and IAM governance, I build verifiable, fault-tolerant architectures engineered for high-security environments.
           </motion.p>
 
-          {/* Desktop Resume Download Button with Hand Cursor (shown on desktop only) */}
+          {/* Desktop Resume Download & ORCID Buttons */}
           <motion.div
             variants={fadeIn('right', 0.5)}
             initial="hidden"
             animate="show"
             exit="hidden"
-            className="hidden xl:flex mb-6 xl:mb-10 justify-start"
+            className="hidden xl:flex mb-6 xl:mb-10 justify-start items-center gap-x-4"
           >
             <a
               href="/CV_Wassim_CHIKHI.pdf"
@@ -221,6 +218,16 @@ const About = () => {
             >
               <BsDownload className="text-base group-hover:translate-y-0.5 transition-transform" />
               <span>Download Resume (PDF)</span>
+            </a>
+            <a
+              href="https://orcid.org/0009-0009-8513-6962"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn rounded-full border border-[#a6ce39]/60 px-5 py-2.5 transition-all duration-300 flex items-center gap-x-2 text-sm font-medium text-[#a6ce39] hover:bg-[#a6ce39]/10 hover:border-[#a6ce39] group cursor-pointer w-fit"
+              title="Verified ORCID Researcher Record"
+            >
+              <SiOrcid className="text-lg" />
+              <span>ORCID Record</span>
             </a>
           </motion.div>
 

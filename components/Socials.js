@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { RiLinkedinBoxLine } from 'react-icons/ri';
 import { FaGithub, FaStackOverflow } from 'react-icons/fa6';
+import { SiOrcid } from 'react-icons/si';
 import React from "react";
 
 const Socials = () => {
@@ -23,6 +24,16 @@ const Socials = () => {
         aria-label="GitHub Profile"
       >
         <FaGithub />
+      </Link>
+      <Link
+        href="https://orcid.org/0009-0009-8513-6962"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="hover:text-accent transition-all duration-300 cursor-pointer text-xl"
+        aria-label="ORCID Research Record"
+        title="ORCID ID: 0009-0009-8513-6962"
+      >
+        <SiOrcid />
       </Link>
       <Link
         href="https://stackoverflow.com/users/20487481/vvazzim"

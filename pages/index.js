@@ -56,12 +56,12 @@ const Home = () => {
             exit="hidden"
             className="max-w-xl xl:max-w-2xl mx-auto xl:mx-0 mb-6 sm:mb-7 xl:mb-8 text-sm sm:text-base text-white/80 leading-relaxed font-light"
           >
-            I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Critical Systems Engineer operating in{' '}
-            <span className="text-emerald-400 font-medium">24/7 Production</span><br />
-            at <span className="text-white font-medium">VINCI SA (CERT VINCI)</span>, certified{' '}
-            <span className="text-accent font-medium">Azure DevOps Expert (AZ-400)</span> and{' '}
-            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>.<br />
-            Trained in <span className="text-emerald-400 font-medium">RGPD / GDPR compliance</span>, I design resilient streaming architectures and sovereign AI platforms.
+            I’m <span className="text-white font-medium">Wassim CHIKHI</span>, AI & Computer Vision Engineer holding an{' '}
+            <span className="text-accent font-medium">M.Sc. Research in Machine Intelligence</span> (Université Paris Cité), with applied software & AI experience at{' '}
+            <span className="text-white font-medium">VINCI (CyberForge)</span>. Accredited by{' '}
+            <span className="text-emerald-400 font-medium">ANSSI SecNumacadémie (96%)</span>, trained in{' '}
+            <span className="text-accent font-medium">Cloud & DevOps (Azure, Docker, CI/CD)</span>, and recipient of the{' '}
+            <span className="text-rose-400 font-medium">Outstanding Contribution Award</span> from the Higher Institute of Sciences, I design deterministic deep learning models and high-throughput production systems.
           </motion.p>
 
           {/* Projects Button */}
